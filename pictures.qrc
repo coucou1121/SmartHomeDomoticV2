@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Picture/mountain_logo.png</file>
+        <file>Picture/thermometer.png</file>
+        <file>Picture/humidity.png</file>
+        <file>Picture/atmosphericPressure.png</file>
+    </qresource>
+</RCC>
