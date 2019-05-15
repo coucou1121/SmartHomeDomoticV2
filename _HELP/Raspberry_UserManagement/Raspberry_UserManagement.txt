@@ -1,0 +1,19 @@
+add smarthomedomotic" user
+sudo adduser smarthomedomotic
+PW: 1234
+	Full Name []: Smart Home Domotic
+
+add same permission as a pi user
+sudo usermod smarthomedomotic -a -G pi,adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,spi,i2c,gpio
+
+
+sudo usermod smarthomedomotic -a -G dialout,cdrom,audio,video,plugdev,users,input,netdev,spi,i2c,gpio
+
+remove "smarthomedomotic" user
+sudo userdel smarthomedomotic
+
+switch to "smarthomedomotic" user
+su smarthomedomotic
+
+Remove the folder
+sudo rm -rf /home/smarthomedomotic

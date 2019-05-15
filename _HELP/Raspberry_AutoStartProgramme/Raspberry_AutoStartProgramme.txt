@@ -1,0 +1,42 @@
+***************** create a service *****************************
+sudo nano /lib/systemd/system/homeDomotic.service
+
+***************** paste text below *****************************
+[Unit]
+Description=Start Clock
+
+[Service]
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/pi/.Xauthority
+ExecStart=/home/pi/HomeDomotic/HomeDomotic
+Restart=always
+RestartSec=10s
+KillMode=process
+TimeoutSec=infinity
+
+[Install]
+WantedBy=graphical.target
+
+***************** tell systemd to recognize our service *********
+sudo systemctl daemon-reload
+
+
+***************** tell systemd that we want our service to start on boot ***************
+sudo systemctl enable homeDomotic.service
+
+***************** tell systemd that we want our service to be disable on boot ***************
+sudo systemctl disable homeDomotic.service
+
+********************* source ********************
+http://comfilewiki.co.kr/en/doku.php?id=comfilepi:configure_a_program_to_auto-start:index
+
+From the ComfilePi desktop:
+
+lxsession-default-apps. 
+If it is not installed, run the command sudo apt-get install lxsession-default-apps.
+
+Choose the Autostart option.
+
+In the Manual autostarted applications section, uncheck all existing applications.
+
+Enter the command necessary to start your program (e.g. mono HelloWorld.exe) and press the Add button.

@@ -1,0 +1,19 @@
+In setting file set value
+
+[APP_SETTING]
+ADS115_5V_InPlus=25670
+
+******************************************************************
+On calibration mode(no filter)
+
+Set minimum range 4 ma : 	0 	puls
+Set maximum range 20 ma : 	25670	puls
+
+******************************************************************
+then on reading mode( with filter)
+
+Set tank at 1500lt, 1500mm and water
+
+minimum range 0ma:		0	lt
+maximum range 20ma:		5000	lt
+

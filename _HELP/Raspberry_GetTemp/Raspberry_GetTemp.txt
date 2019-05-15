@@ -1,0 +1,53 @@
+link:
+https://www.cyberciti.biz/faq/linux-find-out-raspberry-pi-gpu-and-arm-cpu-temperature-command/
+
+Show Raspberry Pi GPU temperature
+Open the Terminal application and type the following command to view GPU (Graphics Processing Unit) temperature:
+vcgencmd measure_temp 
+OR 
+/opt/vc/bin/vcgencmd measure_temp
+
+Display Raspberry Pi ARM CPU temperature
+Type the following cat command:
+cat /sys/class/thermal/thermal_zone0/temp
+
+Putting it all together
+Create a simple bash script called my-pi-temp.sh to see both ARM CPU and GPU temperature of Raspberry Pi. 
+Type the following command:
+
+nano my-pi-temp.sh
+
+Append the following code:
+
+#!/bin/bash
+# Script: my-pi-temp.sh
+# Purpose: Display the ARM CPU and GPU  temperature of Raspberry Pi 2/3 
+# Author: Vivek Gite <www.cyberciti.biz> under GPL v2.x+
+# -------------------------------------------------------
+cpu=$(</sys/class/thermal/thermal_zone0/temp)
+echo "$(date) @ $(hostname)"
+echo "-------------------------------------------"
+echo "GPU => $(/opt/vc/bin/vcgencmd measure_temp)"
+echo "CPU => $((cpu/1000))'C"
+
+Save and close the file. Set permission:
+
+sudo chmod +x my-pi-temp.sh
+
+Run it as follows:
+
+./my-pi-temp.sh
+
+
+Exemple to get in CPU
+We can read a system file and search the temperature.
+
+FILE *temperatureFile;
+double T;
+temperatureFile = fopen ("/sys/class/thermal/thermal_zone0/temp", "r");
+if (temperatureFile == NULL)
+  ; //print some message
+fscanf (temperatureFile, "%lf", &T);
+T /= 1000;
+printf ("The temperature is %6.3f C.\n", T);
+fclose (temperatureFile);

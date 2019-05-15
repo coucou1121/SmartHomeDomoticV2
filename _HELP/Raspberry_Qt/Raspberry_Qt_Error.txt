@@ -1,0 +1,29 @@
+package to install
+
+install qt5-default
+installe qtdeclarative5-*
+
+************** not work ****************
+mesa package. comme from 
+http://www.tal.org/tutorials/building-qt-510-raspberry-pi-debian-stretch
+
+apt-get install build-essential libfontconfig1-dev libdbus-1-dev libfreetype6-dev libicu-dev libinput-dev libxkbcommon-dev 
+libsqlite3-dev libssl-dev libpng-dev libjpeg-dev libglib2.0-dev libraspberrypi-dev
+****************************************
+
+************** not work ****************
+EGLFS
+https://wiki.qt.io/RaspberryPi2EGLFS
+****************************************
+
+************** work ****************
+test OPENGL 60...FPS
+glxgears
+****************************************
+
+************** work ****************
+Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown:
+The name org.a11y.Bus was not provided by any .service files
+
+sudo apt-get install at-spi2-core
+****************************************

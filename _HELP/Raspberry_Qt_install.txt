@@ -1,0 +1,36 @@
+*Update the rapsberry
+sudo apt-get update
+sudo apt-get upgrade
+
+*install the new packages
+sudo apt-get install qt5-default
+sudo apt-get install qtcreator
+
+*set C compiler
+name : GCC
+path : /usr/bin/gcc
+
+*set C++ compiler
+name : GPP
+path : /usr/bin/g++
+
+*add compiler in kit
+add debuger in the kit
+
+*add some tools
+sudo apt-get install qtquickcontrols2*
+sudo apt-get install qtquickcontrols5-*
+sudo apt-get install qtdeclarative5-*
+sudo apt-get install qml-module-qtquick*
+
+*add debugger in the kit
+add debugger in the kit
+
+
+*fix the warning on the destop-kit
+Go to menu "help" -> "plugins"
+Uncheck "device support" -> "remote linux"
+Restart Qt Creator
+Add kit in desktop
+check desktop
+

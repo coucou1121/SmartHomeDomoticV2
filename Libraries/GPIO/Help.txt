@@ -1,0 +1,18 @@
+For read the GPIO configuration
+gpio readall
+
+install wiringpi from Gordon
+git clone git://git.drogon.net/wiringPi
+cd wiringPi
+git pull origin
+./build
+
+check if work
+gpio -v
+gpio readall
+
+check if SPI can be load
+gpio load spi
+
+if unable :
+sudo nano /etc/modprobe.d/raspi-blacklist.conf

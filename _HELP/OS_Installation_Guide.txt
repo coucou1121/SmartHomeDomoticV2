@@ -1,0 +1,153 @@
+OS intallation
+
+Write Stretch OS image with Etcher
+
+Create a ssh.txt empty file at the racine to enable ssh connexion
+
+****************** raspi configuration ************************************
+cmd : sudo raspi-config
+
+in Interface Option:
+Enable VNC  
+Enable I2C 
+Enable Remote GPIO 
+
+Change boot option in boot Otpion -> B1 Desktop / CLI -> B4 Desktop Autologin
+
+In advanced options :
+Set resolution to the maximum (DMT mode 82)
+Set GPU memory to 256 in memory split
+Set fake (KMS) in GL Driver
+
+reboot the pi:
+cmd: sudo reboot
+
+Set time zone, language and clock.
+Set PW : 12345678
+***************************************************************************
+
+****************** wifi configuration ************************************
+get the wifi MAC adress : ifconfig wlan0
+***************************************************************************
+
+remove unused software 
+sudo apt-get remove --purge wolfram-engine	// not install on 2018-11-13-raspbian-stretch
+sudo apt-get remove --purge geany
+sudo apt-get remove --purge scratch		// not install on 2018-11-13-raspbian-stretch
+sudo apt-get remove --purge scratch2		// not install on 2018-11-13-raspbian-stretch
+sudo apt-get remove --purge sonic-pi		// not install on 2018-11-13-raspbian-stretch
+sudo apt-get remove --purge python3-thonny	// not install on 2018-11-13-raspbian-stretc
+sudo apt-get remove --purge python-minecraftpi	// not install on 2018-11-13-raspbian-stretch
+rm -rf ~/python_games				// not install on 2018-11-13-raspbian-stretch
+
+*************** remove bluetooth totaly *****************************
+sudo apt-get purge bluez -y
+sudo apt-get autoremove -y
+***************************************************************************
+
+clean the package
+sudo apt-get autoremove --purge
+
+update the OS package 
+sudo apt-get update
+
+upgrade the kernel
+sudo apt-get upgrade
+
+
+*************** add package for smarthome sofware running *****************************
+sudo apt-get install qtquickcontrols2*
+sudo apt-get install qtquickcontrols5-*
+sudo apt-get install qtdeclarative5-*
+sudo apt-get install qml-module-qtquick*
+***************************************************************************
+
+*************** add smartHomeDomotic user *****************************
+add smarthomedomotic" usersu 
+sudo adduser smarthomedomotic
+PW: 1234
+	Full Name []: Smart Home Domotic
+
+add right to this user
+cmd: sudo usermod smarthomedomotic -a -G dialout,cdrom,audio,video,plugdev,users,input,netdev,spi,i2c,gpio
+
+***************************************************************************
+
+*************** log all the time on the smarthomedomotic user*****************************
+Remove the autologin:
+Change boot option in boot Otpion -> B1 Desktop / CLI -> _B3 Desktop  Desktop GUI, requiring user to login
+
+cmd: sudo nano /etc/lightdm/lightdm.conf
+
+search line with "autologin-user=pi" and chnage pi with smarthomedomotic
+
+save and reboot
+***************************************************************************
+
+*************** create working directory in SMD user *****************************
+
+- create folder : mkdir HomeDomotic		
+- create folder : mkdir HomeDomotic/Data 		
+- create folder : mkdir HomeDomotic/Setting	
+
+- Copy in HomeDomotic folder the application and change right to 754
+***************************************************************************
+
+*************** configure the setting file for the application *****************************
+- change the line above in [APP_SETTING]
+
+ADS115_5V_InPlus=25670
+Data_Path_folder=./home/smarthomedomotic/HomeDomotic/Data/
+Setting_File_Name_and_Path=./home/smarthomedomotic/HomeDomotic/Setting/settings.ini
+
+- save file
+***************************************************************************
+
+
+*************auto startup application***************************************************
+- create a service:
+cmd:	sudo nano /lib/systemd/system/homeDomotic.service
+
+- paste text below
+[Unit]
+Description=Smart home domotic application
+
+[Service]
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/smarthomedomotic/.Xauthority
+ExecStart=/home/smarthomedomotic/HomeDomotic/HomeDomotic
+Restart=always
+RestartSec=30s
+KillMode=process
+TimeoutSec=infinity
+
+[Install]
+WantedBy=graphical.target
+
+- tell systemd to recognize our service *********
+cmd:	sudo systemctl daemon-reload
+
+- set the permission
+cmd : sudo chmod 644 /lib/systemd/system/homeDomotic.service
+
+- tell systemd that we want our service to start on boot ***************
+cmd:	sudo systemctl enable homeDomotic.service
+cmd:	sudo systemctl disable homeDomotic.service
+***************************************************************************
+
+*************** change the setting file right *****************************
+- log in pi user
+- log in super user : sudo -s
+- go down to Setting folder as root
+- change right on setting.ini file : chmod 777 settings.ini 
+
+***************************************************************************
+
+*************** configure again the setting file for the application *****************************
+- change the line above in [APP_SETTING]
+
+ADS115_5V_InPlus=25670
+Data_Path_folder=./Data/
+Setting_File_Name_and_Path=./Setting/settings.ini
+- save file
+***************************************************************************
