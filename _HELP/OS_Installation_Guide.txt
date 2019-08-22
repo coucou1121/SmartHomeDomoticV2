@@ -4,6 +4,7 @@ Write Stretch OS image with Etcher
 
 Create a ssh.txt empty file at the racine to enable ssh connexion
 
+default jessy IP : 169.254.226.130
 ****************** raspi configuration ************************************
 cmd : sudo raspi-config
 
@@ -22,6 +23,7 @@ Set fake (KMS) in GL Driver
 reboot the pi:
 cmd: sudo reboot
 
+Set Country to Switzerland, Frensh, swiss keyboard
 Set time zone, language and clock.
 Set PW : 12345678
 ***************************************************************************
@@ -29,6 +31,8 @@ Set PW : 12345678
 ****************** wifi configuration ************************************
 get the wifi MAC adress : ifconfig wlan0
 ***************************************************************************
+Wired IP address : 10.0.0.21
+Wifi IP address : 10.0.0.31
 
 remove unused software 
 sudo apt-get remove --purge wolfram-engine	// not install on 2018-11-13-raspbian-stretch
@@ -55,7 +59,7 @@ upgrade the kernel
 sudo apt-get upgrade
 
 
-*************** add package for smarthome sofware running *****************************
+*************** add package for smarthome software running *****************************
 sudo apt-get install qtquickcontrols2*
 sudo apt-get install qtquickcontrols5-*
 sudo apt-get install qtdeclarative5-*
@@ -63,7 +67,7 @@ sudo apt-get install qml-module-qtquick*
 ***************************************************************************
 
 *************** add smartHomeDomotic user *****************************
-add smarthomedomotic" usersu 
+
 sudo adduser smarthomedomotic
 PW: 1234
 	Full Name []: Smart Home Domotic
@@ -74,9 +78,6 @@ cmd: sudo usermod smarthomedomotic -a -G dialout,cdrom,audio,video,plugdev,users
 ***************************************************************************
 
 *************** log all the time on the smarthomedomotic user*****************************
-Remove the autologin:
-Change boot option in boot Otpion -> B1 Desktop / CLI -> _B3 Desktop  Desktop GUI, requiring user to login
-
 cmd: sudo nano /etc/lightdm/lightdm.conf
 
 search line with "autologin-user=pi" and chnage pi with smarthomedomotic
