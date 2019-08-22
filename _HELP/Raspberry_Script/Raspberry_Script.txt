@@ -1,0 +1,4 @@
+#!/bin/bash
+# This is my first script! This is a comment.
+
+echo Hello World # Comments can be inline with code too.
