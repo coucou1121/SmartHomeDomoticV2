@@ -31,8 +31,8 @@ Set PW : 12345678
 ****************** wifi configuration ************************************
 get the wifi MAC adress : ifconfig wlan0
 ***************************************************************************
-Wired IP address : 10.0.0.21
-Wifi IP address : 10.0.0.31
+Wired IP address : 10.0.0.21/24
+Wifi IP address : 10.0.0.31/24
 
 remove unused software 
 sudo apt-get remove --purge wolfram-engine	// not install on 2018-11-13-raspbian-stretch
@@ -133,6 +133,8 @@ cmd : sudo chmod 644 /lib/systemd/system/homeDomotic.service
 
 - tell systemd that we want our service to start on boot ***************
 cmd:	sudo systemctl enable homeDomotic.service
+
+- tell systemd that we DON'T want our service to start on boot ***************
 cmd:	sudo systemctl disable homeDomotic.service
 ***************************************************************************
 

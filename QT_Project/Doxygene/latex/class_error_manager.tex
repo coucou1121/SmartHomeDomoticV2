@@ -1,0 +1,90 @@
+\hypertarget{class_error_manager}{}\doxysection{Error\+Manager Class Reference}
+\label{class_error_manager}\index{ErrorManager@{ErrorManager}}
+
+
+Inheritance diagram for Error\+Manager\+:
+% FIG 0
+
+
+Collaboration diagram for Error\+Manager\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_error_manager_a6f44a3090dbcf2258b3d61913a9b4039}\label{class_error_manager_a6f44a3090dbcf2258b3d61913a9b4039}} 
+{\bfseries Error\+Manager} (Q\+Widget $\ast$parent=nullptr, Q\+Object $\ast$object\+Display\+Message=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_error_manager_ac822e1c7f469d2170104c1aad7fefb0e}\label{class_error_manager_ac822e1c7f469d2170104c1aad7fefb0e}} 
+void {\bfseries \+\_\+reveived\+\_\+\+Error} (Q\+String object\+Name, Q\+String object\+Title, int error\+Number, bool active)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_error_manager_a1ab11f65d8c0b7d9c62f162f5feb77c7}{\+\_\+set\+Color}} (bool in\+Trouble)
+\begin{DoxyCompactList}\small\item\em Use to change the color of the message display. Red in case of errors messages, grey no error message at all. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_error_manager_a137788a1c372610f2b7d42c5f68646c7}\label{class_error_manager_a137788a1c372610f2b7d42c5f68646c7}} 
+bool {\bfseries \+\_\+check\+Message\+Allready\+Existe} (\mbox{\hyperlink{class_error_message}{Error\+Message}} $\ast$error\+Message)
+\item 
+\mbox{\Hypertarget{class_error_manager_afa4ba4ad548a676d452391620e33e949}\label{class_error_manager_afa4ba4ad548a676d452391620e33e949}} 
+int {\bfseries \+\_\+find\+Id\+To\+Remove} (\mbox{\hyperlink{class_error_message}{Error\+Message}} $\ast$error\+Message)
+\item 
+void \mbox{\hyperlink{class_error_manager_aaf68cd129105d53780b43769484541d9}{\+\_\+display\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Use to display the message in the dedicated frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_error_manager_ac357db991a9fdb4a0bd23e72c4aac90b}\label{class_error_manager_ac357db991a9fdb4a0bd23e72c4aac90b}} 
+Q\+Object $\ast$ {\bfseries \+\_\+object\+Display\+Message}
+\item 
+\mbox{\Hypertarget{class_error_manager_a55c5a70bd13be2f85e64443e313aa995}\label{class_error_manager_a55c5a70bd13be2f85e64443e313aa995}} 
+\mbox{\hyperlink{class_error_message}{Error\+Message}} $\ast$ {\bfseries \+\_\+error\+Message}
+\item 
+\mbox{\Hypertarget{class_error_manager_a006b6ea7cbd110787bf2a2c8cc5ab923}\label{class_error_manager_a006b6ea7cbd110787bf2a2c8cc5ab923}} 
+Q\+Map$<$ int, Q\+String $>$ {\bfseries \+\_\+error\+List\+Possible}
+\item 
+\mbox{\Hypertarget{class_error_manager_ad2143999e7bd9453a45de177444da2ea}\label{class_error_manager_ad2143999e7bd9453a45de177444da2ea}} 
+Q\+Map$<$ int, \mbox{\hyperlink{class_error_message}{Error\+Message}} $\ast$ $>$ {\bfseries \+\_\+error\+List\+Now}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_error_manager_aaf68cd129105d53780b43769484541d9}\label{class_error_manager_aaf68cd129105d53780b43769484541d9}} 
+\index{ErrorManager@{ErrorManager}!\_displayMessage@{\_displayMessage}}
+\index{\_displayMessage@{\_displayMessage}!ErrorManager@{ErrorManager}}
+\doxysubsubsection{\texorpdfstring{\_displayMessage()}{\_displayMessage()}}
+{\footnotesize\ttfamily void Error\+Manager\+::\+\_\+display\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Use to display the message in the dedicated frame. 
+
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_error_manager_a1ab11f65d8c0b7d9c62f162f5feb77c7}\label{class_error_manager_a1ab11f65d8c0b7d9c62f162f5feb77c7}} 
+\index{ErrorManager@{ErrorManager}!\_setColor@{\_setColor}}
+\index{\_setColor@{\_setColor}!ErrorManager@{ErrorManager}}
+\doxysubsubsection{\texorpdfstring{\_setColor()}{\_setColor()}}
+{\footnotesize\ttfamily void Error\+Manager\+::\+\_\+set\+Color (\begin{DoxyParamCaption}\item[{bool}]{in\+Trouble }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Use to change the color of the message display. Red in case of errors messages, grey no error message at all. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Trouble} & is the status of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Smart\+Home\+Domotic/\mbox{\hyperlink{errormanager_8h}{errormanager.\+h}}\item 
+Smart\+Home\+Domotic/errormanager.\+cpp\end{DoxyCompactItemize}

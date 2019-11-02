@@ -1,0 +1,185 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Main Page}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Hierarchical Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Class Hierarchy}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}File Index}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}
+\contentsline {chapter}{\numberline {5}Class Documentation}{9}{chapter.5}
+\contentsline {section}{\numberline {5.1}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S1115 Class Reference}{9}{section.5.1}
+\contentsline {section}{\numberline {5.2}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S1115\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Item Class Reference}{10}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Member Function Documentation}{12}{subsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.1.1}run()}{13}{subsubsection.5.2.1.1}
+\contentsline {section}{\numberline {5.3}B\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}E280 Class Reference}{13}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Member Function Documentation}{14}{subsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.1.1}compensate\_humidity()}{14}{subsubsection.5.3.1.1}
+\contentsline {subsubsection}{\numberline {5.3.1.2}compensate\_pressure()}{14}{subsubsection.5.3.1.2}
+\contentsline {subsubsection}{\numberline {5.3.1.3}compensate\_temperature()}{15}{subsubsection.5.3.1.3}
+\contentsline {section}{\numberline {5.4}B\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}E280\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Item Class Reference}{15}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Member Function Documentation}{17}{subsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.1.1}run()}{17}{subsubsection.5.4.1.1}
+\contentsline {section}{\numberline {5.5}Custom\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Plot\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Item Class Reference}{17}{section.5.5}
+\contentsline {section}{\numberline {5.6}Data\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Analyser Class Reference}{19}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Member Function Documentation}{21}{subsection.5.6.1}
+\contentsline {subsubsection}{\numberline {5.6.1.1}msleep()}{21}{subsubsection.5.6.1.1}
+\contentsline {subsubsection}{\numberline {5.6.1.2}run()}{21}{subsubsection.5.6.1.2}
+\contentsline {section}{\numberline {5.7}Data\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Frame Class Reference}{21}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Member Function Documentation}{23}{subsection.5.7.1}
+\contentsline {subsubsection}{\numberline {5.7.1.1}ADS115\_1\_chan0()}{23}{subsubsection.5.7.1.1}
+\contentsline {subsubsection}{\numberline {5.7.1.2}ADS115\_1\_chan1()}{23}{subsubsection.5.7.1.2}
+\contentsline {subsubsection}{\numberline {5.7.1.3}ADS115\_1\_chan2()}{23}{subsubsection.5.7.1.3}
+\contentsline {subsubsection}{\numberline {5.7.1.4}ADS115\_1\_chan3()}{24}{subsubsection.5.7.1.4}
+\contentsline {subsubsection}{\numberline {5.7.1.5}ADS115\_2\_chan0()}{24}{subsubsection.5.7.1.5}
+\contentsline {subsubsection}{\numberline {5.7.1.6}ADS115\_2\_chan1()}{24}{subsubsection.5.7.1.6}
+\contentsline {subsubsection}{\numberline {5.7.1.7}ADS115\_2\_chan2()}{24}{subsubsection.5.7.1.7}
+\contentsline {subsubsection}{\numberline {5.7.1.8}ADS115\_2\_chan3()}{25}{subsubsection.5.7.1.8}
+\contentsline {subsubsection}{\numberline {5.7.1.9}BME280\_humidity()}{25}{subsubsection.5.7.1.9}
+\contentsline {subsubsection}{\numberline {5.7.1.10}BME280\_pressure()}{25}{subsubsection.5.7.1.10}
+\contentsline {subsubsection}{\numberline {5.7.1.11}BME280\_temperature()}{25}{subsubsection.5.7.1.11}
+\contentsline {subsubsection}{\numberline {5.7.1.12}msbCPT()}{26}{subsubsection.5.7.1.12}
+\contentsline {subsubsection}{\numberline {5.7.1.13}setADS115\_1\_chan0()}{26}{subsubsection.5.7.1.13}
+\contentsline {subsubsection}{\numberline {5.7.1.14}setADS115\_1\_chan1()}{27}{subsubsection.5.7.1.14}
+\contentsline {subsubsection}{\numberline {5.7.1.15}setADS115\_1\_chan2()}{27}{subsubsection.5.7.1.15}
+\contentsline {subsubsection}{\numberline {5.7.1.16}setADS115\_1\_chan3()}{27}{subsubsection.5.7.1.16}
+\contentsline {subsubsection}{\numberline {5.7.1.17}setADS115\_2\_chan0()}{29}{subsubsection.5.7.1.17}
+\contentsline {subsubsection}{\numberline {5.7.1.18}setADS115\_2\_chan1()}{29}{subsubsection.5.7.1.18}
+\contentsline {subsubsection}{\numberline {5.7.1.19}setADS115\_2\_chan2()}{29}{subsubsection.5.7.1.19}
+\contentsline {subsubsection}{\numberline {5.7.1.20}setADS115\_2\_chan3()}{31}{subsubsection.5.7.1.20}
+\contentsline {subsubsection}{\numberline {5.7.1.21}setBME280\_humidity()}{31}{subsubsection.5.7.1.21}
+\contentsline {subsubsection}{\numberline {5.7.1.22}setBME280\_pressure()}{31}{subsubsection.5.7.1.22}
+\contentsline {subsubsection}{\numberline {5.7.1.23}setBME280\_temperature()}{33}{subsubsection.5.7.1.23}
+\contentsline {subsubsection}{\numberline {5.7.1.24}setMsbCPT()}{33}{subsubsection.5.7.1.24}
+\contentsline {section}{\numberline {5.8}Data\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager Class Reference}{34}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Constructor \& Destructor Documentation}{35}{subsection.5.8.1}
+\contentsline {subsubsection}{\numberline {5.8.1.1}DataManager()}{35}{subsubsection.5.8.1.1}
+\contentsline {subsection}{\numberline {5.8.2}Member Function Documentation}{36}{subsection.5.8.2}
+\contentsline {subsubsection}{\numberline {5.8.2.1}ADS1115\_1()}{36}{subsubsection.5.8.2.1}
+\contentsline {subsubsection}{\numberline {5.8.2.2}ADS1115\_2()}{36}{subsubsection.5.8.2.2}
+\contentsline {subsubsection}{\numberline {5.8.2.3}BME280()}{36}{subsubsection.5.8.2.3}
+\contentsline {subsubsection}{\numberline {5.8.2.4}msleep()}{36}{subsubsection.5.8.2.4}
+\contentsline {subsubsection}{\numberline {5.8.2.5}run()}{37}{subsubsection.5.8.2.5}
+\contentsline {subsubsection}{\numberline {5.8.2.6}setADS1115\_1()}{37}{subsubsection.5.8.2.6}
+\contentsline {subsubsection}{\numberline {5.8.2.7}setADS1115\_2()}{37}{subsubsection.5.8.2.7}
+\contentsline {subsubsection}{\numberline {5.8.2.8}setBME280()}{38}{subsubsection.5.8.2.8}
+\contentsline {subsubsection}{\numberline {5.8.2.9}startReading()}{38}{subsubsection.5.8.2.9}
+\contentsline {section}{\numberline {5.9}E\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Plot\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Style Struct Reference}{38}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Detailed Description}{38}{subsection.5.9.1}
+\contentsline {section}{\numberline {5.10}E\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Tank\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Liquid\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Inside Struct Reference}{39}{section.5.10}
+\contentsline {subsection}{\numberline {5.10.1}Detailed Description}{39}{subsection.5.10.1}
+\contentsline {section}{\numberline {5.11}E\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Tank\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Liquid\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Inside Struct Reference}{39}{section.5.11}
+\contentsline {subsection}{\numberline {5.11.1}Detailed Description}{39}{subsection.5.11.1}
+\contentsline {section}{\numberline {5.12}E\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Tank\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Object\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Name Struct Reference}{39}{section.5.12}
+\contentsline {subsection}{\numberline {5.12.1}Detailed Description}{39}{subsection.5.12.1}
+\contentsline {section}{\numberline {5.13}E\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Tank\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Object\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Name Struct Reference}{40}{section.5.13}
+\contentsline {subsection}{\numberline {5.13.1}Detailed Description}{40}{subsection.5.13.1}
+\contentsline {section}{\numberline {5.14}E\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Tank\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Object\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Name Struct Reference}{40}{section.5.14}
+\contentsline {subsection}{\numberline {5.14.1}Detailed Description}{40}{subsection.5.14.1}
+\contentsline {section}{\numberline {5.15}E\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Tank\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Object\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Name Struct Reference}{40}{section.5.15}
+\contentsline {subsection}{\numberline {5.15.1}Detailed Description}{40}{subsection.5.15.1}
+\contentsline {section}{\numberline {5.16}e\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}B\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Start\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Stop\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}State Struct Reference}{41}{section.5.16}
+\contentsline {subsection}{\numberline {5.16.1}Detailed Description}{41}{subsection.5.16.1}
+\contentsline {section}{\numberline {5.17}e\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Edge Struct Reference}{41}{section.5.17}
+\contentsline {subsection}{\numberline {5.17.1}Detailed Description}{41}{subsection.5.17.1}
+\contentsline {section}{\numberline {5.18}e\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Error Struct Reference}{41}{section.5.18}
+\contentsline {subsection}{\numberline {5.18.1}Detailed Description}{42}{subsection.5.18.1}
+\contentsline {section}{\numberline {5.19}e\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Error Struct Reference}{42}{section.5.19}
+\contentsline {subsection}{\numberline {5.19.1}Detailed Description}{42}{subsection.5.19.1}
+\contentsline {section}{\numberline {5.20}e\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}F\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}I\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Return\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Character Struct Reference}{42}{section.5.20}
+\contentsline {subsection}{\numberline {5.20.1}Detailed Description}{42}{subsection.5.20.1}
+\contentsline {section}{\numberline {5.21}e\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}F\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}I\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}State\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Possible Struct Reference}{43}{section.5.21}
+\contentsline {subsection}{\numberline {5.21.1}Detailed Description}{43}{subsection.5.21.1}
+\contentsline {section}{\numberline {5.22}e\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Logic\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Operator Struct Reference}{43}{section.5.22}
+\contentsline {subsection}{\numberline {5.22.1}Detailed Description}{43}{subsection.5.22.1}
+\contentsline {section}{\numberline {5.23}e\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Main\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}State\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Application Struct Reference}{44}{section.5.23}
+\contentsline {subsection}{\numberline {5.23.1}Detailed Description}{44}{subsection.5.23.1}
+\contentsline {section}{\numberline {5.24}e\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Main\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}State\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Display Struct Reference}{44}{section.5.24}
+\contentsline {subsection}{\numberline {5.24.1}Detailed Description}{44}{subsection.5.24.1}
+\contentsline {section}{\numberline {5.25}e\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Periode\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Possible Struct Reference}{45}{section.5.25}
+\contentsline {subsection}{\numberline {5.25.1}Detailed Description}{45}{subsection.5.25.1}
+\contentsline {section}{\numberline {5.26}e\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Range\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Value Struct Reference}{45}{section.5.26}
+\contentsline {subsection}{\numberline {5.26.1}Detailed Description}{45}{subsection.5.26.1}
+\contentsline {section}{\numberline {5.27}e\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Roll\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}State Struct Reference}{45}{section.5.27}
+\contentsline {subsection}{\numberline {5.27.1}Detailed Description}{46}{subsection.5.27.1}
+\contentsline {section}{\numberline {5.28}Error\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager Class Reference}{46}{section.5.28}
+\contentsline {subsection}{\numberline {5.28.1}Member Function Documentation}{46}{subsection.5.28.1}
+\contentsline {subsubsection}{\numberline {5.28.1.1}\_displayMessage()}{47}{subsubsection.5.28.1.1}
+\contentsline {subsubsection}{\numberline {5.28.1.2}\_setColor()}{47}{subsubsection.5.28.1.2}
+\contentsline {section}{\numberline {5.29}Error\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Message Class Reference}{47}{section.5.29}
+\contentsline {section}{\numberline {5.30}e\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Trace\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Possible Struct Reference}{48}{section.5.30}
+\contentsline {subsection}{\numberline {5.30.1}Detailed Description}{48}{subsection.5.30.1}
+\contentsline {section}{\numberline {5.31}e\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Trig\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}State Struct Reference}{48}{section.5.31}
+\contentsline {subsection}{\numberline {5.31.1}Detailed Description}{48}{subsection.5.31.1}
+\contentsline {section}{\numberline {5.32}Global\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Enumated\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}And\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Extern Class Reference}{49}{section.5.32}
+\contentsline {subsection}{\numberline {5.32.1}Member Enumeration Documentation}{49}{subsection.5.32.1}
+\contentsline {subsubsection}{\numberline {5.32.1.1}E\_TankObjectName}{49}{subsubsection.5.32.1.1}
+\contentsline {section}{\numberline {5.33}Global\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Enumerate Class Reference}{49}{section.5.33}
+\contentsline {subsection}{\numberline {5.33.1}Member Enumeration Documentation}{50}{subsection.5.33.1}
+\contentsline {subsubsection}{\numberline {5.33.1.1}E\_ErrorMesseage}{50}{subsubsection.5.33.1.1}
+\contentsline {subsubsection}{\numberline {5.33.1.2}E\_HomePageObject}{50}{subsubsection.5.33.1.2}
+\contentsline {subsubsection}{\numberline {5.33.1.3}E\_PlotStyle}{51}{subsubsection.5.33.1.3}
+\contentsline {subsubsection}{\numberline {5.33.1.4}E\_StateMachine}{51}{subsubsection.5.33.1.4}
+\contentsline {subsubsection}{\numberline {5.33.1.5}E\_TankLiquidInside}{51}{subsubsection.5.33.1.5}
+\contentsline {subsubsection}{\numberline {5.33.1.6}E\_TankObjectName}{52}{subsubsection.5.33.1.6}
+\contentsline {section}{\numberline {5.34}Globale\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Static\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Value Class Reference}{52}{section.5.34}
+\contentsline {subsection}{\numberline {5.34.1}Member Function Documentation}{53}{subsection.5.34.1}
+\contentsline {subsubsection}{\numberline {5.34.1.1}initErrorPossible()}{54}{subsubsection.5.34.1.1}
+\contentsline {subsubsection}{\numberline {5.34.1.2}initHomeViewObject()}{54}{subsubsection.5.34.1.2}
+\contentsline {subsubsection}{\numberline {5.34.1.3}initTankObjectName()}{54}{subsubsection.5.34.1.3}
+\contentsline {subsection}{\numberline {5.34.2}Member Data Documentation}{54}{subsection.5.34.2}
+\contentsline {subsubsection}{\numberline {5.34.2.1}welcomeText}{54}{subsubsection.5.34.2.1}
+\contentsline {section}{\numberline {5.35}Global\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Style Class Reference}{55}{section.5.35}
+\contentsline {section}{\numberline {5.36}Home\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}View\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Object Struct Reference}{56}{section.5.36}
+\contentsline {subsection}{\numberline {5.36.1}Detailed Description}{56}{subsection.5.36.1}
+\contentsline {section}{\numberline {5.37}Main Class Reference}{56}{section.5.37}
+\contentsline {section}{\numberline {5.38}sbme280\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}calib\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}data Struct Reference}{56}{section.5.38}
+\contentsline {section}{\numberline {5.39}sbme280\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}data Struct Reference}{57}{section.5.39}
+\contentsline {subsection}{\numberline {5.39.1}Detailed Description}{57}{subsection.5.39.1}
+\contentsline {subsection}{\numberline {5.39.2}Member Data Documentation}{57}{subsection.5.39.2}
+\contentsline {subsubsection}{\numberline {5.39.2.1}humidity}{57}{subsubsection.5.39.2.1}
+\contentsline {subsubsection}{\numberline {5.39.2.2}pressure}{57}{subsubsection.5.39.2.2}
+\contentsline {subsubsection}{\numberline {5.39.2.3}temperature}{57}{subsubsection.5.39.2.3}
+\contentsline {section}{\numberline {5.40}sbme280\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}dev Struct Reference}{58}{section.5.40}
+\contentsline {subsection}{\numberline {5.40.1}Detailed Description}{58}{subsection.5.40.1}
+\contentsline {subsection}{\numberline {5.40.2}Member Data Documentation}{58}{subsection.5.40.2}
+\contentsline {subsubsection}{\numberline {5.40.2.1}calib\_data}{58}{subsubsection.5.40.2.1}
+\contentsline {subsubsection}{\numberline {5.40.2.2}comp\_data}{58}{subsubsection.5.40.2.2}
+\contentsline {subsubsection}{\numberline {5.40.2.3}dev\_id}{58}{subsubsection.5.40.2.3}
+\contentsline {subsubsection}{\numberline {5.40.2.4}settings}{59}{subsubsection.5.40.2.4}
+\contentsline {subsubsection}{\numberline {5.40.2.5}uncomp\_data}{59}{subsubsection.5.40.2.5}
+\contentsline {section}{\numberline {5.41}sbme280\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}setting Struct Reference}{59}{section.5.41}
+\contentsline {subsection}{\numberline {5.41.1}Detailed Description}{59}{subsection.5.41.1}
+\contentsline {subsection}{\numberline {5.41.2}Member Data Documentation}{59}{subsection.5.41.2}
+\contentsline {subsubsection}{\numberline {5.41.2.1}filter}{59}{subsubsection.5.41.2.1}
+\contentsline {subsubsection}{\numberline {5.41.2.2}osr\_h}{60}{subsubsection.5.41.2.2}
+\contentsline {subsubsection}{\numberline {5.41.2.3}osr\_t}{60}{subsubsection.5.41.2.3}
+\contentsline {subsubsection}{\numberline {5.41.2.4}power\_mode}{60}{subsubsection.5.41.2.4}
+\contentsline {subsubsection}{\numberline {5.41.2.5}standby\_time}{60}{subsubsection.5.41.2.5}
+\contentsline {section}{\numberline {5.42}sbme280\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}uncomp\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}data Struct Reference}{60}{section.5.42}
+\contentsline {section}{\numberline {5.43}Setting Class Reference}{61}{section.5.43}
+\contentsline {section}{\numberline {5.44}Tank Class Reference}{62}{section.5.44}
+\contentsline {subsection}{\numberline {5.44.1}Constructor \& Destructor Documentation}{63}{subsection.5.44.1}
+\contentsline {subsubsection}{\numberline {5.44.1.1}Tank()}{63}{subsubsection.5.44.1.1}
+\contentsline {section}{\numberline {5.45}Tank\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Object\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Name Struct Reference}{64}{section.5.45}
+\contentsline {subsection}{\numberline {5.45.1}Detailed Description}{64}{subsection.5.45.1}
+\contentsline {section}{\numberline {5.46}timerthread Class Reference}{64}{section.5.46}
+\contentsline {subsection}{\numberline {5.46.1}Member Function Documentation}{65}{subsection.5.46.1}
+\contentsline {subsubsection}{\numberline {5.46.1.1}msleep()}{65}{subsubsection.5.46.1.1}
+\contentsline {subsubsection}{\numberline {5.46.1.2}run()}{65}{subsubsection.5.46.1.2}
+\contentsline {subsubsection}{\numberline {5.46.1.3}sleep()}{65}{subsubsection.5.46.1.3}
+\contentsline {subsubsection}{\numberline {5.46.1.4}startWorking()}{66}{subsubsection.5.46.1.4}
+\contentsline {subsubsection}{\numberline {5.46.1.5}stopWorking()}{66}{subsubsection.5.46.1.5}
+\contentsline {subsubsection}{\numberline {5.46.1.6}usleep()}{66}{subsubsection.5.46.1.6}
+\contentsline {chapter}{\numberline {6}File Documentation}{69}{chapter.6}
+\contentsline {section}{\numberline {6.1}Smart\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Home\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Domotic/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Data\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager/data\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Frame.h File Reference}{69}{section.6.1}
+\contentsline {section}{\numberline {6.2}Smart\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Home\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Domotic/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Data\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager/datamanager.h File Reference}{69}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{70}{subsection.6.2.1}
+\contentsline {section}{\numberline {6.3}Smart\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Home\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Domotic/errormanager.h File Reference}{70}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{70}{subsection.6.3.1}
+\contentsline {section}{\numberline {6.4}Smart\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Home\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Domotic/global\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Enumated\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}And\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Extern.h File Reference}{71}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Detailed Description}{71}{subsection.6.4.1}
+\contentsline {section}{\numberline {6.5}Smart\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Home\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Domotic/tank.h File Reference}{71}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Detailed Description}{72}{subsection.6.5.1}
+\contentsline {section}{\numberline {6.6}Smart\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Home\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Domotic/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Timer\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Thread.h File Reference}{72}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}Detailed Description}{72}{subsection.6.6.1}
+\contentsline {chapter}{Index}{73}{section*.72}

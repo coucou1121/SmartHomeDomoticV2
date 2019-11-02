@@ -1,0 +1,277 @@
+\hypertarget{class_custom_plot_item}{}\doxysection{Custom\+Plot\+Item Class Reference}
+\label{class_custom_plot_item}\index{CustomPlotItem@{CustomPlotItem}}
+
+
+Inheritance diagram for Custom\+Plot\+Item\+:
+% FIG 0
+
+
+Collaboration diagram for Custom\+Plot\+Item\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a73683ceeaaab2681d2d4e7aa7fda14a3}\label{class_custom_plot_item_a73683ceeaaab2681d2d4e7aa7fda14a3}} 
+{\bfseries Custom\+Plot\+Item} (Q\+Quick\+Item $\ast$parent=nullptr, Q\+Object $\ast$plot\+View=nullptr)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_adeb274b4ceb53ffba0fdd99d813547de}\label{class_custom_plot_item_adeb274b4ceb53ffba0fdd99d813547de}} 
+void {\bfseries paint} (Q\+Painter $\ast$painter)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a0d2061adc2576bc4fdf023acaf48d3d1}\label{class_custom_plot_item_a0d2061adc2576bc4fdf023acaf48d3d1}} 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE void {\bfseries setup\+Style} (\mbox{\hyperlink{class_global_enumerate_a21292de6312673384c23f76865bd21af}{Global\+Enumerate\+::\+E\+\_\+\+Plot\+Style}} plotstyle, quint8 nb\+Of\+Trace)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a17b5b874d0086eb38f68f6782b3b9597}\label{class_custom_plot_item_a17b5b874d0086eb38f68f6782b3b9597}} 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE void {\bfseries setup\+Graph\+Label} (quint8 trace\+Number, Q\+String title\+Text)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_adf6f688d1116567bdf61a6da96d697b7}\label{class_custom_plot_item_adf6f688d1116567bdf61a6da96d697b7}} 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE void {\bfseries setup\+Trace\+Is\+Selected} (quint8 trace\+Number, bool is\+Visible)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_ac6ca7fd8b581c5785a07bb89931e4048}\label{class_custom_plot_item_ac6ca7fd8b581c5785a07bb89931e4048}} 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE void {\bfseries add\+Point} (const int graph\+Number, const double x, const double y)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_ad0d4c8ce4e7ef22bdee70d15c659ae9a}\label{class_custom_plot_item_ad0d4c8ce4e7ef22bdee70d15c659ae9a}} 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE void {\bfseries add\+Y\+Value} (qreal value\+Graph0, qreal value\+Graph1, qreal value\+Graph2, qreal value\+Graph3=0, qreal value\+Graph4=0, qreal value\+Graph5=0, qreal setting\+Trigger\+Value=0, bool tick\+As\+Date=true, quint8 tick\+Number=0, bool is\+The\+First\+Data=false)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_acad81ee25f0fdfabe2c5878d79c3c4b8}\label{class_custom_plot_item_acad81ee25f0fdfabe2c5878d79c3c4b8}} 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE void {\bfseries clear\+Graph\+And\+Values} ()
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a91a681d599d5b22981d5d7f8802a1a97}\label{class_custom_plot_item_a91a681d599d5b22981d5d7f8802a1a97}} 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE void {\bfseries replot} (bool resize)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_aad32569cde3f48160bdd3c3307e410eb}\label{class_custom_plot_item_aad32569cde3f48160bdd3c3307e410eb}} 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE void {\bfseries replot\+With\+Saved\+Data} (quint16 year, quint8 month, quint8 day)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a44c69019b8027a24dfcbc716901ad7e8}\label{class_custom_plot_item_a44c69019b8027a24dfcbc716901ad7e8}} 
+Q\+\_\+\+I\+N\+V\+O\+K\+A\+B\+LE void {\bfseries set\+Range} (const quint64 \&range)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a5fe1fa0c8681998d881726a070e4216b}\label{class_custom_plot_item_a5fe1fa0c8681998d881726a070e4216b}} 
+void {\bfseries set\+Draw\+Right\+To\+Left} (bool draw\+Right\+To\+Left)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a121bc978c879fb4fd4513041762ab5a6}\label{class_custom_plot_item_a121bc978c879fb4fd4513041762ab5a6}} 
+void {\bfseries set\+Nb\+Pixels} (const quint16 \&nb\+Pixels)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_aef8111b6426386c1c08910f22f9f0aca}\label{class_custom_plot_item_aef8111b6426386c1c08910f22f9f0aca}} 
+void {\bfseries set\+Setting\+Trigger\+Value} (const quint8 \&setting\+Trigger\+Value)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a8e0bebc7012ad9268a33f5b9d7ffd568}\label{class_custom_plot_item_a8e0bebc7012ad9268a33f5b9d7ffd568}} 
+void {\bfseries set\+Graph0\+Label} (const Q\+String \&graph0\+Label)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a1de5de9c96677b0e8d2023abd3dfd472}\label{class_custom_plot_item_a1de5de9c96677b0e8d2023abd3dfd472}} 
+void {\bfseries set\+Graph1\+Label} (const Q\+String \&graph1\+Label)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a69404afee9a91a5eec18cf6a8232ae64}\label{class_custom_plot_item_a69404afee9a91a5eec18cf6a8232ae64}} 
+void {\bfseries set\+Graph2\+Label} (const Q\+String \&graph2\+Label)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_afe770d42681348fa4558f4fd4504e46b}\label{class_custom_plot_item_afe770d42681348fa4558f4fd4504e46b}} 
+void {\bfseries set\+Graph3\+Label} (const Q\+String \&graph3\+Label)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_ae7966d03409b278132e655b2914a905b}\label{class_custom_plot_item_ae7966d03409b278132e655b2914a905b}} 
+void {\bfseries set\+Graph4\+Label} (const Q\+String \&graph4\+Label)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a06857d06b99a7b04a1d9ae70a80acc17}\label{class_custom_plot_item_a06857d06b99a7b04a1d9ae70a80acc17}} 
+void {\bfseries set\+Graph5\+Label} (const Q\+String \&graph5\+Label)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a10da62afac91390f877905738ea2fca2}\label{class_custom_plot_item_a10da62afac91390f877905738ea2fca2}} 
+void {\bfseries route\+Mouse\+Events} (Q\+Mouse\+Event $\ast$event)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_af8ab2441143f6cab1a25934bee9c981e}\label{class_custom_plot_item_af8ab2441143f6cab1a25934bee9c981e}} 
+virtual void {\bfseries mouse\+Press\+Event} (Q\+Mouse\+Event $\ast$event)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_ae638865796b087c916606cfc2aef23d5}\label{class_custom_plot_item_ae638865796b087c916606cfc2aef23d5}} 
+virtual void {\bfseries mouse\+Release\+Event} (Q\+Mouse\+Event $\ast$event)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a5d614d523e6da0290cfbb06473906767}\label{class_custom_plot_item_a5d614d523e6da0290cfbb06473906767}} 
+virtual void {\bfseries mouse\+Move\+Event} (Q\+Mouse\+Event $\ast$event)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a3a9e5320a5a0f6fdb892a6444723df95}\label{class_custom_plot_item_a3a9e5320a5a0f6fdb892a6444723df95}} 
+virtual void {\bfseries mouse\+Double\+Click\+Event} (Q\+Mouse\+Event $\ast$event)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_acc73191224765c33efbd6efdc997b70a}\label{class_custom_plot_item_acc73191224765c33efbd6efdc997b70a}} 
+void {\bfseries graph\+Clicked} (Q\+C\+P\+Abstract\+Plottable $\ast$plottable)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a1859600dd204375bc45a266d30848283}\label{class_custom_plot_item_a1859600dd204375bc45a266d30848283}} 
+void {\bfseries on\+Custom\+Replot} ()
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_af18d28fe83756a9d8d32eef5d718b888}\label{class_custom_plot_item_af18d28fe83756a9d8d32eef5d718b888}} 
+void {\bfseries update\+Custom\+Plot\+Size} ()
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_ad3cf8512b9227d7419fe20fea58e8723}\label{class_custom_plot_item_ad3cf8512b9227d7419fe20fea58e8723}} 
+void {\bfseries \+\_\+recieved\+Refresh\+Data\+Temperature\+Plot} ()
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a4500fdb9a9e0655883e9e76368a84264}\label{class_custom_plot_item_a4500fdb9a9e0655883e9e76368a84264}} 
+void {\bfseries update\+Plot} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a5c26c4291edc5e853397d4ad038d98bc}\label{class_custom_plot_item_a5c26c4291edc5e853397d4ad038d98bc}} 
+void {\bfseries setup\+Trace\+Wather\+Station} ()
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a67e28248ea917db71e1e6f51723f8e78}\label{class_custom_plot_item_a67e28248ea917db71e1e6f51723f8e78}} 
+void {\bfseries setup\+Trace\+Analog\+Trace} (quint8 nb\+Of\+Trace)
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_adaa839e8e5e6ce9a952c65d6c150cf4f}\label{class_custom_plot_item_adaa839e8e5e6ce9a952c65d6c150cf4f}} 
+void {\bfseries setup\+Trace\+Statistic\+Trace} (\mbox{\hyperlink{class_global_enumerate_a21292de6312673384c23f76865bd21af}{Global\+Enumerate\+::\+E\+\_\+\+Plot\+Style}} plotstyle)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a6f12c125d621e72c77c7afffb14cf8dd}\label{class_custom_plot_item_a6f12c125d621e72c77c7afffb14cf8dd}} 
+Q\+Date\+Time {\bfseries \+\_\+date\+Time}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a6b2415cc92a4cc8124a5f227678b6202}\label{class_custom_plot_item_a6b2415cc92a4cc8124a5f227678b6202}} 
+Q\+Object $\ast$ {\bfseries \+\_\+plot\+View}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a67dfd259fb91f13bac1f3a7c05c2baa0}\label{class_custom_plot_item_a67dfd259fb91f13bac1f3a7c05c2baa0}} 
+Q\+Object $\ast$ {\bfseries \+\_\+qobject\+Statistic\+Viewer}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a0bee65047b04ba5f4e45837acd1ec88d}\label{class_custom_plot_item_a0bee65047b04ba5f4e45837acd1ec88d}} 
+Q\+Custom\+Plot $\ast$ {\bfseries \+\_\+custom\+Plot}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a3f1f9c93290c2bf9dab6507ade81dc4a}\label{class_custom_plot_item_a3f1f9c93290c2bf9dab6507ade81dc4a}} 
+Q\+C\+P\+Graph $\ast$ {\bfseries \+\_\+graph0}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_aa890c35a02cefc46ed18c56de44570e2}\label{class_custom_plot_item_aa890c35a02cefc46ed18c56de44570e2}} 
+Q\+C\+P\+Graph $\ast$ {\bfseries \+\_\+graph1}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a25601529b3cffaf44b62e5a0f53958bb}\label{class_custom_plot_item_a25601529b3cffaf44b62e5a0f53958bb}} 
+Q\+C\+P\+Graph $\ast$ {\bfseries \+\_\+graph2}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_ab91823f5fb8e3a9348ccc6c18c47e7f7}\label{class_custom_plot_item_ab91823f5fb8e3a9348ccc6c18c47e7f7}} 
+Q\+C\+P\+Graph $\ast$ {\bfseries \+\_\+graph3}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a7adcea98bc377f188af939a42b044f81}\label{class_custom_plot_item_a7adcea98bc377f188af939a42b044f81}} 
+Q\+C\+P\+Graph $\ast$ {\bfseries \+\_\+graph4}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_aa6365495694b3d6157395cb2759201c1}\label{class_custom_plot_item_aa6365495694b3d6157395cb2759201c1}} 
+Q\+C\+P\+Graph $\ast$ {\bfseries \+\_\+graph5}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a30cc94b62120d0e9d16127c875fd48b3}\label{class_custom_plot_item_a30cc94b62120d0e9d16127c875fd48b3}} 
+Q\+C\+P\+Bars $\ast$ {\bfseries \+\_\+bar0}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a19f352beb08989bc250f3fe4944b3486}\label{class_custom_plot_item_a19f352beb08989bc250f3fe4944b3486}} 
+Q\+C\+P\+Bars $\ast$ {\bfseries \+\_\+bar1}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a3017ea918515074798f36f6de68bffdd}\label{class_custom_plot_item_a3017ea918515074798f36f6de68bffdd}} 
+Q\+C\+P\+Bars $\ast$ {\bfseries \+\_\+bar2}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a8bce869868b91bc4eafa71329150a480}\label{class_custom_plot_item_a8bce869868b91bc4eafa71329150a480}} 
+Q\+String {\bfseries \+\_\+graph0\+Label}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_acedc912d50d8be06002b360a5e03fb7d}\label{class_custom_plot_item_acedc912d50d8be06002b360a5e03fb7d}} 
+Q\+String {\bfseries \+\_\+graph1\+Label}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a9e6f300ab4e640b73a6541c161c8ce11}\label{class_custom_plot_item_a9e6f300ab4e640b73a6541c161c8ce11}} 
+Q\+String {\bfseries \+\_\+graph2\+Label}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a5d82af0e596375fcbb35a94dcf5513a3}\label{class_custom_plot_item_a5d82af0e596375fcbb35a94dcf5513a3}} 
+Q\+String {\bfseries \+\_\+graph3\+Label}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_aeb45f661a9b144ae0daaa95d75149498}\label{class_custom_plot_item_aeb45f661a9b144ae0daaa95d75149498}} 
+Q\+String {\bfseries \+\_\+graph4\+Label}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a2432876047c55b13d03c20d8fc857cf9}\label{class_custom_plot_item_a2432876047c55b13d03c20d8fc857cf9}} 
+Q\+String {\bfseries \+\_\+graph5\+Label}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a2529f5be51d109f9e683b9df01ed5350}\label{class_custom_plot_item_a2529f5be51d109f9e683b9df01ed5350}} 
+Q\+C\+P\+Item\+Straight\+Line $\ast$ {\bfseries \+\_\+line}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_af89b00c1467987f1f469244285ff16b2}\label{class_custom_plot_item_af89b00c1467987f1f469244285ff16b2}} 
+Q\+Color {\bfseries \+\_\+axis\+Tick\+Plot}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_aaaf1a3d9edff7cdaa9008f325b7a38e5}\label{class_custom_plot_item_aaaf1a3d9edff7cdaa9008f325b7a38e5}} 
+quint8 {\bfseries \+\_\+nb\+Of\+Trace}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_aa440382bf34b53c4846e93b3a0c2beda}\label{class_custom_plot_item_aa440382bf34b53c4846e93b3a0c2beda}} 
+quint64 {\bfseries \+\_\+nb\+Pixels}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_af704dc92e66b452f0bc162aa789e077c}\label{class_custom_plot_item_af704dc92e66b452f0bc162aa789e077c}} 
+quint64 {\bfseries \+\_\+range}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a14b04ed6a2db1a07653583d8a3f8e03e}\label{class_custom_plot_item_a14b04ed6a2db1a07653583d8a3f8e03e}} 
+quint64 {\bfseries \+\_\+\+C\+PT}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a3ae3ad591d17499c9bceab000ad33da2}\label{class_custom_plot_item_a3ae3ad591d17499c9bceab000ad33da2}} 
+double {\bfseries \+\_\+\+C\+P\+T\+Min}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a064882f3ac487feb6b629b67e10c1266}\label{class_custom_plot_item_a064882f3ac487feb6b629b67e10c1266}} 
+double {\bfseries \+\_\+\+C\+P\+T\+Max}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a5f544aa3cbe1977de0d52b227860cec7}\label{class_custom_plot_item_a5f544aa3cbe1977de0d52b227860cec7}} 
+quint8 {\bfseries \+\_\+y\+Value}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a2af146133be23f508ae02267bd6b85b8}\label{class_custom_plot_item_a2af146133be23f508ae02267bd6b85b8}} 
+quint16 {\bfseries \+\_\+y\+Value\+Min}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a0a505ba98f5db1e695851d9f9e7bb873}\label{class_custom_plot_item_a0a505ba98f5db1e695851d9f9e7bb873}} 
+quint16 {\bfseries \+\_\+y\+Value\+Max}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a631fb065ef4b87dd8c9d176ad7820b38}\label{class_custom_plot_item_a631fb065ef4b87dd8c9d176ad7820b38}} 
+qreal {\bfseries \+\_\+setting\+Trigger\+Value}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_aaed877166d0dfcc1fa6783693591cf8d}\label{class_custom_plot_item_aaed877166d0dfcc1fa6783693591cf8d}} 
+bool {\bfseries \+\_\+plot\+With\+Y\+Border\+Gap}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_acb980de4d6f86646c8f8efd624cf41a0}\label{class_custom_plot_item_acb980de4d6f86646c8f8efd624cf41a0}} 
+int {\bfseries \+\_\+object\+Instance}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a6e67019e2f305ee12b84c5bba20171b0}\label{class_custom_plot_item_a6e67019e2f305ee12b84c5bba20171b0}} 
+Q\+Color {\bfseries \+\_\+trace\+Setting\+Color}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a7c42cb4af7c940f5cd6807d8b89ac7ee}\label{class_custom_plot_item_a7c42cb4af7c940f5cd6807d8b89ac7ee}} 
+Q\+Vector$<$ double $>$ {\bfseries \+\_\+\+Y\+Data}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_aea63e8fe1f4a1405a67ebcf833c7cf0d}\label{class_custom_plot_item_aea63e8fe1f4a1405a67ebcf833c7cf0d}} 
+Q\+Vector$<$ double $>$ {\bfseries \+\_\+minus\+Y\+Data}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a56f59a54df78154c34850f76a59e911e}\label{class_custom_plot_item_a56f59a54df78154c34850f76a59e911e}} 
+Q\+Vector$<$ double $>$ {\bfseries \+\_\+\+X\+Data}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a4fae9a38bc998dcd6181ddf55f8e9491}\label{class_custom_plot_item_a4fae9a38bc998dcd6181ddf55f8e9491}} 
+Q\+Vector$<$ int $>$ {\bfseries \+\_\+\+X\+Data\+Int}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a1141ca797a0cbd1272f6e9dfe2fc4b78}\label{class_custom_plot_item_a1141ca797a0cbd1272f6e9dfe2fc4b78}} 
+Q\+Vector$<$ int $>$ {\bfseries \+\_\+\+Y1\+Data\+Int}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_aeebcde28a9b29e19710f296295e79959}\label{class_custom_plot_item_aeebcde28a9b29e19710f296295e79959}} 
+Q\+Vector$<$ int $>$ {\bfseries \+\_\+\+Y2\+Data\+Int}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_ae2c5bcbf17532482f76f3a8b612a0f63}\label{class_custom_plot_item_ae2c5bcbf17532482f76f3a8b612a0f63}} 
+\mbox{\hyperlink{class_global_enumerate_a21292de6312673384c23f76865bd21af}{Global\+Enumerate\+::\+E\+\_\+\+Plot\+Style}} {\bfseries \+\_\+my\+Plot\+Style}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_aeddebbafb943460b03709df11e3a4322}\label{class_custom_plot_item_aeddebbafb943460b03709df11e3a4322}} 
+Q\+Shared\+Pointer$<$ Q\+C\+P\+Graph\+Data\+Container $>$ {\bfseries \+\_\+array\+Plot\+Container\+Pointer\+Graph0}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_ab3abaa6df9a1386f771ea0fbb8a788ff}\label{class_custom_plot_item_ab3abaa6df9a1386f771ea0fbb8a788ff}} 
+Q\+Shared\+Pointer$<$ Q\+C\+P\+Graph\+Data\+Container $>$ {\bfseries \+\_\+array\+Plot\+Container\+Pointer\+Graph1}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a02daafb6ec2f52d37aec4c67c25b4305}\label{class_custom_plot_item_a02daafb6ec2f52d37aec4c67c25b4305}} 
+Q\+Shared\+Pointer$<$ Q\+C\+P\+Graph\+Data\+Container $>$ {\bfseries \+\_\+array\+Plot\+Container\+Pointer\+Graph2}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a69ba90593ede3d2b66dbd972fb1fb55a}\label{class_custom_plot_item_a69ba90593ede3d2b66dbd972fb1fb55a}} 
+Q\+Shared\+Pointer$<$ Q\+C\+P\+Graph\+Data\+Container $>$ {\bfseries \+\_\+array\+Plot\+Container\+Pointer\+Graph3}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a9b651e7cbd0573902fcd69a987c120a6}\label{class_custom_plot_item_a9b651e7cbd0573902fcd69a987c120a6}} 
+Q\+Shared\+Pointer$<$ Q\+C\+P\+Graph\+Data\+Container $>$ {\bfseries \+\_\+array\+Plot\+Container\+Pointer\+Graph4}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_af3d81733e53caf9883ebfbf2083483b2}\label{class_custom_plot_item_af3d81733e53caf9883ebfbf2083483b2}} 
+Q\+Shared\+Pointer$<$ Q\+C\+P\+Graph\+Data\+Container $>$ {\bfseries \+\_\+array\+Plot\+Container\+Pointer\+Graph5}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a0af14e1dea309d423348a7f3d68c7b1a}\label{class_custom_plot_item_a0af14e1dea309d423348a7f3d68c7b1a}} 
+Q\+C\+P\+Graph\+Data\+Container\+::const\+\_\+iterator {\bfseries \+\_\+it\+Begin}
+\item 
+\mbox{\Hypertarget{class_custom_plot_item_a01b5fd0f9ae4e7fdeeb744d54a177311}\label{class_custom_plot_item_a01b5fd0f9ae4e7fdeeb744d54a177311}} 
+Q\+C\+P\+Graph\+Data\+Container\+::const\+\_\+iterator {\bfseries \+\_\+it\+End}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Smart\+Home\+Domotic/customplotitem.\+h\item 
+Smart\+Home\+Domotic/customplotitem.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,238 @@
+\hypertarget{class_data_analyser}{}\doxysection{Data\+Analyser Class Reference}
+\label{class_data_analyser}\index{DataAnalyser@{DataAnalyser}}
+
+
+Inheritance diagram for Data\+Analyser\+:
+% FIG 0
+
+
+Collaboration diagram for Data\+Analyser\+:
+% FIG 1
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_data_analyser_ad7a87652c009616f94eb92012ccbbc5e}\label{class_data_analyser_ad7a87652c009616f94eb92012ccbbc5e}} 
+void {\bfseries Receivedreplot\+With\+Saved\+Data} (int year, int month, int day)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_data_analyser_aa3fecb8b273373959c37e98f67bf3ac8}\label{class_data_analyser_aa3fecb8b273373959c37e98f67bf3ac8}} 
+{\bfseries Data\+Analyser} (quint16 nb\+Data\+Fram\+To\+Temp\+Save, Q\+Object $\ast$statistic\+Value\+Viewer, Q\+Object $\ast$statistic\+Viewer)
+\item 
+\mbox{\Hypertarget{class_data_analyser_adb6cb2d92f144679a05ea616c3f6c2c7}\label{class_data_analyser_adb6cb2d92f144679a05ea616c3f6c2c7}} 
+void {\bfseries save\+Data\+File} ()
+\item 
+\mbox{\Hypertarget{class_data_analyser_af18d289b9b0fe1f56ca7deb1bac6da24}\label{class_data_analyser_af18d289b9b0fe1f56ca7deb1bac6da24}} 
+void {\bfseries set\+Buffer} (Q\+Vector$<$ \mbox{\hyperlink{class_data_frame}{Data\+Frame}} $>$ $\ast$buffer)
+\item 
+\mbox{\Hypertarget{class_data_analyser_a8ea06484959c63edf17456c5150f5c1f}\label{class_data_analyser_a8ea06484959c63edf17456c5150f5c1f}} 
+void {\bfseries save\+Temp\+Data} (\mbox{\hyperlink{class_data_frame}{Data\+Frame}} $\ast$data\+Frame)
+\item 
+\mbox{\Hypertarget{class_data_analyser_a33e1e6b92efbecf8ca8743efa81b5b34}\label{class_data_analyser_a33e1e6b92efbecf8ca8743efa81b5b34}} 
+void {\bfseries set\+Save\+Temp\+File} (bool save\+Temp\+File)
+\item 
+\mbox{\Hypertarget{class_data_analyser_ad3a0b2bd40c3c46779f96dd6d98fce47}\label{class_data_analyser_ad3a0b2bd40c3c46779f96dd6d98fce47}} 
+void {\bfseries set\+Save\+File} (bool save\+File)
+\item 
+\mbox{\Hypertarget{class_data_analyser_a3cfb4aba7a20ec6eecab441d8f633d31}\label{class_data_analyser_a3cfb4aba7a20ec6eecab441d8f633d31}} 
+void {\bfseries set\+Data\+Frame} (\mbox{\hyperlink{class_data_frame}{Data\+Frame}} $\ast$data\+Frame)
+\item 
+\mbox{\Hypertarget{class_data_analyser_af90638fdcdb01adc9ff5e8e70f1d329c}\label{class_data_analyser_af90638fdcdb01adc9ff5e8e70f1d329c}} 
+void {\bfseries set\+Itdata\+Frame\+End} (const Q\+Vector$<$ \mbox{\hyperlink{class_data_frame}{Data\+Frame}} $>$\+::iterator \&itdata\+Frame\+End)
+\item 
+\mbox{\Hypertarget{class_data_analyser_abfdc197e864b28e18a4626e0889f9739}\label{class_data_analyser_abfdc197e864b28e18a4626e0889f9739}} 
+void {\bfseries set\+Nb\+Of\+Saved\+Data\+In\+Buffer} (const quint16 \&nb\+Of\+Saved\+Data\+In\+Buffer)
+\item 
+\mbox{\Hypertarget{class_data_analyser_afa6ad24e4f7a02893ec9429c23449e75}\label{class_data_analyser_afa6ad24e4f7a02893ec9429c23449e75}} 
+void {\bfseries set\+Reset\+Temp\+File} (bool reset\+Temp\+File)
+\item 
+\mbox{\Hypertarget{class_data_analyser_af38e312d5a99dd3f374a08f319bcbb34}\label{class_data_analyser_af38e312d5a99dd3f374a08f319bcbb34}} 
+bool {\bfseries save\+Finished} () const
+\item 
+\mbox{\Hypertarget{class_data_analyser_acd1598c5b802ccd93d18fa32024d5c82}\label{class_data_analyser_acd1598c5b802ccd93d18fa32024d5c82}} 
+void {\bfseries set\+Date\+Time} (const Q\+Date\+Time \&date\+Time)
+\item 
+\mbox{\Hypertarget{class_data_analyser_ac66a64cd0965cbb160a42f1acc53bcb7}\label{class_data_analyser_ac66a64cd0965cbb160a42f1acc53bcb7}} 
+bool {\bfseries save\+Temp\+File\+Finished} () const
+\item 
+\mbox{\Hypertarget{class_data_analyser_a21a84ddd156cda0e40ce5fef6ddd69ce}\label{class_data_analyser_a21a84ddd156cda0e40ce5fef6ddd69ce}} 
+bool {\bfseries save\+File\+Finished} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_data_analyser_ae7449ba974be4c82ac56e1a0cdaf0122}{msleep}} (unsigned long msecs)
+\begin{DoxyCompactList}\small\item\em waiting delay \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_data_analyser_a2bc1b7f83cb67d27a3d2b340291f96c2}{run}} ()
+\begin{DoxyCompactList}\small\item\em called function when the thread start \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a69915cf0c98cf1e7a3635477690caa23}\label{class_data_analyser_a69915cf0c98cf1e7a3635477690caa23}} 
+void {\bfseries \+\_\+update\+Data\+For\+The\+Hour} (quint8 minute\+To\+Update)
+\item 
+\mbox{\Hypertarget{class_data_analyser_a0f4e0bcdf7050384775b4eb4b69029f6}\label{class_data_analyser_a0f4e0bcdf7050384775b4eb4b69029f6}} 
+void {\bfseries \+\_\+update\+Data\+For\+The\+Day} (Q\+Date\+Time $\ast$date\+To\+Update)
+\item 
+\mbox{\Hypertarget{class_data_analyser_aec484ffeebde87ddbef61a0f85a820ea}\label{class_data_analyser_aec484ffeebde87ddbef61a0f85a820ea}} 
+void {\bfseries \+\_\+update\+Data\+For\+The\+Month} (Q\+Date\+Time $\ast$date\+To\+Update)
+\item 
+\mbox{\Hypertarget{class_data_analyser_aa2b784091d2f9d40b015bccfe564f36a}\label{class_data_analyser_aa2b784091d2f9d40b015bccfe564f36a}} 
+void {\bfseries \+\_\+create\+Directory} (Q\+Date\+Time $\ast$date\+Time\+To\+Check)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_data_analyser_af8290d4120226f668bd0781d0c2e9ac8}\label{class_data_analyser_af8290d4120226f668bd0781d0c2e9ac8}} 
+Q\+Vector$<$ \mbox{\hyperlink{class_data_frame}{Data\+Frame}} $>$ $\ast$ {\bfseries \+\_\+buffer}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a192049952696f552958065829c808aef}\label{class_data_analyser_a192049952696f552958065829c808aef}} 
+Q\+Vector$<$ \mbox{\hyperlink{class_data_frame}{Data\+Frame}} $>$\+::iterator {\bfseries \+\_\+itdata\+Frame\+End}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a94c59ae2996f63334f70ff86a87dae89}\label{class_data_analyser_a94c59ae2996f63334f70ff86a87dae89}} 
+quint16 {\bfseries \+\_\+nb\+Of\+Saved\+Data\+In\+Buffer}
+\item 
+\mbox{\Hypertarget{class_data_analyser_ada0cb38d0828502da68b263df9a595a8}\label{class_data_analyser_ada0cb38d0828502da68b263df9a595a8}} 
+Q\+List$<$ \mbox{\hyperlink{class_data_frame}{Data\+Frame}} $>$ {\bfseries \+\_\+buffer\+Temp\+Data}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a971d867cab6109c27c32d780a1390dbe}\label{class_data_analyser_a971d867cab6109c27c32d780a1390dbe}} 
+Q\+File {\bfseries \+\_\+file\+Temp\+Data}
+\item 
+\mbox{\Hypertarget{class_data_analyser_acf5179817731ac36b87ea31b2e7938c7}\label{class_data_analyser_acf5179817731ac36b87ea31b2e7938c7}} 
+quint16 {\bfseries \+\_\+nb\+Data\+Fram\+To\+Temp\+Save}
+\item 
+\mbox{\Hypertarget{class_data_analyser_ad737236451ea7dfccd4a24af577c23fb}\label{class_data_analyser_ad737236451ea7dfccd4a24af577c23fb}} 
+bool {\bfseries \+\_\+save\+Temp\+File}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a04b4a10b57885f5bba5e0a347e2196ea}\label{class_data_analyser_a04b4a10b57885f5bba5e0a347e2196ea}} 
+bool {\bfseries \+\_\+save\+Temp\+File\+Finished}
+\item 
+\mbox{\Hypertarget{class_data_analyser_aae6244414e401603575ebb0e8180f298}\label{class_data_analyser_aae6244414e401603575ebb0e8180f298}} 
+bool {\bfseries \+\_\+save\+File}
+\item 
+\mbox{\Hypertarget{class_data_analyser_aa5843f83bfc2b66a4dde3c089ea375d9}\label{class_data_analyser_aa5843f83bfc2b66a4dde3c089ea375d9}} 
+bool {\bfseries \+\_\+save\+File\+Finished}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a371fce4400e360254a757d7b6223576a}\label{class_data_analyser_a371fce4400e360254a757d7b6223576a}} 
+bool {\bfseries \+\_\+reset\+Temp\+File}
+\item 
+\mbox{\Hypertarget{class_data_analyser_adee84d6187a629f6438d45d8526e8120}\label{class_data_analyser_adee84d6187a629f6438d45d8526e8120}} 
+bool {\bfseries \+\_\+update\+Day\+Data}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a93e0f164443788b1f9170a63feab6083}\label{class_data_analyser_a93e0f164443788b1f9170a63feab6083}} 
+bool {\bfseries \+\_\+update\+Month\+Data}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a3c850e5e81ea5af063628e06d60ec2e1}\label{class_data_analyser_a3c850e5e81ea5af063628e06d60ec2e1}} 
+bool {\bfseries \+\_\+save\+Finished}
+\item 
+\mbox{\Hypertarget{class_data_analyser_ab45f28eab2b259af6b6f79f41cdc2706}\label{class_data_analyser_ab45f28eab2b259af6b6f79f41cdc2706}} 
+\mbox{\hyperlink{class_data_frame}{Data\+Frame}} $\ast$ {\bfseries \+\_\+data\+Frame}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a590243d19e2fbe67d8d39cc82de99d28}\label{class_data_analyser_a590243d19e2fbe67d8d39cc82de99d28}} 
+Q\+String {\bfseries \+\_\+directory\+Data\+Main}
+\item 
+\mbox{\Hypertarget{class_data_analyser_ae977bcf583d2102a58b4f9c7ea72fbf3}\label{class_data_analyser_ae977bcf583d2102a58b4f9c7ea72fbf3}} 
+Q\+String {\bfseries \+\_\+directory\+File\+Name\+Year}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a4c607714f851e5f6a1c5e50999199a5b}\label{class_data_analyser_a4c607714f851e5f6a1c5e50999199a5b}} 
+Q\+String {\bfseries \+\_\+directory\+File\+Name\+Month}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a35b417b5c27e04c8a77df4f43d20534e}\label{class_data_analyser_a35b417b5c27e04c8a77df4f43d20534e}} 
+Q\+String {\bfseries \+\_\+directory\+File\+Name\+Day}
+\item 
+\mbox{\Hypertarget{class_data_analyser_ae78b817c33969509f846b0d1908dd3c0}\label{class_data_analyser_ae78b817c33969509f846b0d1908dd3c0}} 
+Q\+String {\bfseries \+\_\+directory\+File\+Name\+Hour}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a84aa2bcd48c36e3dc0b3185563e964ae}\label{class_data_analyser_a84aa2bcd48c36e3dc0b3185563e964ae}} 
+Q\+String {\bfseries \+\_\+directory\+File\+Name\+Minute}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a81a6de103db72b0a1017176cc1c872c5}\label{class_data_analyser_a81a6de103db72b0a1017176cc1c872c5}} 
+quint16 {\bfseries \+\_\+wait\+Delay\+In\+Mili}
+\item 
+\mbox{\Hypertarget{class_data_analyser_ac97b7fc34a62c74e34197360233fb34a}\label{class_data_analyser_ac97b7fc34a62c74e34197360233fb34a}} 
+Q\+Date\+Time {\bfseries \+\_\+date\+Time}
+\item 
+\mbox{\Hypertarget{class_data_analyser_ad3b11b901c25e6a3f781c4eaf0729fab}\label{class_data_analyser_ad3b11b901c25e6a3f781c4eaf0729fab}} 
+double {\bfseries \+\_\+temp\+Min}
+\item 
+\mbox{\Hypertarget{class_data_analyser_aa8e0553194a848bced5a71e9ac993ba0}\label{class_data_analyser_aa8e0553194a848bced5a71e9ac993ba0}} 
+double {\bfseries \+\_\+temp\+Max}
+\item 
+\mbox{\Hypertarget{class_data_analyser_acde07265127abe90712ef0cbc292ec18}\label{class_data_analyser_acde07265127abe90712ef0cbc292ec18}} 
+double {\bfseries \+\_\+hum\+Min}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a0b45014019ed40081b99ac7ec0dd6565}\label{class_data_analyser_a0b45014019ed40081b99ac7ec0dd6565}} 
+double {\bfseries \+\_\+hum\+Max}
+\item 
+\mbox{\Hypertarget{class_data_analyser_ab500ac3e911414654cf10123b9b77a72}\label{class_data_analyser_ab500ac3e911414654cf10123b9b77a72}} 
+double {\bfseries \+\_\+press\+Min}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a6ad45b0b0c6b95d83909b1d748aeb72a}\label{class_data_analyser_a6ad45b0b0c6b95d83909b1d748aeb72a}} 
+double {\bfseries \+\_\+press\+Max}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a01efeeb691f2248d330a7a218de02cb9}\label{class_data_analyser_a01efeeb691f2248d330a7a218de02cb9}} 
+qint16 {\bfseries \+\_\+conso\+Chan0}
+\item 
+\mbox{\Hypertarget{class_data_analyser_aefa7e30468a0e6d8ee03db221e2fc1d3}\label{class_data_analyser_aefa7e30468a0e6d8ee03db221e2fc1d3}} 
+qint16 {\bfseries \+\_\+conso\+Chan1}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a04804c5ee9fbd42cb6bd21db32f86e95}\label{class_data_analyser_a04804c5ee9fbd42cb6bd21db32f86e95}} 
+qint16 {\bfseries \+\_\+conso\+Chan2}
+\item 
+\mbox{\Hypertarget{class_data_analyser_aca78e4f93bde0c8f29ff7346117a2676}\label{class_data_analyser_aca78e4f93bde0c8f29ff7346117a2676}} 
+qint16 {\bfseries \+\_\+conso\+Chan3}
+\item 
+\mbox{\Hypertarget{class_data_analyser_ae579fefae857d43c480da600ab506073}\label{class_data_analyser_ae579fefae857d43c480da600ab506073}} 
+Q\+Object $\ast$ {\bfseries \+\_\+qobject\+Stastistic\+Value\+Viewer}
+\item 
+\mbox{\Hypertarget{class_data_analyser_a509d52d2c3306901cd11dc3409d2180e}\label{class_data_analyser_a509d52d2c3306901cd11dc3409d2180e}} 
+Q\+Object $\ast$ {\bfseries \+\_\+statistic\+Viewer}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_data_analyser_ae7449ba974be4c82ac56e1a0cdaf0122}\label{class_data_analyser_ae7449ba974be4c82ac56e1a0cdaf0122}} 
+\index{DataAnalyser@{DataAnalyser}!msleep@{msleep}}
+\index{msleep@{msleep}!DataAnalyser@{DataAnalyser}}
+\doxysubsubsection{\texorpdfstring{msleep()}{msleep()}}
+{\footnotesize\ttfamily static void Data\+Analyser\+::msleep (\begin{DoxyParamCaption}\item[{unsigned long}]{msecs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+waiting delay 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msleep} & is the time in miliseconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_data_analyser_a2bc1b7f83cb67d27a3d2b340291f96c2}\label{class_data_analyser_a2bc1b7f83cb67d27a3d2b340291f96c2}} 
+\index{DataAnalyser@{DataAnalyser}!run@{run}}
+\index{run@{run}!DataAnalyser@{DataAnalyser}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Data\+Analyser\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+called function when the thread start 
+
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 3
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Smart\+Home\+Domotic/\+Data\+Manager/dataanalyser.\+h\item 
+Smart\+Home\+Domotic/\+Data\+Manager/dataanalyser.\+cpp\end{DoxyCompactItemize}

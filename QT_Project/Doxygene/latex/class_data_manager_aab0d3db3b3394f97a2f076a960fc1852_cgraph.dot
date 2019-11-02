@@ -1,0 +1,24 @@
+digraph "DataManager::run"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="DataManager::run",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="called function when the thread start"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="DataFrame::ADS115_1\l_chan0",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_data_frame.html#afeffc3d312746825de69b007e77941c7",tooltip="Getter for ADS115_1_chan0 attribute."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="DataFrame::ADS115_1\l_chan1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_data_frame.html#a3d8309ca261ed3a506e95fe0447ca939",tooltip="Getter for ADS115_1_chan1 attribute."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="DataFrame::ADS115_1\l_chan2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_data_frame.html#a18c0fa150792da5e1acc75e7e08c342f",tooltip="Getter for ADS115_1_chan2 attribute."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="DataFrame::ADS115_1\l_chan3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_data_frame.html#a83bacb791a2f7a1fc46f37886ce18bf6",tooltip="Getter for ADS115_1_chan3 attribute."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="DataFrame::BME280_humidity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_data_frame.html#ad70782bfd8bad9239840c0e3315b230e",tooltip="Getter for BME280_humidity attribute."];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="DataFrame::BME280_pressure",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_data_frame.html#a28daba4a3d966437be73c685d0128aa6",tooltip="Getter for BME280_pressure attribute."];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="DataFrame::BME280_temperature",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_data_frame.html#a26f6f8c0e4dcf881c8daa3f21bebc522",tooltip="Getter for BME280_temperature attribute."];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="DataManager::msleep",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_data_manager.html#a7e7ecf621f23fa25b07d6aa93ae81cda",tooltip="waiting delay"];
+}

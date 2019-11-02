@@ -1,0 +1,289 @@
+\hypertarget{class_a_d_s1115_item}{}\doxysection{A\+D\+S1115\+Item Class Reference}
+\label{class_a_d_s1115_item}\index{ADS1115Item@{ADS1115Item}}
+
+
+Inheritance diagram for A\+D\+S1115\+Item\+:
+% FIG 0
+
+
+Collaboration diagram for A\+D\+S1115\+Item\+:
+% FIG 1
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a2492c18a3066022086df02ce06f7461e}\label{class_a_d_s1115_item_a2492c18a3066022086df02ce06f7461e}} 
+void {\bfseries send\+Tank\+Actual\+Volume\+Changed} (int object\+ID, int actual\+Volume)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a7e85e787895eadb2e174f26e0ba54e3a}\label{class_a_d_s1115_item_a7e85e787895eadb2e174f26e0ba54e3a}} 
+{\bfseries A\+D\+S1115\+Item} (Q\+String device\+Name, quint8 device\+I2\+C\+Adress, Q\+Object $\ast$A\+D\+S1115\+Display=nullptr, Q\+Object $\ast$room\+Data\+Plot=nullptr, \mbox{\hyperlink{classtimerthread}{timerthread}} $\ast$I2\+C\+Thread=nullptr, Q\+Object $\ast$home\+Viewer=nullptr)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a8dfe0a8e6ca2b5e6d0492b89e0855c0e}\label{class_a_d_s1115_item_a8dfe0a8e6ca2b5e6d0492b89e0855c0e}} 
+ads\+Rate\+\_\+t {\bfseries ads\+\_\+rate} () const
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a1977c0bbe8ed56145f7d7a27021a5bc3}\label{class_a_d_s1115_item_a1977c0bbe8ed56145f7d7a27021a5bc3}} 
+void {\bfseries set\+Ads\+\_\+rate} (const ads\+Rate\+\_\+t \&ads\+\_\+rate)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a4158518dbb65965b7388436ffd3331f6}\label{class_a_d_s1115_item_a4158518dbb65965b7388436ffd3331f6}} 
+bool {\bfseries device\+Is\+Ready} () const
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a4f6a11d9dda25e65cba076c881febd16}\label{class_a_d_s1115_item_a4f6a11d9dda25e65cba076c881febd16}} 
+void {\bfseries set\+Tank\+Chan0\+Volume\+Max} (const quint16 \&tank\+Chan0\+Volume\+Max)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a577b5dcbe61df843a519894c18eb06df}\label{class_a_d_s1115_item_a577b5dcbe61df843a519894c18eb06df}} 
+void {\bfseries set\+Tank\+Chan1\+Volume\+Max} (const quint16 \&tank\+Chan1\+Volume\+Max)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_ae3b62d4f645cdaf08d83358f35962a87}\label{class_a_d_s1115_item_ae3b62d4f645cdaf08d83358f35962a87}} 
+void {\bfseries set\+Tank\+Chan2\+Volume\+Max} (const quint16 \&tank\+Chan2\+Volume\+Max)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a6d3549e1675e2e5740828714d0e81eb8}\label{class_a_d_s1115_item_a6d3549e1675e2e5740828714d0e81eb8}} 
+void {\bfseries set\+Tank\+Chan3\+Volume\+Max} (const quint16 \&tank\+Chan3\+Volume\+Max)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a33b08459458573ac828c795aff0f4af4}\label{class_a_d_s1115_item_a33b08459458573ac828c795aff0f4af4}} 
+void {\bfseries set\+Tank\+Chan0\+Liquide\+Inside} (const \mbox{\hyperlink{class_global_enumerate_a73257283da9ea629bb4f7182fe008d94}{Global\+Enumerate\+::\+E\+\_\+\+Tank\+Liquid\+Inside}} \&tank\+Chan0\+Liquide\+Inside)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a074f5fce09cbfb8a668c36a084817af8}\label{class_a_d_s1115_item_a074f5fce09cbfb8a668c36a084817af8}} 
+void {\bfseries set\+Tank\+Chan1\+Liquide\+Inside} (const \mbox{\hyperlink{class_global_enumerate_a73257283da9ea629bb4f7182fe008d94}{Global\+Enumerate\+::\+E\+\_\+\+Tank\+Liquid\+Inside}} \&tank\+Chan1\+Liquide\+Inside)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a8b31cc5d53dfa044e52fdccefe5179d9}\label{class_a_d_s1115_item_a8b31cc5d53dfa044e52fdccefe5179d9}} 
+void {\bfseries set\+Tank\+Chan2\+Liquide\+Inside} (const \mbox{\hyperlink{class_global_enumerate_a73257283da9ea629bb4f7182fe008d94}{Global\+Enumerate\+::\+E\+\_\+\+Tank\+Liquid\+Inside}} \&tank\+Chan2\+Liquide\+Inside)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a1b7aeb349df770797b34164e223582c2}\label{class_a_d_s1115_item_a1b7aeb349df770797b34164e223582c2}} 
+void {\bfseries set\+Tank\+Chan3\+Liquide\+Inside} (const \mbox{\hyperlink{class_global_enumerate_a73257283da9ea629bb4f7182fe008d94}{Global\+Enumerate\+::\+E\+\_\+\+Tank\+Liquid\+Inside}} \&tank\+Chan3\+Liquide\+Inside)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a64759a621fc9f0f3e9ab4563a53e923b}\label{class_a_d_s1115_item_a64759a621fc9f0f3e9ab4563a53e923b}} 
+void {\bfseries set\+Tank\+I\+Dchan0} (const quint8 \&tank\+I\+Dchan0)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a7a478cae7c3401571a53cbb707329571}\label{class_a_d_s1115_item_a7a478cae7c3401571a53cbb707329571}} 
+void {\bfseries set\+Tank\+I\+Dchan1} (const quint8 \&tank\+I\+Dchan1)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a0f5440eb5befd2c3783876d812e848f6}\label{class_a_d_s1115_item_a0f5440eb5befd2c3783876d812e848f6}} 
+void {\bfseries set\+Tank\+I\+Dchan2} (const quint8 \&tank\+I\+Dchan2)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a5996bec349f86903ea168a56ec7b043e}\label{class_a_d_s1115_item_a5996bec349f86903ea168a56ec7b043e}} 
+void {\bfseries set\+Tank\+I\+Dchan3} (const quint8 \&tank\+I\+Dchan3)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_ab90f8af28798cc7643f62893b4f93d71}\label{class_a_d_s1115_item_ab90f8af28798cc7643f62893b4f93d71}} 
+void {\bfseries set\+Tank\+Chan0\+Volume\+Max\+Height\+In\+Milimeter} (const quint16 \&tank\+Chan0\+Volume\+Max\+Height\+In\+Milimeter)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a7cfc2baa11b22a9cafa1adcc3c492937}\label{class_a_d_s1115_item_a7cfc2baa11b22a9cafa1adcc3c492937}} 
+void {\bfseries set\+Tank\+Chan1\+Volume\+Max\+Height\+In\+Milimeter} (const quint16 \&tank\+Chan1\+Volume\+Max\+Height\+In\+Milimeter)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_acee251554c1bd6ed77528a2651740f8a}\label{class_a_d_s1115_item_acee251554c1bd6ed77528a2651740f8a}} 
+void {\bfseries set\+Tank\+Chan2\+Volume\+Max\+Height\+In\+Milimeter} (const quint16 \&tank\+Chan2\+Volume\+Max\+Height\+In\+Milimeter)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a1056bd652bb8637cf98ae2e43b583d21}\label{class_a_d_s1115_item_a1056bd652bb8637cf98ae2e43b583d21}} 
+void {\bfseries set\+Tank\+Chan3\+Volume\+Max\+Height\+In\+Milimeter} (const quint16 \&tank\+Chan3\+Volume\+Max\+Height\+In\+Milimeter)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_ae162b8953409de92ab117bf4304e4b6d}\label{class_a_d_s1115_item_ae162b8953409de92ab117bf4304e4b6d}} 
+bool {\bfseries on\+Reading\+Data} () const
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a2b2f9a3aa62f7901bd0775faf3e1725a}\label{class_a_d_s1115_item_a2b2f9a3aa62f7901bd0775faf3e1725a}} 
+void {\bfseries read\+Saved\+Data} ()
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_afc2e5d9547e735e24610aba563bfe3a7}\label{class_a_d_s1115_item_afc2e5d9547e735e24610aba563bfe3a7}} 
+\mbox{\hyperlink{class_data_frame}{Data\+Frame}} $\ast$ {\bfseries data\+Frame} () const
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a8693a6ebfb1c62f6f2e9b9bbde861441}\label{class_a_d_s1115_item_a8693a6ebfb1c62f6f2e9b9bbde861441}} 
+void {\bfseries set\+Start\+To\+Read\+On\+Data} (bool start\+To\+Read\+On\+Data)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a99fb4a00f49d710577e2df06f08dce96}\label{class_a_d_s1115_item_a99fb4a00f49d710577e2df06f08dce96}} 
+bool {\bfseries start\+To\+Read\+On\+Data} () const
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a60bc08aaf6167eac7d8d15717f6571e6}\label{class_a_d_s1115_item_a60bc08aaf6167eac7d8d15717f6571e6}} 
+void {\bfseries set\+On\+Calibration} (bool on\+Calibration)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a6a3f90b1facc198fb470b6c096580bf0}\label{class_a_d_s1115_item_a6a3f90b1facc198fb470b6c096580bf0}} 
+void {\bfseries set\+High\+Max\+Value\+In\+Puls} (const quint64 \&high\+Max\+Value\+In\+Puls)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_d_s1115_item_a672e43b918f759129969604aebaee247}{run}} ()
+\begin{DoxyCompactList}\small\item\em called function when the thread start \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a85d65162eae8071afaa9b9cdc2a906e8}\label{class_a_d_s1115_item_a85d65162eae8071afaa9b9cdc2a906e8}} 
+void {\bfseries \+\_\+init\+Device} ()
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a4f08c0a5832e680e813bc3a23167c277}\label{class_a_d_s1115_item_a4f08c0a5832e680e813bc3a23167c277}} 
+void {\bfseries \+\_\+insert\+Text\+At\+Home\+Page} (Q\+String text\+To\+Insert)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_ae9f5fc9fd899630618dcb7d1bb397322}\label{class_a_d_s1115_item_ae9f5fc9fd899630618dcb7d1bb397322}} 
+void {\bfseries \+\_\+check\+State\+Of\+Device} ()
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a66d9c861ec58ea8893d72fee71558f31}\label{class_a_d_s1115_item_a66d9c861ec58ea8893d72fee71558f31}} 
+void {\bfseries \+\_\+init\+Config\+Device} ()
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a268605a530a71b934e17f2953d15ac92}\label{class_a_d_s1115_item_a268605a530a71b934e17f2953d15ac92}} 
+bool {\bfseries \+\_\+check\+Register\+Configuration} ()
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_af5bd1fc1fd072c59df1cf43918e898a8}\label{class_a_d_s1115_item_af5bd1fc1fd072c59df1cf43918e898a8}} 
+void {\bfseries \+\_\+read\+Data\+I2C} (\mbox{\hyperlink{class_data_frame}{Data\+Frame}} $\ast$data\+Frame=nullptr)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a0f193d9ba158b4f4fb2147da05cacf5a}\label{class_a_d_s1115_item_a0f193d9ba158b4f4fb2147da05cacf5a}} 
+quint16 {\bfseries \+\_\+convert\+To\+Volume\+In\+Liter} (qint16 value\+In, quint16 tankolume\+Max, quint16 tank\+Volume\+M\+Max\+Height\+In\+Milimeter, \mbox{\hyperlink{class_global_enumerate_a73257283da9ea629bb4f7182fe008d94}{Global\+Enumerate\+::\+E\+\_\+\+Tank\+Liquid\+Inside}} liquide)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a4913c5033d8a57ccee14b5419ab1cfb0}\label{class_a_d_s1115_item_a4913c5033d8a57ccee14b5419ab1cfb0}} 
+void {\bfseries \+\_\+continue\+Reading\+All\+Value} ()
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a143db29122f0b4feb051d9db12525167}\label{class_a_d_s1115_item_a143db29122f0b4feb051d9db12525167}} 
+void {\bfseries \+\_\+wait\+Delay} (quint64 delay\+Seconde)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a7d6c7a0893bd4ddf6f8fb9ac02ea4d39}\label{class_a_d_s1115_item_a7d6c7a0893bd4ddf6f8fb9ac02ea4d39}} 
+void {\bfseries \+\_\+wait\+Delay\+Mili} (quint64 delay\+In\+Mili\+Seconde)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_abbe199e54171e941c67e4e9eb97de319}\label{class_a_d_s1115_item_abbe199e54171e941c67e4e9eb97de319}} 
+void {\bfseries \+\_\+wait\+Delay\+Micro} (quint64 delay\+In\+Micro\+Seconde)
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_ae2e8a4b04e1061d4a68b6b323dc17918}\label{class_a_d_s1115_item_ae2e8a4b04e1061d4a68b6b323dc17918}} 
+void {\bfseries \+\_\+go\+To\+Next\+State} ()
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a0ecd40954a96e2caaa4b926e3428266f}\label{class_a_d_s1115_item_a0ecd40954a96e2caaa4b926e3428266f}} 
+quint16 {\bfseries \+\_\+mean\+List} (Q\+List$<$ quint16 $>$ \&list\+To\+Mean)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a72621a45749bd64603b00d2a3da6d58f}\label{class_a_d_s1115_item_a72621a45749bd64603b00d2a3da6d58f}} 
+Q\+Object $\ast$ {\bfseries \+\_\+tanks\+Data\+Plot}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a62ec8e2589b22f6791e83190adb31f6c}\label{class_a_d_s1115_item_a62ec8e2589b22f6791e83190adb31f6c}} 
+Q\+Object $\ast$ {\bfseries \+\_\+home\+Viewer}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a41b9fc28c49b8b09208fd72f49f8dfcd}\label{class_a_d_s1115_item_a41b9fc28c49b8b09208fd72f49f8dfcd}} 
+\mbox{\hyperlink{classtimerthread}{timerthread}} $\ast$ {\bfseries \+\_\+\+I2\+C\+Thread}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a035ed542906c034edd7eafce3f5a24da}\label{class_a_d_s1115_item_a035ed542906c034edd7eafce3f5a24da}} 
+Q\+String {\bfseries \+\_\+device\+Name}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a2ce611cb890f5656b1d3d13cd532a0b1}\label{class_a_d_s1115_item_a2ce611cb890f5656b1d3d13cd532a0b1}} 
+quint8 {\bfseries \+\_\+device\+I2\+C\+Adress}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_ac022232c605ba0f20b8b2a632477fb2d}\label{class_a_d_s1115_item_ac022232c605ba0f20b8b2a632477fb2d}} 
+quint8 {\bfseries \+\_\+fd}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_aed9b5096f72e4eb2913688a3e10eb667}\label{class_a_d_s1115_item_aed9b5096f72e4eb2913688a3e10eb667}} 
+\mbox{\hyperlink{class_a_d_s1115}{A\+D\+S1115}} $\ast$ {\bfseries \+\_\+ads1115}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_ae9dcf43cfba348ded2a8259c679c98de}\label{class_a_d_s1115_item_ae9dcf43cfba348ded2a8259c679c98de}} 
+\mbox{\hyperlink{class_data_frame}{Data\+Frame}} $\ast$ {\bfseries \+\_\+data\+Frame}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_aaaaef64a89cb515fbf687295694dec6e}\label{class_a_d_s1115_item_aaaaef64a89cb515fbf687295694dec6e}} 
+ads\+Rate\+\_\+t {\bfseries \+\_\+ads\+\_\+rate}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a02e61dafd4d5baef49e006e5c0a7c228}\label{class_a_d_s1115_item_a02e61dafd4d5baef49e006e5c0a7c228}} 
+bool {\bfseries \+\_\+device\+Is\+Ready}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a837d9dd8c9c57f93d9e4cd477d735b87}\label{class_a_d_s1115_item_a837d9dd8c9c57f93d9e4cd477d735b87}} 
+bool {\bfseries \+\_\+on\+Reading\+Data}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a6a1e09ccf5297406f5acd6aa7b65d3d2}\label{class_a_d_s1115_item_a6a1e09ccf5297406f5acd6aa7b65d3d2}} 
+bool {\bfseries \+\_\+start\+To\+Read\+On\+Data}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_ad59cb795d2bfaeb05cc4301170ba151c}\label{class_a_d_s1115_item_ad59cb795d2bfaeb05cc4301170ba151c}} 
+bool {\bfseries \+\_\+on\+Calibration}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a926ae478e6cc6a3655e4123bfe5f9ad3}\label{class_a_d_s1115_item_a926ae478e6cc6a3655e4123bfe5f9ad3}} 
+quint64 {\bfseries \+\_\+high\+Max\+Value\+In\+Puls}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_aa758d969e4fdcc2d02492699003f66e3}\label{class_a_d_s1115_item_aa758d969e4fdcc2d02492699003f66e3}} 
+quint8 {\bfseries \+\_\+tank\+I\+Dchan0}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_ac630ebe4b18fd8d453f9dc2457ce8d20}\label{class_a_d_s1115_item_ac630ebe4b18fd8d453f9dc2457ce8d20}} 
+quint8 {\bfseries \+\_\+tank\+I\+Dchan1}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a2e187e5009d4bad7044dcc30a3c357db}\label{class_a_d_s1115_item_a2e187e5009d4bad7044dcc30a3c357db}} 
+quint8 {\bfseries \+\_\+tank\+I\+Dchan2}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_adb78c707099840896a3caf45115fd2d2}\label{class_a_d_s1115_item_adb78c707099840896a3caf45115fd2d2}} 
+quint8 {\bfseries \+\_\+tank\+I\+Dchan3}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_ad0aa1e9d315a6ef6f1b62dbc66384700}\label{class_a_d_s1115_item_ad0aa1e9d315a6ef6f1b62dbc66384700}} 
+quint16 {\bfseries \+\_\+tank\+Chan0\+Volume\+Max}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a710588ba48c21ef37207fb5311cecbeb}\label{class_a_d_s1115_item_a710588ba48c21ef37207fb5311cecbeb}} 
+quint16 {\bfseries \+\_\+tank\+Chan1\+Volume\+Max}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a4b70f2a279f5a75ae65a88508f3c5188}\label{class_a_d_s1115_item_a4b70f2a279f5a75ae65a88508f3c5188}} 
+quint16 {\bfseries \+\_\+tank\+Chan2\+Volume\+Max}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a998e3b31215a99c12b247340a557818b}\label{class_a_d_s1115_item_a998e3b31215a99c12b247340a557818b}} 
+quint16 {\bfseries \+\_\+tank\+Chan3\+Volume\+Max}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a051105db1a10fe35c2003482d739d4bd}\label{class_a_d_s1115_item_a051105db1a10fe35c2003482d739d4bd}} 
+quint16 {\bfseries \+\_\+tank\+Chan0\+Volume\+Max\+Height\+In\+Milimeter}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a1533478d2feb53f1b0e30bf667bac5da}\label{class_a_d_s1115_item_a1533478d2feb53f1b0e30bf667bac5da}} 
+quint16 {\bfseries \+\_\+tank\+Chan1\+Volume\+Max\+Height\+In\+Milimeter}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a6f35d8cbbc6f2d0b02ae90c878e89123}\label{class_a_d_s1115_item_a6f35d8cbbc6f2d0b02ae90c878e89123}} 
+quint16 {\bfseries \+\_\+tank\+Chan2\+Volume\+Max\+Height\+In\+Milimeter}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a33a42c4e7f5d735f6334e76359c16cdc}\label{class_a_d_s1115_item_a33a42c4e7f5d735f6334e76359c16cdc}} 
+quint16 {\bfseries \+\_\+tank\+Chan3\+Volume\+Max\+Height\+In\+Milimeter}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_ac586d9402cc1d1e54c5c8b1c6b9695d2}\label{class_a_d_s1115_item_ac586d9402cc1d1e54c5c8b1c6b9695d2}} 
+\mbox{\hyperlink{class_global_enumerate_a73257283da9ea629bb4f7182fe008d94}{Global\+Enumerate\+::\+E\+\_\+\+Tank\+Liquid\+Inside}} {\bfseries \+\_\+tank\+Chan0\+Liquide\+Inside}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_afb0152226dc72dc4b17f2dedab7da616}\label{class_a_d_s1115_item_afb0152226dc72dc4b17f2dedab7da616}} 
+\mbox{\hyperlink{class_global_enumerate_a73257283da9ea629bb4f7182fe008d94}{Global\+Enumerate\+::\+E\+\_\+\+Tank\+Liquid\+Inside}} {\bfseries \+\_\+tank\+Chan1\+Liquide\+Inside}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_ab48f9022b2e15b3604e59136c178f0d6}\label{class_a_d_s1115_item_ab48f9022b2e15b3604e59136c178f0d6}} 
+\mbox{\hyperlink{class_global_enumerate_a73257283da9ea629bb4f7182fe008d94}{Global\+Enumerate\+::\+E\+\_\+\+Tank\+Liquid\+Inside}} {\bfseries \+\_\+tank\+Chan2\+Liquide\+Inside}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a759b8139eb86ea301186fa8efc944332}\label{class_a_d_s1115_item_a759b8139eb86ea301186fa8efc944332}} 
+\mbox{\hyperlink{class_global_enumerate_a73257283da9ea629bb4f7182fe008d94}{Global\+Enumerate\+::\+E\+\_\+\+Tank\+Liquid\+Inside}} {\bfseries \+\_\+tank\+Chan3\+Liquide\+Inside}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a530c4911970684a6a1829263518af8f7}\label{class_a_d_s1115_item_a530c4911970684a6a1829263518af8f7}} 
+Q\+List$<$ quint16 $>$ {\bfseries \+\_\+filter\+Liste\+Chan0}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_aa430619f28db4e43ca6fd04afb00e89a}\label{class_a_d_s1115_item_aa430619f28db4e43ca6fd04afb00e89a}} 
+Q\+List$<$ quint16 $>$ {\bfseries \+\_\+filter\+Liste\+Chan1}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a42f9a63210a7a90111f60f1925ac06f9}\label{class_a_d_s1115_item_a42f9a63210a7a90111f60f1925ac06f9}} 
+Q\+List$<$ quint16 $>$ {\bfseries \+\_\+filter\+Liste\+Chan2}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_aef8069fef9b5b3f6a0c22099baa6060c}\label{class_a_d_s1115_item_aef8069fef9b5b3f6a0c22099baa6060c}} 
+Q\+List$<$ quint16 $>$ {\bfseries \+\_\+filter\+Liste\+Chan3}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a6394307d5fed963b4f6d7ec229cd89a8}\label{class_a_d_s1115_item_a6394307d5fed963b4f6d7ec229cd89a8}} 
+qint16 {\bfseries \+\_\+chan0}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_aa193aeec715449ed92f5236b2755d458}\label{class_a_d_s1115_item_aa193aeec715449ed92f5236b2755d458}} 
+qint16 {\bfseries \+\_\+chan1}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a6de943b6e5766b8faa99958101144ced}\label{class_a_d_s1115_item_a6de943b6e5766b8faa99958101144ced}} 
+qint16 {\bfseries \+\_\+chan2}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_abb0a49f6b8331d02a94abfffc1503228}\label{class_a_d_s1115_item_abb0a49f6b8331d02a94abfffc1503228}} 
+qint16 {\bfseries \+\_\+chan3}
+\item 
+\mbox{\Hypertarget{class_a_d_s1115_item_a1710992ef37142ad3f453b8810662a6e}\label{class_a_d_s1115_item_a1710992ef37142ad3f453b8810662a6e}} 
+\mbox{\hyperlink{class_global_enumerate_a4258d211973c735c37c4ae3d1f9460b6}{Global\+Enumerate\+::\+E\+\_\+\+State\+Machine}} {\bfseries \+\_\+state\+Machine}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_d_s1115_item_a672e43b918f759129969604aebaee247}\label{class_a_d_s1115_item_a672e43b918f759129969604aebaee247}} 
+\index{ADS1115Item@{ADS1115Item}!run@{run}}
+\index{run@{run}!ADS1115Item@{ADS1115Item}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void A\+D\+S1115\+Item\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+called function when the thread start 
+
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Smart\+Home\+Domotic/\+A\+D\+S1115/ads1115item.\+h\item 
+Smart\+Home\+Domotic/\+A\+D\+S1115/ads1115item.\+cpp\end{DoxyCompactItemize}

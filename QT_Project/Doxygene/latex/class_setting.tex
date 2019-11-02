@@ -1,0 +1,166 @@
+\hypertarget{class_setting}{}\doxysection{Setting Class Reference}
+\label{class_setting}\index{Setting@{Setting}}
+
+
+Inheritance diagram for Setting\+:
+% FIG 0
+
+
+Collaboration diagram for Setting\+:
+% FIG 1
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_setting_a81722eceb8ce97a5830066dd9ed91a5f}\label{class_setting_a81722eceb8ce97a5830066dd9ed91a5f}} 
+void {\bfseries received\+Tank\+Is\+Visible} (const int object\+ID, const bool is\+Visible)
+\item 
+\mbox{\Hypertarget{class_setting_addb62a694e1121ce14115eeb2ab0a428}\label{class_setting_addb62a694e1121ce14115eeb2ab0a428}} 
+void {\bfseries received\+Tank\+Title\+Changed} (const int object\+ID, const Q\+String title\+Text)
+\item 
+\mbox{\Hypertarget{class_setting_aeae593b0b8208ee225f48f2067f4a678}\label{class_setting_aeae593b0b8208ee225f48f2067f4a678}} 
+void {\bfseries received\+Tank\+Volume\+Max\+Changed} (const Q\+String object\+Name, const int volume\+Max)
+\item 
+\mbox{\Hypertarget{class_setting_a598da56e0c0108d74c2c7afc81fd50f0}\label{class_setting_a598da56e0c0108d74c2c7afc81fd50f0}} 
+void {\bfseries received\+Warning\+Low\+Level\+From\+Tank} (const Q\+String object\+Name, const bool is\+Active)
+\item 
+\mbox{\Hypertarget{class_setting_a2c04b128b64d280319b46dea1b609c27}\label{class_setting_a2c04b128b64d280319b46dea1b609c27}} 
+void {\bfseries received\+Tank\+Warning\+Low\+Level\+Changed} (const Q\+String object\+Name, const int low\+Level)
+\item 
+\mbox{\Hypertarget{class_setting_a176447b19c41edce4a8bfec935dcb429}\label{class_setting_a176447b19c41edce4a8bfec935dcb429}} 
+void {\bfseries received\+Tank\+Liquide\+Fillup\+Changed} (const Q\+String object\+Name, const int liquide\+Fillup)
+\item 
+\mbox{\Hypertarget{class_setting_afd5de43c01dc547f7b58826085ead89e}\label{class_setting_afd5de43c01dc547f7b58826085ead89e}} 
+void {\bfseries received\+Tank\+Height\+Max\+Level\+Changed} (const Q\+String object\+Name, const int height\+V\+Max)
+\item 
+\mbox{\Hypertarget{class_setting_ad46986bffcf8b3776027990da6ae780e}\label{class_setting_ad46986bffcf8b3776027990da6ae780e}} 
+void {\bfseries received\+Tank\+Actual\+Volume\+Changed} (const int object\+ID, const int volume\+Actual)
+\item 
+\mbox{\Hypertarget{class_setting_adc0870c37da7c4cb0ea5c166706bb2a6}\label{class_setting_adc0870c37da7c4cb0ea5c166706bb2a6}} 
+void {\bfseries received\+Graph\+Reccord\+Times\+Changed} (const int reccord\+Time)
+\item 
+\mbox{\Hypertarget{class_setting_a871fdcf15beef180e834bdefb67b3a41}\label{class_setting_a871fdcf15beef180e834bdefb67b3a41}} 
+void {\bfseries received\+On\+Calibration\+Mode} (const bool on\+Calibration)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_setting_a290265af04d83e86a3b5c4deb21cd12d}\label{class_setting_a290265af04d83e86a3b5c4deb21cd12d}} 
+{\bfseries Setting} (Q\+Object $\ast$parent=nullptr, Q\+Object $\ast$home\+Viewer=nullptr, Q\+Object $\ast$tank\+Viewer=nullptr, Q\+Object $\ast$setting\+Viewer=nullptr, Q\+Object $\ast$statistic\+Viewer=nullptr, \mbox{\hyperlink{class_b_m_e280_item}{B\+M\+E280\+Item}} $\ast$bme280=nullptr, \mbox{\hyperlink{class_a_d_s1115_item}{A\+D\+S1115\+Item}} $\ast$ads1115\+\_\+1=nullptr, \mbox{\hyperlink{class_a_d_s1115_item}{A\+D\+S1115\+Item}} $\ast$ads1115\+\_\+2=nullptr, \mbox{\hyperlink{class_data_manager}{Data\+Manager}} $\ast$data\+Manager=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_setting_a1a605d29339d0d5d752dcdad47783bc0}\label{class_setting_a1a605d29339d0d5d752dcdad47783bc0}} 
+void {\bfseries init\+Setting} ()
+\item 
+\mbox{\Hypertarget{class_setting_a67c56de4af42c853a8e7655d43faac1d}\label{class_setting_a67c56de4af42c853a8e7655d43faac1d}} 
+void {\bfseries init\+Tank\+Object\+Name} (int object\+ID, Q\+String object\+Name)
+\item 
+\mbox{\Hypertarget{class_setting_ac74a343d7c56f058fcba88b201e28ba0}\label{class_setting_ac74a343d7c56f058fcba88b201e28ba0}} 
+void {\bfseries init\+Tank\+Color\+In\+Home\+Page} (int object\+ID)
+\item 
+\mbox{\Hypertarget{class_setting_a1ac7f9351f46969fc9d6e1b88b964341}\label{class_setting_a1ac7f9351f46969fc9d6e1b88b964341}} 
+void {\bfseries init\+Tank\+Title\+Text} (int object\+ID, Q\+String is\+Visible)
+\item 
+\mbox{\Hypertarget{class_setting_acca840efeb5266921a619e15ab80e5a8}\label{class_setting_acca840efeb5266921a619e15ab80e5a8}} 
+void {\bfseries init\+Home\+View\+Object} (int object\+ID, Q\+String obbject\+Name)
+\item 
+\mbox{\Hypertarget{class_setting_a5e151c7b8ddcc5f9cc92f0a36a8e27dd}\label{class_setting_a5e151c7b8ddcc5f9cc92f0a36a8e27dd}} 
+void {\bfseries init\+Tank\+Is\+Visible} (int object\+ID, bool is\+Visible)
+\item 
+\mbox{\Hypertarget{class_setting_a9b01604b81774da04c5751667f2d9f9b}\label{class_setting_a9b01604b81774da04c5751667f2d9f9b}} 
+void {\bfseries init\+Tank\+Volume\+Max} (int object\+ID, int volume\+Max)
+\item 
+\mbox{\Hypertarget{class_setting_a950b9167bd72eafe4c45d6cafc6691cc}\label{class_setting_a950b9167bd72eafe4c45d6cafc6691cc}} 
+void {\bfseries init\+Tank\+Warning\+Low\+Level} (int object\+ID, int warning\+Low\+Level)
+\item 
+\mbox{\Hypertarget{class_setting_a1546fcd6cf30d985ba73bd298d71d357}\label{class_setting_a1546fcd6cf30d985ba73bd298d71d357}} 
+void {\bfseries init\+Tank\+Liquide\+Inside} (int object\+ID, int tank\+Liquide\+Inside)
+\item 
+\mbox{\Hypertarget{class_setting_a6636f1ad5d0ff892b95f1beb789b185f}\label{class_setting_a6636f1ad5d0ff892b95f1beb789b185f}} 
+void {\bfseries init\+Height\+V\+Max\+Value} (int object\+ID, int Height\+V\+Max\+Value)
+\item 
+\mbox{\Hypertarget{class_setting_a69a8c78eddff2d18e0b3cec7ab328e57}\label{class_setting_a69a8c78eddff2d18e0b3cec7ab328e57}} 
+quint8 {\bfseries calcul\+Nb\+Trace\+In\+Plot} ()
+\item 
+\mbox{\Hypertarget{class_setting_ac0ad27eb7da6b93f20c8a0302c5e9519}\label{class_setting_ac0ad27eb7da6b93f20c8a0302c5e9519}} 
+void {\bfseries save\+Settings} ()
+\item 
+\mbox{\Hypertarget{class_setting_a6397c6306b7307a4a852809e6cc77273}\label{class_setting_a6397c6306b7307a4a852809e6cc77273}} 
+void {\bfseries save\+Tank\+Setting} (\mbox{\hyperlink{class_tank}{Tank}} $\ast$tank)
+\item 
+\mbox{\Hypertarget{class_setting_add7742ed343d0e3cd22ada0260cd9256}\label{class_setting_add7742ed343d0e3cd22ada0260cd9256}} 
+void {\bfseries load\+Settings} ()
+\item 
+\mbox{\Hypertarget{class_setting_ae07840fa0a20eb7ba9e4ce967a47320d}\label{class_setting_ae07840fa0a20eb7ba9e4ce967a47320d}} 
+void {\bfseries load\+Tank\+Setting} (\mbox{\hyperlink{class_tank}{Tank}} $\ast$tank)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_setting_a2b7bd23e5a8c5526f20d803d3cc0e488}\label{class_setting_a2b7bd23e5a8c5526f20d803d3cc0e488}} 
+Q\+Map$<$ int, Q\+String $>$ {\bfseries \+\_\+tank\+Object\+Name\+Array}
+\item 
+\mbox{\Hypertarget{class_setting_a0e2434d09cbbe993fa27a5a7d1d1c2cf}\label{class_setting_a0e2434d09cbbe993fa27a5a7d1d1c2cf}} 
+Q\+Map$<$ int, Q\+String $>$ {\bfseries \+\_\+home\+View\+Object}
+\item 
+\mbox{\Hypertarget{class_setting_af46f93636534c0565b183afd865090ff}\label{class_setting_af46f93636534c0565b183afd865090ff}} 
+Q\+String {\bfseries \+\_\+setting\+File\+Name}
+\item 
+\mbox{\Hypertarget{class_setting_a72e66466fa7645b39850b9e377252339}\label{class_setting_a72e66466fa7645b39850b9e377252339}} 
+Q\+Settings $\ast$ {\bfseries \+\_\+setting}
+\item 
+\mbox{\Hypertarget{class_setting_abbbd14cb0a98feb569e4d43e9795b4fe}\label{class_setting_abbbd14cb0a98feb569e4d43e9795b4fe}} 
+\mbox{\hyperlink{class_tank}{Tank}} $\ast$ {\bfseries \+\_\+\+Tank1}
+\item 
+\mbox{\Hypertarget{class_setting_ab89bb7e682a093cc709b2cfe64bfa46a}\label{class_setting_ab89bb7e682a093cc709b2cfe64bfa46a}} 
+\mbox{\hyperlink{class_tank}{Tank}} $\ast$ {\bfseries \+\_\+\+Tank2}
+\item 
+\mbox{\Hypertarget{class_setting_aec7fde50847c9b7f808ddc44149acb9b}\label{class_setting_aec7fde50847c9b7f808ddc44149acb9b}} 
+\mbox{\hyperlink{class_tank}{Tank}} $\ast$ {\bfseries \+\_\+\+Tank3}
+\item 
+\mbox{\Hypertarget{class_setting_a0f96fd83f8cecd40abb97b6de70e7627}\label{class_setting_a0f96fd83f8cecd40abb97b6de70e7627}} 
+\mbox{\hyperlink{class_tank}{Tank}} $\ast$ {\bfseries \+\_\+\+Tank4}
+\item 
+\mbox{\Hypertarget{class_setting_a83627ee28f4cdcdc5aeee8ab55fc9b67}\label{class_setting_a83627ee28f4cdcdc5aeee8ab55fc9b67}} 
+\mbox{\hyperlink{class_tank}{Tank}} $\ast$ {\bfseries \+\_\+\+Tank5}
+\item 
+\mbox{\Hypertarget{class_setting_a0adc4a7ce1c873dcf6887c1683660943}\label{class_setting_a0adc4a7ce1c873dcf6887c1683660943}} 
+\mbox{\hyperlink{class_tank}{Tank}} $\ast$ {\bfseries \+\_\+\+Tank6}
+\item 
+\mbox{\Hypertarget{class_setting_ae356ceef815130bcade50322a595e5b5}\label{class_setting_ae356ceef815130bcade50322a595e5b5}} 
+bool {\bfseries \+\_\+tank\+Is\+Visible}
+\item 
+\mbox{\Hypertarget{class_setting_a79686e2b1d0da11326782345d7a0cc72}\label{class_setting_a79686e2b1d0da11326782345d7a0cc72}} 
+quint8 {\bfseries \+\_\+nb\+Trace}
+\item 
+\mbox{\Hypertarget{class_setting_a1c944c1d2e14d9271bf9073e9acf03a7}\label{class_setting_a1c944c1d2e14d9271bf9073e9acf03a7}} 
+Q\+Object $\ast$ {\bfseries \+\_\+home\+Viewer}
+\item 
+\mbox{\Hypertarget{class_setting_ae3d2c75ca19acd5a2a259f88e116e3c8}\label{class_setting_ae3d2c75ca19acd5a2a259f88e116e3c8}} 
+Q\+Object $\ast$ {\bfseries \+\_\+tank\+Viewer}
+\item 
+\mbox{\Hypertarget{class_setting_a148de0d87b6802edd123f2b91aa6cf5a}\label{class_setting_a148de0d87b6802edd123f2b91aa6cf5a}} 
+Q\+Object $\ast$ {\bfseries \+\_\+setting\+Viewer}
+\item 
+\mbox{\Hypertarget{class_setting_aa50aaf725323ee6a359e90f37f8f666d}\label{class_setting_aa50aaf725323ee6a359e90f37f8f666d}} 
+Q\+Object $\ast$ {\bfseries \+\_\+statistic\+Viewer}
+\item 
+\mbox{\Hypertarget{class_setting_af4609eac4eac53ebf185079ab80a2da9}\label{class_setting_af4609eac4eac53ebf185079ab80a2da9}} 
+\mbox{\hyperlink{class_b_m_e280_item}{B\+M\+E280\+Item}} $\ast$ {\bfseries \+\_\+bme280}
+\item 
+\mbox{\Hypertarget{class_setting_a11bb7e076d39028cf220d462926751aa}\label{class_setting_a11bb7e076d39028cf220d462926751aa}} 
+\mbox{\hyperlink{class_a_d_s1115_item}{A\+D\+S1115\+Item}} $\ast$ {\bfseries \+\_\+ads1115\+\_\+1}
+\item 
+\mbox{\Hypertarget{class_setting_aa33a93c74ba909baa5298de232eb0a9b}\label{class_setting_aa33a93c74ba909baa5298de232eb0a9b}} 
+\mbox{\hyperlink{class_a_d_s1115_item}{A\+D\+S1115\+Item}} $\ast$ {\bfseries \+\_\+ads1115\+\_\+2}
+\item 
+\mbox{\Hypertarget{class_setting_a0999cc8b9db2a9d0cc9eecd4ed33aac8}\label{class_setting_a0999cc8b9db2a9d0cc9eecd4ed33aac8}} 
+\mbox{\hyperlink{class_data_manager}{Data\+Manager}} $\ast$ {\bfseries \+\_\+data\+Manager}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Smart\+Home\+Domotic/setting.\+h\item 
+Smart\+Home\+Domotic/setting.\+cpp\end{DoxyCompactItemize}

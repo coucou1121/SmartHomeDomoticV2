@@ -1,0 +1,11 @@
+digraph "SmartHomeDomotic/BME280" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e4e24e40906c3f4b094b97bc540b6ce5 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="SmartHomeDomotic" fontname="Helvetica", fontsize="10", URL="dir_e4e24e40906c3f4b094b97bc540b6ce5.html"]
+  dir_206a804ea317367acc58cae035d1924a [shape=box, label="BME280", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_206a804ea317367acc58cae035d1924a.html"];
+  }
+  dir_ca2e47619ba1223c25fbd371124c3290 [shape=box label="DataManager" URL="dir_ca2e47619ba1223c25fbd371124c3290.html"];
+  dir_206a804ea317367acc58cae035d1924a->dir_ca2e47619ba1223c25fbd371124c3290 [headlabel="1", labeldistance=1.5 headhref="dir_000002_000003.html"];
+}

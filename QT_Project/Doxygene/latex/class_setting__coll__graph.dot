@@ -1,0 +1,48 @@
+digraph "Setting"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Setting",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="QObject",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _ads1115_1\n_ads1115_2" ];
+  Node3 [label="ADS1115Item",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_d_s1115_item.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="QThread",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _ads1115" ];
+  Node5 [label="ADS1115",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_d_s1115.html",tooltip=" "];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _I2CThread" ];
+  Node6 [label="timerthread",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtimerthread.html",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _dataFrame" ];
+  Node7 [label="DataFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_data_frame.html",tooltip=" "];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _bme280" ];
+  Node8 [label="BME280Item",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_b_m_e280_item.html",tooltip=" "];
+  Node4 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _bme280" ];
+  Node9 [label="BME280",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_b_m_e280.html",tooltip=" "];
+  Node10 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _bme280Device\n_pbme280Device" ];
+  Node10 [label="sbme280_dev",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsbme280__dev.html",tooltip="bme280 device ure"];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" comp_data" ];
+  Node11 [label="sbme280_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsbme280__data.html",tooltip="bme280 sensor which comprises of temperature, pressure and humidity data"];
+  Node12 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" uncomp_data" ];
+  Node12 [label="sbme280_uncomp_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsbme280__uncomp__data.html",tooltip=" "];
+  Node13 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" settings" ];
+  Node13 [label="sbme280_setting",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsbme280__setting.html",tooltip="bme280 sensor settings ure which comprises of mode, oversampling and filter settings."];
+  Node14 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" calib_data" ];
+  Node14 [label="sbme280_calib_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsbme280__calib__data.html",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _dataFrame" ];
+  Node15 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _Tank6\n_Tank1\n_Tank2\n_Tank3\n_Tank4\n_Tank5" ];
+  Node15 [label="Tank",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tank.html",tooltip=" "];
+  Node2 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _dataManager" ];
+  Node16 [label="DataManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_data_manager.html",tooltip=" "];
+  Node4 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node16 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _ADS1115_1\n_ADS1115_2" ];
+  Node8 -> Node16 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _BME280" ];
+  Node17 -> Node16 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _dataAnalyerObject" ];
+  Node17 [label="DataAnalyser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_data_analyser.html",tooltip=" "];
+  Node4 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node17 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _dataFrame" ];
+}

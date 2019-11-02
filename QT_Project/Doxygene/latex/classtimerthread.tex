@@ -1,0 +1,158 @@
+\hypertarget{classtimerthread}{}\doxysection{timerthread Class Reference}
+\label{classtimerthread}\index{timerthread@{timerthread}}
+
+
+Inheritance diagram for timerthread\+:
+% FIG 0
+
+
+Collaboration diagram for timerthread\+:
+% FIG 1
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtimerthread_ab6e1a84d40f235e353384ec61b308c07}\label{classtimerthread_ab6e1a84d40f235e353384ec61b308c07}} 
+void {\bfseries delay\+Finished} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtimerthread_a056337119fc616fa6fe1645c727b55f9}\label{classtimerthread_a056337119fc616fa6fe1645c727b55f9}} 
+{\bfseries timerthread} (bool is\+Working, Q\+String name, quint16 delay)
+\item 
+void \mbox{\hyperlink{classtimerthread_a0ae3472f103a40920dab38cae9c592cf}{start\+Working}} ()
+\begin{DoxyCompactList}\small\item\em start working operation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtimerthread_a1953033c1c7f71390cfda902524a3eab}{stop\+Working}} ()
+\begin{DoxyCompactList}\small\item\em stop working operation \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classtimerthread_aa51478d6b7c2c5f5aa38baf8542ae671}\label{classtimerthread_aa51478d6b7c2c5f5aa38baf8542ae671}} 
+bool {\bfseries is\+Working} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classtimerthread_a3f6c8ac00e7ff1e33ee62a23b6cb2362}{usleep}} (unsigned long usecs)
+\begin{DoxyCompactList}\small\item\em waiting delay \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classtimerthread_a1ce63854dd548edd4d0cbd3a5dbd9afe}{msleep}} (unsigned long msecs)
+\begin{DoxyCompactList}\small\item\em waiting delay \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classtimerthread_a9836b2c4ce0d579c8f85c8b5d0df9871}{sleep}} (unsigned long secs)
+\begin{DoxyCompactList}\small\item\em waiting delay \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtimerthread_a7f7b3af8360b5380c28248250a9f13dc}{run}} ()
+\begin{DoxyCompactList}\small\item\em called function when the thread start \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtimerthread_aad24c038320fe736b04b08ec518d5ae4}\label{classtimerthread_aad24c038320fe736b04b08ec518d5ae4}} 
+quint16 {\bfseries \+\_\+delay}
+\item 
+\mbox{\Hypertarget{classtimerthread_ad472d731d082b7109276d74fd1139072}\label{classtimerthread_ad472d731d082b7109276d74fd1139072}} 
+bool {\bfseries \+\_\+is\+Working}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtimerthread_a1ce63854dd548edd4d0cbd3a5dbd9afe}\label{classtimerthread_a1ce63854dd548edd4d0cbd3a5dbd9afe}} 
+\index{timerthread@{timerthread}!msleep@{msleep}}
+\index{msleep@{msleep}!timerthread@{timerthread}}
+\doxysubsubsection{\texorpdfstring{msleep()}{msleep()}}
+{\footnotesize\ttfamily static void timerthread\+::msleep (\begin{DoxyParamCaption}\item[{unsigned long}]{msecs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+waiting delay 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msleep} & is the time in miliseconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classtimerthread_a7f7b3af8360b5380c28248250a9f13dc}\label{classtimerthread_a7f7b3af8360b5380c28248250a9f13dc}} 
+\index{timerthread@{timerthread}!run@{run}}
+\index{run@{run}!timerthread@{timerthread}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void timerthread\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+called function when the thread start 
+
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classtimerthread_a9836b2c4ce0d579c8f85c8b5d0df9871}\label{classtimerthread_a9836b2c4ce0d579c8f85c8b5d0df9871}} 
+\index{timerthread@{timerthread}!sleep@{sleep}}
+\index{sleep@{sleep}!timerthread@{timerthread}}
+\doxysubsubsection{\texorpdfstring{sleep()}{sleep()}}
+{\footnotesize\ttfamily static void timerthread\+::sleep (\begin{DoxyParamCaption}\item[{unsigned long}]{secs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+waiting delay 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em secs} & is the time in seconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtimerthread_a0ae3472f103a40920dab38cae9c592cf}\label{classtimerthread_a0ae3472f103a40920dab38cae9c592cf}} 
+\index{timerthread@{timerthread}!startWorking@{startWorking}}
+\index{startWorking@{startWorking}!timerthread@{timerthread}}
+\doxysubsubsection{\texorpdfstring{startWorking()}{startWorking()}}
+{\footnotesize\ttfamily timerthread\+::start\+Working (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+start working operation 
+
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtimerthread_a1953033c1c7f71390cfda902524a3eab}\label{classtimerthread_a1953033c1c7f71390cfda902524a3eab}} 
+\index{timerthread@{timerthread}!stopWorking@{stopWorking}}
+\index{stopWorking@{stopWorking}!timerthread@{timerthread}}
+\doxysubsubsection{\texorpdfstring{stopWorking()}{stopWorking()}}
+{\footnotesize\ttfamily timerthread\+::stop\+Working (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+stop working operation 
+
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtimerthread_a3f6c8ac00e7ff1e33ee62a23b6cb2362}\label{classtimerthread_a3f6c8ac00e7ff1e33ee62a23b6cb2362}} 
+\index{timerthread@{timerthread}!usleep@{usleep}}
+\index{usleep@{usleep}!timerthread@{timerthread}}
+\doxysubsubsection{\texorpdfstring{usleep()}{usleep()}}
+{\footnotesize\ttfamily static void timerthread\+::usleep (\begin{DoxyParamCaption}\item[{unsigned long}]{usecs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+waiting delay 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msleep} & is the time in microseconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Smart\+Home\+Domotic/\mbox{\hyperlink{_timer_thread_8h}{Timer\+Thread.\+h}}\item 
+Smart\+Home\+Domotic/Timer\+Thread.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,295 @@
+\hypertarget{class_data_manager}{}\doxysection{Data\+Manager Class Reference}
+\label{class_data_manager}\index{DataManager@{DataManager}}
+
+
+Inheritance diagram for Data\+Manager\+:
+% FIG 0
+
+
+Collaboration diagram for Data\+Manager\+:
+% FIG 1
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_data_manager_aa196957b5e97784ecd8e55eac0e681f4}\label{class_data_manager_aa196957b5e97784ecd8e55eac0e681f4}} 
+void {\bfseries Receivedreplot\+With\+Saved\+Data} (int year, int month, int day)
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_data_manager_af6be8d3d1d727e7153597fb8b339e7f1}\label{class_data_manager_af6be8d3d1d727e7153597fb8b339e7f1}} 
+void {\bfseries data\+Frame\+Was\+Sent} (int it\+Producer\+Adress)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_data_manager_aa7bf94eb77754ac6e8fa94d2e82c034f}{Data\+Manager}} (Q\+Object $\ast$stastistic\+Viewer, Q\+Object $\ast$bme280\+Display, Q\+String name, quint32 nb\+Frame\+Read\+For\+Every\+Saved\+File, quint16 delay\+In\+Mili, Q\+Object $\ast$statistic\+Value\+Viewer, \mbox{\hyperlink{class_data_analyser}{Data\+Analyser}} $\ast$data\+Analyser\+Object=nullptr)
+\begin{DoxyCompactList}\small\item\em constructor for Data\+Frame\+Live\+Reading \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_manager_ab2e9b2da6c9c41ab3c6220db07ddec3c}{start\+Reading}} ()
+\begin{DoxyCompactList}\small\item\em start reading operation \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_data_manager_a73688f5cf0a6d97139a61f8fc6333f4f}\label{class_data_manager_a73688f5cf0a6d97139a61f8fc6333f4f}} 
+void {\bfseries stop\+Reading} ()
+\item 
+\mbox{\hyperlink{class_a_d_s1115_item}{A\+D\+S1115\+Item}} $\ast$ \mbox{\hyperlink{class_data_manager_aa047a9e05774b7858047d41a08276d92}{A\+D\+S1115\+\_\+1}} () const
+\begin{DoxyCompactList}\small\item\em Getter of the A\+D\+S1115\+\_\+1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_manager_ae5d5debc5a7055c5507f064cf8bb9b86}{set\+A\+D\+S1115\+\_\+1}} (\mbox{\hyperlink{class_a_d_s1115_item}{A\+D\+S1115\+Item}} $\ast$\mbox{\hyperlink{class_data_manager_aa047a9e05774b7858047d41a08276d92}{A\+D\+S1115\+\_\+1}})
+\begin{DoxyCompactList}\small\item\em Getter for A\+D\+S1115\+\_\+1 attribute. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_a_d_s1115_item}{A\+D\+S1115\+Item}} $\ast$ \mbox{\hyperlink{class_data_manager_a76580a2c86bd8b2461c839a4b687045b}{A\+D\+S1115\+\_\+2}} () const
+\begin{DoxyCompactList}\small\item\em Getter of the A\+D\+S1115\+\_\+1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_manager_adffc1a89530921cd61c69c4c5a4271f2}{set\+A\+D\+S1115\+\_\+2}} (\mbox{\hyperlink{class_a_d_s1115_item}{A\+D\+S1115\+Item}} $\ast$\mbox{\hyperlink{class_data_manager_a76580a2c86bd8b2461c839a4b687045b}{A\+D\+S1115\+\_\+2}})
+\begin{DoxyCompactList}\small\item\em Getter for A\+D\+S1115\+\_\+2 attribute. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_m_e280_item}{B\+M\+E280\+Item}} $\ast$ \mbox{\hyperlink{class_data_manager_a7eed1cca090ba46b8239797e2073c6b9}{B\+M\+E280}} () const
+\begin{DoxyCompactList}\small\item\em Getter of the \mbox{\hyperlink{class_b_m_e280}{B\+M\+E280}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_manager_a12a8153c138510c01007664f209db31b}{set\+B\+M\+E280}} (\mbox{\hyperlink{class_b_m_e280_item}{B\+M\+E280\+Item}} $\ast$\mbox{\hyperlink{class_b_m_e280}{B\+M\+E280}})
+\begin{DoxyCompactList}\small\item\em Getter for \mbox{\hyperlink{class_b_m_e280}{B\+M\+E280}} attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_data_manager_a85cf2856ba471f345b90fcd476d67768}\label{class_data_manager_a85cf2856ba471f345b90fcd476d67768}} 
+void {\bfseries set\+Delay} (const quint16 \&delay)
+\item 
+\mbox{\Hypertarget{class_data_manager_a647f11f2e7d62bc65baa43d69ed5372c}\label{class_data_manager_a647f11f2e7d62bc65baa43d69ed5372c}} 
+void {\bfseries set\+Directory\+Datafile\+Name} (const Q\+String \&directory\+Datafile\+Name)
+\item 
+\mbox{\Hypertarget{class_data_manager_a9d1242b5afa8540464291f1a7d536d10}\label{class_data_manager_a9d1242b5afa8540464291f1a7d536d10}} 
+Q\+String {\bfseries directory\+Datafile\+Name} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_data_manager_a7e7ecf621f23fa25b07d6aa93ae81cda}{msleep}} (unsigned long msecs)
+\begin{DoxyCompactList}\small\item\em waiting delay \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_data_manager_aab0d3db3b3394f97a2f076a960fc1852}{run}} ()
+\begin{DoxyCompactList}\small\item\em called function when the thread start \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_data_manager_a27c6b83bbd325baabcb8e75e9d7a01ce}\label{class_data_manager_a27c6b83bbd325baabcb8e75e9d7a01ce}} 
+void {\bfseries \+\_\+wait\+Delay} (int delay\+In\+Seconde)
+\item 
+\mbox{\Hypertarget{class_data_manager_aaf4b5310c61a4c8c10d5febca2464785}\label{class_data_manager_aaf4b5310c61a4c8c10d5febca2464785}} 
+void {\bfseries \+\_\+wait\+Delay\+Mili} (quint64 delay\+In\+Mili\+Seconde)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_data_manager_a982a1da4f047edabcae5647e12a71039}\label{class_data_manager_a982a1da4f047edabcae5647e12a71039}} 
+Q\+Object $\ast$ {\bfseries \+\_\+stastistic\+Viewer}
+\item 
+\mbox{\Hypertarget{class_data_manager_a949552ac9fdf706031dfda8f8fdb8134}\label{class_data_manager_a949552ac9fdf706031dfda8f8fdb8134}} 
+Q\+Object $\ast$ {\bfseries \+\_\+bme280\+Display}
+\item 
+\mbox{\Hypertarget{class_data_manager_aa9e2f4ed76c49211a67b6bc5461db97f}\label{class_data_manager_aa9e2f4ed76c49211a67b6bc5461db97f}} 
+quint16 {\bfseries \+\_\+delay}
+\item 
+\mbox{\Hypertarget{class_data_manager_a1c89d03bb8e3ea18dc27116ea5c4883a}\label{class_data_manager_a1c89d03bb8e3ea18dc27116ea5c4883a}} 
+bool {\bfseries \+\_\+ask\+For\+Start\+Reading}
+\item 
+\mbox{\Hypertarget{class_data_manager_a9b3c67784c803beefdc0162d64c33c00}\label{class_data_manager_a9b3c67784c803beefdc0162d64c33c00}} 
+bool {\bfseries \+\_\+ask\+For\+Stop\+Reading}
+\item 
+\mbox{\Hypertarget{class_data_manager_a262330e43d94a0f54a18cf17beeb2a89}\label{class_data_manager_a262330e43d94a0f54a18cf17beeb2a89}} 
+\mbox{\hyperlink{class_a_d_s1115_item}{A\+D\+S1115\+Item}} $\ast$ {\bfseries \+\_\+\+A\+D\+S1115\+\_\+1}
+\item 
+\mbox{\Hypertarget{class_data_manager_a3b02b348bbf08cea2f402d0c1585e13b}\label{class_data_manager_a3b02b348bbf08cea2f402d0c1585e13b}} 
+\mbox{\hyperlink{class_a_d_s1115_item}{A\+D\+S1115\+Item}} $\ast$ {\bfseries \+\_\+\+A\+D\+S1115\+\_\+2}
+\item 
+\mbox{\Hypertarget{class_data_manager_a3a3af2a4473913bcca9c67c5bb37c3f3}\label{class_data_manager_a3a3af2a4473913bcca9c67c5bb37c3f3}} 
+\mbox{\hyperlink{class_b_m_e280_item}{B\+M\+E280\+Item}} $\ast$ {\bfseries \+\_\+\+B\+M\+E280}
+\item 
+\mbox{\Hypertarget{class_data_manager_a5f821d5c43394dd9dfc858d5c98e5dbc}\label{class_data_manager_a5f821d5c43394dd9dfc858d5c98e5dbc}} 
+Q\+Vector$<$ \mbox{\hyperlink{class_data_frame}{Data\+Frame}} $>$ {\bfseries \+\_\+buffer1}
+\item 
+\mbox{\Hypertarget{class_data_manager_a972377afdbce56bc0a1df75c3519af8d}\label{class_data_manager_a972377afdbce56bc0a1df75c3519af8d}} 
+Q\+Vector$<$ \mbox{\hyperlink{class_data_frame}{Data\+Frame}} $>$\+::iterator {\bfseries \+\_\+itdata\+Frame\+Buffer1}
+\item 
+\mbox{\Hypertarget{class_data_manager_a122847577354f1a4b91bc997103ac7ed}\label{class_data_manager_a122847577354f1a4b91bc997103ac7ed}} 
+Q\+Vector$<$ \mbox{\hyperlink{class_data_frame}{Data\+Frame}} $>$ {\bfseries \+\_\+buffer2}
+\item 
+\mbox{\Hypertarget{class_data_manager_afebc92b851efd2d00c8d16a5c5c5d747}\label{class_data_manager_afebc92b851efd2d00c8d16a5c5c5d747}} 
+Q\+Vector$<$ \mbox{\hyperlink{class_data_frame}{Data\+Frame}} $>$\+::iterator {\bfseries \+\_\+itdata\+Frame\+Buffer2}
+\item 
+\mbox{\Hypertarget{class_data_manager_ae4b4e1f3a11fe8015d76222bc0149dc4}\label{class_data_manager_ae4b4e1f3a11fe8015d76222bc0149dc4}} 
+quint32 {\bfseries \+\_\+nb\+Frame\+Read\+For\+Every\+Saved\+File}
+\item 
+\mbox{\Hypertarget{class_data_manager_ae9dbc648af14409504338d407efe21f9}\label{class_data_manager_ae9dbc648af14409504338d407efe21f9}} 
+Q\+Date\+Time {\bfseries \+\_\+date\+Time}
+\item 
+\mbox{\Hypertarget{class_data_manager_ad1a71a047f23a69976a6180e70d864b7}\label{class_data_manager_ad1a71a047f23a69976a6180e70d864b7}} 
+\mbox{\hyperlink{class_data_analyser}{Data\+Analyser}} $\ast$ {\bfseries \+\_\+data\+Analyer\+Object}
+\item 
+\mbox{\Hypertarget{class_data_manager_a1292f2eae73598e365640e60ecb87ae7}\label{class_data_manager_a1292f2eae73598e365640e60ecb87ae7}} 
+Q\+String {\bfseries \+\_\+time\+\_\+format}
+\item 
+\mbox{\Hypertarget{class_data_manager_a5e9829d48c179c4586b4b2267e6d7875}\label{class_data_manager_a5e9829d48c179c4586b4b2267e6d7875}} 
+Q\+String {\bfseries \+\_\+directory\+Datafile\+Name}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_data_manager_aa7bf94eb77754ac6e8fa94d2e82c034f}\label{class_data_manager_aa7bf94eb77754ac6e8fa94d2e82c034f}} 
+\index{DataManager@{DataManager}!DataManager@{DataManager}}
+\index{DataManager@{DataManager}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{DataManager()}{DataManager()}}
+{\footnotesize\ttfamily Data\+Manager\+::\+Data\+Manager (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{stastistic\+Viewer,  }\item[{Q\+Object $\ast$}]{bme280\+Display,  }\item[{Q\+String}]{name,  }\item[{quint32}]{nb\+Frame\+Read\+For\+Every\+Saved\+File,  }\item[{quint16}]{delay\+In\+Mili,  }\item[{Q\+Object $\ast$}]{statistic\+Value\+Viewer,  }\item[{\mbox{\hyperlink{class_data_analyser}{Data\+Analyser}} $\ast$}]{data\+Analyser\+Object = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+constructor for Data\+Frame\+Live\+Reading 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & is the name of the object \\
+\hline
+\mbox{\texttt{ in}}  & {\em nb\+Frame\+Read\+For\+Every\+Saved\+File} & is the amont of reading data saved per file \\
+\hline
+\mbox{\texttt{ in}}  & {\em delay} & is the cycle time delay in miliseconds \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_data_manager_aa047a9e05774b7858047d41a08276d92}\label{class_data_manager_aa047a9e05774b7858047d41a08276d92}} 
+\index{DataManager@{DataManager}!ADS1115\_1@{ADS1115\_1}}
+\index{ADS1115\_1@{ADS1115\_1}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_1()}{ADS1115\_1()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_d_s1115_item}{A\+D\+S1115\+Item}} $\ast$ Data\+Manager\+::\+A\+D\+S1115\+\_\+1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter of the A\+D\+S1115\+\_\+1. 
+
+\begin{DoxyReturn}{Returns}
+A\+D\+S1115\+\_\+1 \+: A\+D\+S1115\+\_\+1 object pointer 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_data_manager_a76580a2c86bd8b2461c839a4b687045b}\label{class_data_manager_a76580a2c86bd8b2461c839a4b687045b}} 
+\index{DataManager@{DataManager}!ADS1115\_2@{ADS1115\_2}}
+\index{ADS1115\_2@{ADS1115\_2}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{ADS1115\_2()}{ADS1115\_2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_a_d_s1115_item}{A\+D\+S1115\+Item}} $\ast$ Data\+Manager\+::\+A\+D\+S1115\+\_\+2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter of the A\+D\+S1115\+\_\+1. 
+
+\begin{DoxyReturn}{Returns}
+A\+D\+S1115\+\_\+2 \+: A\+D\+S1115\+\_\+2 object pointer 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_data_manager_a7eed1cca090ba46b8239797e2073c6b9}\label{class_data_manager_a7eed1cca090ba46b8239797e2073c6b9}} 
+\index{DataManager@{DataManager}!BME280@{BME280}}
+\index{BME280@{BME280}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{BME280()}{BME280()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_m_e280_item}{B\+M\+E280\+Item}} $\ast$ Data\+Manager\+::\+B\+M\+E280 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter of the \mbox{\hyperlink{class_b_m_e280}{B\+M\+E280}}. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_b_m_e280}{B\+M\+E280}} \+: \mbox{\hyperlink{class_b_m_e280}{B\+M\+E280}} object pointer 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_data_manager_a7e7ecf621f23fa25b07d6aa93ae81cda}\label{class_data_manager_a7e7ecf621f23fa25b07d6aa93ae81cda}} 
+\index{DataManager@{DataManager}!msleep@{msleep}}
+\index{msleep@{msleep}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{msleep()}{msleep()}}
+{\footnotesize\ttfamily static void Data\+Manager\+::msleep (\begin{DoxyParamCaption}\item[{unsigned long}]{msecs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+waiting delay 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msleep} & is the time in miliseconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_data_manager_aab0d3db3b3394f97a2f076a960fc1852}\label{class_data_manager_aab0d3db3b3394f97a2f076a960fc1852}} 
+\index{DataManager@{DataManager}!run@{run}}
+\index{run@{run}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Data\+Manager\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+called function when the thread start 
+
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_data_manager_ae5d5debc5a7055c5507f064cf8bb9b86}\label{class_data_manager_ae5d5debc5a7055c5507f064cf8bb9b86}} 
+\index{DataManager@{DataManager}!setADS1115\_1@{setADS1115\_1}}
+\index{setADS1115\_1@{setADS1115\_1}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{setADS1115\_1()}{setADS1115\_1()}}
+{\footnotesize\ttfamily void Data\+Manager\+::set\+A\+D\+S1115\+\_\+1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_d_s1115_item}{A\+D\+S1115\+Item}} $\ast$}]{A\+D\+S1115\+\_\+1 }\end{DoxyParamCaption})}
+
+
+
+Getter for A\+D\+S1115\+\_\+1 attribute. 
+
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{class_data_manager_adffc1a89530921cd61c69c4c5a4271f2}\label{class_data_manager_adffc1a89530921cd61c69c4c5a4271f2}} 
+\index{DataManager@{DataManager}!setADS1115\_2@{setADS1115\_2}}
+\index{setADS1115\_2@{setADS1115\_2}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{setADS1115\_2()}{setADS1115\_2()}}
+{\footnotesize\ttfamily void Data\+Manager\+::set\+A\+D\+S1115\+\_\+2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_d_s1115_item}{A\+D\+S1115\+Item}} $\ast$}]{A\+D\+S1115\+\_\+2 }\end{DoxyParamCaption})}
+
+
+
+Getter for A\+D\+S1115\+\_\+2 attribute. 
+
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{class_data_manager_a12a8153c138510c01007664f209db31b}\label{class_data_manager_a12a8153c138510c01007664f209db31b}} 
+\index{DataManager@{DataManager}!setBME280@{setBME280}}
+\index{setBME280@{setBME280}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{setBME280()}{setBME280()}}
+{\footnotesize\ttfamily Data\+Manager\+::set\+B\+M\+E280 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_m_e280_item}{B\+M\+E280\+Item}} $\ast$}]{B\+M\+E280 }\end{DoxyParamCaption})}
+
+
+
+Getter for \mbox{\hyperlink{class_b_m_e280}{B\+M\+E280}} attribute. 
+
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{class_data_manager_ab2e9b2da6c9c41ab3c6220db07ddec3c}\label{class_data_manager_ab2e9b2da6c9c41ab3c6220db07ddec3c}} 
+\index{DataManager@{DataManager}!startReading@{startReading}}
+\index{startReading@{startReading}!DataManager@{DataManager}}
+\doxysubsubsection{\texorpdfstring{startReading()}{startReading()}}
+{\footnotesize\ttfamily Data\+Manager\+::start\+Reading (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+start reading operation 
+
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Smart\+Home\+Domotic/\+Data\+Manager/\mbox{\hyperlink{datamanager_8h}{datamanager.\+h}}\item 
+Smart\+Home\+Domotic/\+Data\+Manager/datamanager.\+cpp\end{DoxyCompactItemize}

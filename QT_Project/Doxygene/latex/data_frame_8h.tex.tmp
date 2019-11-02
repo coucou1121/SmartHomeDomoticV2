@@ -1,0 +1,31 @@
+\hypertarget{data_frame_8h}{}\doxysection{Smart\+Home\+Domotic/\+Data\+Manager/data\+Frame.h File Reference}
+\label{data_frame_8h}\index{SmartHomeDomotic/DataManager/dataFrame.h@{SmartHomeDomotic/DataManager/dataFrame.h}}
+
+
+Structure of the data.  
+
+
+{\ttfamily \#include $<$Q\+Debug$>$}\newline
+Include dependency graph for data\+Frame.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_data_frame}{Data\+Frame}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure of the data. 
+
+\begin{DoxyAuthor}{Author}
+Sébastien Blessemaille 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16 septembre 2017 
+\end{DoxyDate}

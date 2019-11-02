@@ -1,0 +1,149 @@
+\hypertarget{class_b_m_e280}{}\doxysection{B\+M\+E280 Class Reference}
+\label{class_b_m_e280}\index{BME280@{BME280}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_a898f1b3bef54a27937a31cfc346e7692}\label{class_b_m_e280_a898f1b3bef54a27937a31cfc346e7692}} 
+{\bfseries B\+M\+E280} (quint8 device\+\_\+\+I2\+C\+\_\+\+Adress)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_a3be47fed35e68e6e856d6646a0d8b881}\label{class_b_m_e280_a3be47fed35e68e6e856d6646a0d8b881}} 
+void {\bfseries init\+\_\+sbme280\+\_\+calib\+\_\+data} (\mbox{\hyperlink{structsbme280__calib__data}{psbme280\+\_\+calib\+\_\+data}} p\+Calib\+\_\+data)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_a24580eed0fcbe902e36744574b2a5115}\label{class_b_m_e280_a24580eed0fcbe902e36744574b2a5115}} 
+void {\bfseries init\+\_\+sbme280\+\_\+uncomp\+\_\+data} (\mbox{\hyperlink{structsbme280__uncomp__data}{psbme280\+\_\+uncomp\+\_\+data}} p\+Uncomp\+\_\+data)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_a29ae8d88cfbe4e5c319d626a47aaac02}\label{class_b_m_e280_a29ae8d88cfbe4e5c319d626a47aaac02}} 
+void {\bfseries init\+\_\+sbme280\+\_\+data} (\mbox{\hyperlink{structsbme280__data}{psbme280\+\_\+data}} p\+Comp\+\_\+data)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_a0ff3a4b97e9254d85628f3d9e851a1c6}\label{class_b_m_e280_a0ff3a4b97e9254d85628f3d9e851a1c6}} 
+void {\bfseries init\+\_\+sbme280\+\_\+setting} (\mbox{\hyperlink{structsbme280__setting}{psbme280\+\_\+setting}} p\+B\+M\+E280\+\_\+setting)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_a052bd93ab322f68b6979d384594b5469}\label{class_b_m_e280_a052bd93ab322f68b6979d384594b5469}} 
+void {\bfseries init\+\_\+sbme280\+\_\+device} (\mbox{\hyperlink{structsbme280__dev}{psbme280\+\_\+dev}} p\+B\+M\+E280\+\_\+device)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_ad8e18c8ae05defb88606f66f944a7801}\label{class_b_m_e280_ad8e18c8ae05defb88606f66f944a7801}} 
+quint8 {\bfseries read\+Chip\+ID} (int fd)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_ab6b0ad76def4c18eabd0f4375e23c2c9}\label{class_b_m_e280_ab6b0ad76def4c18eabd0f4375e23c2c9}} 
+quint8 {\bfseries read\+Register} (quint8 register\+Value)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_a188e1e5c325993633012b754f11b8348}\label{class_b_m_e280_a188e1e5c325993633012b754f11b8348}} 
+void {\bfseries read\+Calibration\+Data} (int fd, \mbox{\hyperlink{structsbme280__calib__data}{sbme280\+\_\+calib\+\_\+data}} $\ast$data)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_a51ca58da7ff283620dd0723fc2ec12c1}\label{class_b_m_e280_a51ca58da7ff283620dd0723fc2ec12c1}} 
+void {\bfseries read\+Uncompensated\+Value} (int fd, \mbox{\hyperlink{structsbme280__uncomp__data}{psbme280\+\_\+uncomp\+\_\+data}} p\+Uncomp\+\_\+data)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_a73364292bff2abd6880c62f1b482dffe}\label{class_b_m_e280_a73364292bff2abd6880c62f1b482dffe}} 
+void {\bfseries writ\+B\+M\+E280configuration} (\mbox{\hyperlink{structsbme280__dev}{psbme280\+\_\+dev}} p\+B\+M\+E280\+\_\+device)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_a009ce071405c8d3fe5a4ec2037a14aec}\label{class_b_m_e280_a009ce071405c8d3fe5a4ec2037a14aec}} 
+void {\bfseries wakeup\+Device} (\mbox{\hyperlink{structsbme280__dev}{psbme280\+\_\+dev}} p\+B\+M\+E280\+\_\+device)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_ab4589d7c4c9e957349092c3191596f88}\label{class_b_m_e280_ab4589d7c4c9e957349092c3191596f88}} 
+float {\bfseries get\+Altitude} (double pressure)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_a07c1810ab8f854e9a911e96bb931f207}\label{class_b_m_e280_a07c1810ab8f854e9a911e96bb931f207}} 
+quint8 {\bfseries get\+B\+M\+E280\+\_\+fd} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{class_b_m_e280_a8b0810198ae1a9492c220b51e7bec398}{compensate\+\_\+pressure}} (const \mbox{\hyperlink{structsbme280__uncomp__data}{sbme280\+\_\+uncomp\+\_\+data}} $\ast$uncomp\+\_\+data, \mbox{\hyperlink{structsbme280__calib__data}{sbme280\+\_\+calib\+\_\+data}} $\ast$calib\+\_\+data)
+\begin{DoxyCompactList}\small\item\em This internal A\+PI is used to compensate the raw pressure data and return the compensated pressure data in double data type. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_b_m_e280_ae14f091036b73752cc384ea9d5bf6b8c}{compensate\+\_\+temperature}} (const \mbox{\hyperlink{structsbme280__uncomp__data}{sbme280\+\_\+uncomp\+\_\+data}} $\ast$uncomp\+\_\+data, \mbox{\hyperlink{structsbme280__calib__data}{sbme280\+\_\+calib\+\_\+data}} $\ast$calib\+\_\+data)
+\begin{DoxyCompactList}\small\item\em This internal A\+PI is used to compensate the raw temperature data and return the compensated temperature data in double data type. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_b_m_e280_a86e72eeb7c44ec660be1b19219655832}{compensate\+\_\+humidity}} (const \mbox{\hyperlink{structsbme280__uncomp__data}{sbme280\+\_\+uncomp\+\_\+data}} $\ast$uncomp\+\_\+data, \mbox{\hyperlink{structsbme280__calib__data}{sbme280\+\_\+calib\+\_\+data}} $\ast$calib\+\_\+data)
+\begin{DoxyCompactList}\small\item\em This internal A\+PI is used to compensate the raw humidity data and return the compensated humidity data in double data type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_a7a332839be67b9763ef354844e57005f}\label{class_b_m_e280_a7a332839be67b9763ef354844e57005f}} 
+quint8 {\bfseries \+\_\+\+B\+M\+E280\+\_\+i2c\+Address}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_aa62efac048ae4b8335ae87fe1e569594}\label{class_b_m_e280_aa62efac048ae4b8335ae87fe1e569594}} 
+quint8 {\bfseries \+\_\+\+B\+M\+E280\+\_\+fd}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_m_e280_a86e72eeb7c44ec660be1b19219655832}\label{class_b_m_e280_a86e72eeb7c44ec660be1b19219655832}} 
+\index{BME280@{BME280}!compensate\_humidity@{compensate\_humidity}}
+\index{compensate\_humidity@{compensate\_humidity}!BME280@{BME280}}
+\doxysubsubsection{\texorpdfstring{compensate\_humidity()}{compensate\_humidity()}}
+{\footnotesize\ttfamily static double B\+M\+E280\+::compensate\+\_\+humidity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsbme280__uncomp__data}{sbme280\+\_\+uncomp\+\_\+data}} $\ast$}]{uncomp\+\_\+data,  }\item[{\mbox{\hyperlink{structsbme280__calib__data}{sbme280\+\_\+calib\+\_\+data}} $\ast$}]{calib\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This internal A\+PI is used to compensate the raw humidity data and return the compensated humidity data in double data type. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uncomp\+\_\+data} & \+: Contains the uncompensated humidity data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em calib\+\_\+data} & \+: Pointer to the calibration data ure.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Compensated humidity data. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em Compensated} & humidity data in double. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_b_m_e280_a8b0810198ae1a9492c220b51e7bec398}\label{class_b_m_e280_a8b0810198ae1a9492c220b51e7bec398}} 
+\index{BME280@{BME280}!compensate\_pressure@{compensate\_pressure}}
+\index{compensate\_pressure@{compensate\_pressure}!BME280@{BME280}}
+\doxysubsubsection{\texorpdfstring{compensate\_pressure()}{compensate\_pressure()}}
+{\footnotesize\ttfamily static double B\+M\+E280\+::compensate\+\_\+pressure (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsbme280__uncomp__data}{sbme280\+\_\+uncomp\+\_\+data}} $\ast$}]{uncomp\+\_\+data,  }\item[{\mbox{\hyperlink{structsbme280__calib__data}{sbme280\+\_\+calib\+\_\+data}} $\ast$}]{calib\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This internal A\+PI is used to compensate the raw pressure data and return the compensated pressure data in double data type. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uncomp\+\_\+data} & \+: Contains the uncompensated pressure data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em calib\+\_\+data} & \+: Pointer to the calibration data ure.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Compensated pressure data. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em Compensated} & pressure data in double. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_b_m_e280_ae14f091036b73752cc384ea9d5bf6b8c}\label{class_b_m_e280_ae14f091036b73752cc384ea9d5bf6b8c}} 
+\index{BME280@{BME280}!compensate\_temperature@{compensate\_temperature}}
+\index{compensate\_temperature@{compensate\_temperature}!BME280@{BME280}}
+\doxysubsubsection{\texorpdfstring{compensate\_temperature()}{compensate\_temperature()}}
+{\footnotesize\ttfamily double B\+M\+E280\+::compensate\+\_\+temperature (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsbme280__uncomp__data}{sbme280\+\_\+uncomp\+\_\+data}} $\ast$}]{uncomp\+\_\+data,  }\item[{\mbox{\hyperlink{structsbme280__calib__data}{sbme280\+\_\+calib\+\_\+data}} $\ast$}]{calib\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This internal A\+PI is used to compensate the raw temperature data and return the compensated temperature data in double data type. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uncomp\+\_\+data} & \+: Contains the uncompensated temperature data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em calib\+\_\+data} & \+: Pointer to calibration data ure.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Compensated temperature data. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em Compensated} & temperature data in double. \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Smart\+Home\+Domotic/\+B\+M\+E280/bme280.\+h\item 
+Smart\+Home\+Domotic/\+B\+M\+E280/bme280.\+cpp\end{DoxyCompactItemize}

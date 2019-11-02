@@ -1,0 +1,435 @@
+\begin{theindex}
+
+  \item {\_displayMessage}
+    \subitem {ErrorManager}, \hyperpage{46}
+  \item {\_setColor}
+    \subitem {ErrorManager}, \hyperpage{47}
+
+  \indexspace
+
+  \item {ADS1115}, \hyperpage{9}
+  \item {ADS1115\_1}
+    \subitem {DataManager}, \hyperpage{36}
+  \item {ADS1115\_2}
+    \subitem {DataManager}, \hyperpage{36}
+  \item {ADS1115Item}, \hyperpage{10}
+    \subitem {run}, \hyperpage{12}
+  \item {ADS115\_1\_chan0}
+    \subitem {DataFrame}, \hyperpage{23}
+  \item {ADS115\_1\_chan1}
+    \subitem {DataFrame}, \hyperpage{23}
+  \item {ADS115\_1\_chan2}
+    \subitem {DataFrame}, \hyperpage{23}
+  \item {ADS115\_1\_chan3}
+    \subitem {DataFrame}, \hyperpage{23}
+  \item {ADS115\_2\_chan0}
+    \subitem {DataFrame}, \hyperpage{24}
+  \item {ADS115\_2\_chan1}
+    \subitem {DataFrame}, \hyperpage{24}
+  \item {ADS115\_2\_chan2}
+    \subitem {DataFrame}, \hyperpage{24}
+  \item {ADS115\_2\_chan3}
+    \subitem {DataFrame}, \hyperpage{24}
+
+  \indexspace
+
+  \item {BME280}, \hyperpage{13}
+    \subitem {compensate\_humidity}, \hyperpage{14}
+    \subitem {compensate\_pressure}, \hyperpage{14}
+    \subitem {compensate\_temperature}, \hyperpage{15}
+    \subitem {DataManager}, \hyperpage{36}
+  \item {BME280\_humidity}
+    \subitem {DataFrame}, \hyperpage{25}
+  \item {BME280\_pressure}
+    \subitem {DataFrame}, \hyperpage{25}
+  \item {BME280\_temperature}
+    \subitem {DataFrame}, \hyperpage{25}
+  \item {BME280Item}, \hyperpage{15}
+    \subitem {run}, \hyperpage{17}
+
+  \indexspace
+
+  \item {calib\_data}
+    \subitem {sbme280\_dev}, \hyperpage{58}
+  \item {comp\_data}
+    \subitem {sbme280\_dev}, \hyperpage{58}
+  \item {compensate\_humidity}
+    \subitem {BME280}, \hyperpage{14}
+  \item {compensate\_pressure}
+    \subitem {BME280}, \hyperpage{14}
+  \item {compensate\_temperature}
+    \subitem {BME280}, \hyperpage{15}
+  \item {CustomPlotItem}, \hyperpage{17}
+
+  \indexspace
+
+  \item {DataAnalyser}, \hyperpage{19}
+    \subitem {msleep}, \hyperpage{21}
+    \subitem {run}, \hyperpage{21}
+  \item {DataFrame}, \hyperpage{21}
+    \subitem {ADS115\_1\_chan0}, \hyperpage{23}
+    \subitem {ADS115\_1\_chan1}, \hyperpage{23}
+    \subitem {ADS115\_1\_chan2}, \hyperpage{23}
+    \subitem {ADS115\_1\_chan3}, \hyperpage{23}
+    \subitem {ADS115\_2\_chan0}, \hyperpage{24}
+    \subitem {ADS115\_2\_chan1}, \hyperpage{24}
+    \subitem {ADS115\_2\_chan2}, \hyperpage{24}
+    \subitem {ADS115\_2\_chan3}, \hyperpage{24}
+    \subitem {BME280\_humidity}, \hyperpage{25}
+    \subitem {BME280\_pressure}, \hyperpage{25}
+    \subitem {BME280\_temperature}, \hyperpage{25}
+    \subitem {msbCPT}, \hyperpage{25}
+    \subitem {setADS115\_1\_chan0}, \hyperpage{26}
+    \subitem {setADS115\_1\_chan1}, \hyperpage{27}
+    \subitem {setADS115\_1\_chan2}, \hyperpage{27}
+    \subitem {setADS115\_1\_chan3}, \hyperpage{27}
+    \subitem {setADS115\_2\_chan0}, \hyperpage{29}
+    \subitem {setADS115\_2\_chan1}, \hyperpage{29}
+    \subitem {setADS115\_2\_chan2}, \hyperpage{29}
+    \subitem {setADS115\_2\_chan3}, \hyperpage{31}
+    \subitem {setBME280\_humidity}, \hyperpage{31}
+    \subitem {setBME280\_pressure}, \hyperpage{31}
+    \subitem {setBME280\_temperature}, \hyperpage{33}
+    \subitem {setMsbCPT}, \hyperpage{33}
+  \item {DataManager}, \hyperpage{34}
+    \subitem {ADS1115\_1}, \hyperpage{36}
+    \subitem {ADS1115\_2}, \hyperpage{36}
+    \subitem {BME280}, \hyperpage{36}
+    \subitem {DataManager}, \hyperpage{35}
+    \subitem {msleep}, \hyperpage{36}
+    \subitem {run}, \hyperpage{37}
+    \subitem {setADS1115\_1}, \hyperpage{37}
+    \subitem {setADS1115\_2}, \hyperpage{37}
+    \subitem {setBME280}, \hyperpage{37}
+    \subitem {startReading}, \hyperpage{38}
+  \item {dev\_id}
+    \subitem {sbme280\_dev}, \hyperpage{58}
+
+  \indexspace
+
+  \item {E\_ErrorMesseage}
+    \subitem {GlobalEnumerate}, \hyperpage{50}
+  \item {E\_HomePageObject}
+    \subitem {GlobalEnumerate}, \hyperpage{50}
+  \item {E\_PlotStyle}, \hyperpage{38}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {E\_StateMachine}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {E\_TankLiquidInside}, \hyperpage{39}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {E\_TankObjectName}, \hyperpage{39, 40}
+    \subitem {GlobalEnumatedAndExtern}, \hyperpage{49}
+    \subitem {GlobalEnumerate}, \hyperpage{52}
+  \item {eBPStartStopState}, \hyperpage{41}
+  \item {ECO\_OIL}
+    \subitem {GlobalEnumerate}, \hyperpage{52}
+  \item {eEdge}, \hyperpage{41}
+  \item {eError}, \hyperpage{41, 42}
+  \item {eFTDIReturnCharacter}, \hyperpage{42}
+  \item {eFTDIStatePossible}, \hyperpage{43}
+  \item {eLogicOperator}, \hyperpage{43}
+  \item {eMainStateApplication}, \hyperpage{44}
+  \item {eMainStateDisplay}, \hyperpage{44}
+  \item {ePeriodePossible}, \hyperpage{45}
+  \item {eRangeValue}, \hyperpage{45}
+  \item {eRollState}, \hyperpage{45}
+  \item {ERR\_LOW\_LEVEL\_REACHED}
+    \subitem {GlobalEnumerate}, \hyperpage{50}
+  \item {ERR\_NO\_ERROR}
+    \subitem {GlobalEnumerate}, \hyperpage{50}
+  \item {ErrorManager}, \hyperpage{46}
+    \subitem {\_displayMessage}, \hyperpage{46}
+    \subitem {\_setColor}, \hyperpage{47}
+  \item {ErrorMessage}, \hyperpage{47}
+  \item {eTracePossible}, \hyperpage{48}
+  \item {eTrigState}, \hyperpage{48}
+
+  \indexspace
+
+  \item {filter}
+    \subitem {sbme280\_setting}, \hyperpage{59}
+
+  \indexspace
+
+  \item {GlobalEnumatedAndExtern}, \hyperpage{49}
+    \subitem {E\_TankObjectName}, \hyperpage{49}
+    \subitem {TANK1}, \hyperpage{49}
+    \subitem {TANK2}, \hyperpage{49}
+    \subitem {TANK3}, \hyperpage{49}
+    \subitem {TANK4}, \hyperpage{49}
+    \subitem {TANK5}, \hyperpage{49}
+    \subitem {TANK6}, \hyperpage{49}
+  \item {GlobalEnumerate}, \hyperpage{49}
+    \subitem {E\_ErrorMesseage}, \hyperpage{50}
+    \subitem {E\_HomePageObject}, \hyperpage{50}
+    \subitem {E\_PlotStyle}, \hyperpage{51}
+    \subitem {E\_StateMachine}, \hyperpage{51}
+    \subitem {E\_TankLiquidInside}, \hyperpage{51}
+    \subitem {E\_TankObjectName}, \hyperpage{52}
+    \subitem {ECO\_OIL}, \hyperpage{52}
+    \subitem {ERR\_LOW\_LEVEL\_REACHED}, \hyperpage{50}
+    \subitem {ERR\_NO\_ERROR}, \hyperpage{50}
+    \subitem {HOMEAD1115\_1}, \hyperpage{51}
+    \subitem {HOMEAD1115\_2}, \hyperpage{51}
+    \subitem {HOMEBME280}, \hyperpage{50}
+    \subitem {HOMESENSOR1}, \hyperpage{50}
+    \subitem {HOMESENSOR2}, \hyperpage{50}
+    \subitem {HOMESENSOR3}, \hyperpage{51}
+    \subitem {HOMESENSOR4}, \hyperpage{51}
+    \subitem {HOMESENSOR5}, \hyperpage{51}
+    \subitem {HOMESENSOR6}, \hyperpage{51}
+    \subitem {HOMETANK1}, \hyperpage{50}
+    \subitem {HOMETANK2}, \hyperpage{50}
+    \subitem {HOMETANK3}, \hyperpage{50}
+    \subitem {HOMETANK4}, \hyperpage{50}
+    \subitem {HOMETANK5}, \hyperpage{50}
+    \subitem {HOMETANK6}, \hyperpage{50}
+    \subitem {OIL}, \hyperpage{52}
+    \subitem {PLOT\_STYLE\_ANANLOG\_TRACE}, \hyperpage{51}
+    \subitem {PLOT\_STYLE\_CONSO\_TRACE}, \hyperpage{51}
+    \subitem {PLOT\_STYLE\_HUMIDITY\_TRACE}, \hyperpage{51}
+    \subitem {PLOT\_STYLE\_PRESSURE\_TRACE}, \hyperpage{51}
+    \subitem {PLOT\_STYLE\_STATISTIC\_TRACE}, \hyperpage{51}
+    \subitem {PLOT\_STYLE\_TEMPERATURE\_TRACE}, \hyperpage{51}
+    \subitem {PLOT\_STYLE\_WEATHER\_STATION}, \hyperpage{51}
+    \subitem {STATE\_FOUNDED}, \hyperpage{51}
+    \subitem {STATE\_INIT}, \hyperpage{51}
+    \subitem {STATE\_NOT\_FOUNDED}, \hyperpage{51}
+    \subitem {STATE\_ON\_READING}, \hyperpage{51}
+    \subitem {STATE\_READY}, \hyperpage{51}
+    \subitem {TANK1}, \hyperpage{52}
+    \subitem {TANK2}, \hyperpage{52}
+    \subitem {TANK3}, \hyperpage{52}
+    \subitem {TANK4}, \hyperpage{52}
+    \subitem {TANK5}, \hyperpage{52}
+    \subitem {TANK6}, \hyperpage{52}
+    \subitem {WATER}, \hyperpage{52}
+  \item {GlobaleStaticValue}, \hyperpage{52}
+    \subitem {initErrorPossible}, \hyperpage{53}
+    \subitem {initHomeViewObject}, \hyperpage{54}
+    \subitem {initTankObjectName}, \hyperpage{54}
+    \subitem {welcomeText}, \hyperpage{54}
+  \item {GlobalStyle}, \hyperpage{55}
+
+  \indexspace
+
+  \item {HOMEAD1115\_1}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {HOMEAD1115\_2}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {HOMEBME280}
+    \subitem {GlobalEnumerate}, \hyperpage{50}
+  \item {HOMESENSOR1}
+    \subitem {GlobalEnumerate}, \hyperpage{50}
+  \item {HOMESENSOR2}
+    \subitem {GlobalEnumerate}, \hyperpage{50}
+  \item {HOMESENSOR3}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {HOMESENSOR4}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {HOMESENSOR5}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {HOMESENSOR6}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {HOMETANK1}
+    \subitem {GlobalEnumerate}, \hyperpage{50}
+  \item {HOMETANK2}
+    \subitem {GlobalEnumerate}, \hyperpage{50}
+  \item {HOMETANK3}
+    \subitem {GlobalEnumerate}, \hyperpage{50}
+  \item {HOMETANK4}
+    \subitem {GlobalEnumerate}, \hyperpage{50}
+  \item {HOMETANK5}
+    \subitem {GlobalEnumerate}, \hyperpage{50}
+  \item {HOMETANK6}
+    \subitem {GlobalEnumerate}, \hyperpage{50}
+  \item {HomeViewObject}, \hyperpage{56}
+  \item {humidity}
+    \subitem {sbme280\_data}, \hyperpage{57}
+
+  \indexspace
+
+  \item {initErrorPossible}
+    \subitem {GlobaleStaticValue}, \hyperpage{53}
+  \item {initHomeViewObject}
+    \subitem {GlobaleStaticValue}, \hyperpage{54}
+  \item {initTankObjectName}
+    \subitem {GlobaleStaticValue}, \hyperpage{54}
+
+  \indexspace
+
+  \item {Main}, \hyperpage{56}
+  \item {msbCPT}
+    \subitem {DataFrame}, \hyperpage{25}
+  \item {msleep}
+    \subitem {DataAnalyser}, \hyperpage{21}
+    \subitem {DataManager}, \hyperpage{36}
+    \subitem {timerthread}, \hyperpage{65}
+
+  \indexspace
+
+  \item {OIL}
+    \subitem {GlobalEnumerate}, \hyperpage{52}
+  \item {osr\_h}
+    \subitem {sbme280\_setting}, \hyperpage{59}
+  \item {osr\_t}
+    \subitem {sbme280\_setting}, \hyperpage{60}
+
+  \indexspace
+
+  \item {PLOT\_STYLE\_ANANLOG\_TRACE}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {PLOT\_STYLE\_CONSO\_TRACE}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {PLOT\_STYLE\_HUMIDITY\_TRACE}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {PLOT\_STYLE\_PRESSURE\_TRACE}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {PLOT\_STYLE\_STATISTIC\_TRACE}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {PLOT\_STYLE\_TEMPERATURE\_TRACE}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {PLOT\_STYLE\_WEATHER\_STATION}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {power\_mode}
+    \subitem {sbme280\_setting}, \hyperpage{60}
+  \item {pressure}
+    \subitem {sbme280\_data}, \hyperpage{57}
+
+  \indexspace
+
+  \item {run}
+    \subitem {ADS1115Item}, \hyperpage{12}
+    \subitem {BME280Item}, \hyperpage{17}
+    \subitem {DataAnalyser}, \hyperpage{21}
+    \subitem {DataManager}, \hyperpage{37}
+    \subitem {timerthread}, \hyperpage{65}
+
+  \indexspace
+
+  \item {sbme280\_calib\_data}, \hyperpage{56}
+  \item {sbme280\_data}, \hyperpage{57}
+    \subitem {humidity}, \hyperpage{57}
+    \subitem {pressure}, \hyperpage{57}
+    \subitem {temperature}, \hyperpage{57}
+  \item {sbme280\_dev}, \hyperpage{58}
+    \subitem {calib\_data}, \hyperpage{58}
+    \subitem {comp\_data}, \hyperpage{58}
+    \subitem {dev\_id}, \hyperpage{58}
+    \subitem {settings}, \hyperpage{58}
+    \subitem {uncomp\_data}, \hyperpage{59}
+  \item {sbme280\_setting}, \hyperpage{59}
+    \subitem {filter}, \hyperpage{59}
+    \subitem {osr\_h}, \hyperpage{59}
+    \subitem {osr\_t}, \hyperpage{60}
+    \subitem {power\_mode}, \hyperpage{60}
+    \subitem {standby\_time}, \hyperpage{60}
+  \item {sbme280\_uncomp\_data}, \hyperpage{60}
+  \item {setADS1115\_1}
+    \subitem {DataManager}, \hyperpage{37}
+  \item {setADS1115\_2}
+    \subitem {DataManager}, \hyperpage{37}
+  \item {setADS115\_1\_chan0}
+    \subitem {DataFrame}, \hyperpage{26}
+  \item {setADS115\_1\_chan1}
+    \subitem {DataFrame}, \hyperpage{27}
+  \item {setADS115\_1\_chan2}
+    \subitem {DataFrame}, \hyperpage{27}
+  \item {setADS115\_1\_chan3}
+    \subitem {DataFrame}, \hyperpage{27}
+  \item {setADS115\_2\_chan0}
+    \subitem {DataFrame}, \hyperpage{29}
+  \item {setADS115\_2\_chan1}
+    \subitem {DataFrame}, \hyperpage{29}
+  \item {setADS115\_2\_chan2}
+    \subitem {DataFrame}, \hyperpage{29}
+  \item {setADS115\_2\_chan3}
+    \subitem {DataFrame}, \hyperpage{31}
+  \item {setBME280}
+    \subitem {DataManager}, \hyperpage{37}
+  \item {setBME280\_humidity}
+    \subitem {DataFrame}, \hyperpage{31}
+  \item {setBME280\_pressure}
+    \subitem {DataFrame}, \hyperpage{31}
+  \item {setBME280\_temperature}
+    \subitem {DataFrame}, \hyperpage{33}
+  \item {setMsbCPT}
+    \subitem {DataFrame}, \hyperpage{33}
+  \item {Setting}, \hyperpage{61}
+  \item {settings}
+    \subitem {sbme280\_dev}, \hyperpage{58}
+  \item {sleep}
+    \subitem {timerthread}, \hyperpage{65}
+  \item {SmartHomeDomotic/DataManager/dataFrame.h}, \hyperpage{69}
+  \item {SmartHomeDomotic/DataManager/datamanager.h}, \hyperpage{69}
+  \item {SmartHomeDomotic/errormanager.h}, \hyperpage{70}
+  \item {SmartHomeDomotic/globalEnumatedAndExtern.h}, \hyperpage{71}
+  \item {SmartHomeDomotic/tank.h}, \hyperpage{71}
+  \item {SmartHomeDomotic/TimerThread.h}, \hyperpage{72}
+  \item {standby\_time}
+    \subitem {sbme280\_setting}, \hyperpage{60}
+  \item {startReading}
+    \subitem {DataManager}, \hyperpage{38}
+  \item {startWorking}
+    \subitem {timerthread}, \hyperpage{66}
+  \item {STATE\_FOUNDED}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {STATE\_INIT}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {STATE\_NOT\_FOUNDED}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {STATE\_ON\_READING}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {STATE\_READY}
+    \subitem {GlobalEnumerate}, \hyperpage{51}
+  \item {stopWorking}
+    \subitem {timerthread}, \hyperpage{66}
+
+  \indexspace
+
+  \item {Tank}, \hyperpage{62}
+    \subitem {Tank}, \hyperpage{63}
+  \item {TANK1}
+    \subitem {GlobalEnumatedAndExtern}, \hyperpage{49}
+    \subitem {GlobalEnumerate}, \hyperpage{52}
+  \item {TANK2}
+    \subitem {GlobalEnumatedAndExtern}, \hyperpage{49}
+    \subitem {GlobalEnumerate}, \hyperpage{52}
+  \item {TANK3}
+    \subitem {GlobalEnumatedAndExtern}, \hyperpage{49}
+    \subitem {GlobalEnumerate}, \hyperpage{52}
+  \item {TANK4}
+    \subitem {GlobalEnumatedAndExtern}, \hyperpage{49}
+    \subitem {GlobalEnumerate}, \hyperpage{52}
+  \item {TANK5}
+    \subitem {GlobalEnumatedAndExtern}, \hyperpage{49}
+    \subitem {GlobalEnumerate}, \hyperpage{52}
+  \item {TANK6}
+    \subitem {GlobalEnumatedAndExtern}, \hyperpage{49}
+    \subitem {GlobalEnumerate}, \hyperpage{52}
+  \item {TankObjectName}, \hyperpage{64}
+  \item {temperature}
+    \subitem {sbme280\_data}, \hyperpage{57}
+  \item {timerthread}, \hyperpage{64}
+    \subitem {msleep}, \hyperpage{65}
+    \subitem {run}, \hyperpage{65}
+    \subitem {sleep}, \hyperpage{65}
+    \subitem {startWorking}, \hyperpage{66}
+    \subitem {stopWorking}, \hyperpage{66}
+    \subitem {usleep}, \hyperpage{66}
+
+  \indexspace
+
+  \item {uncomp\_data}
+    \subitem {sbme280\_dev}, \hyperpage{59}
+  \item {usleep}
+    \subitem {timerthread}, \hyperpage{66}
+
+  \indexspace
+
+  \item {WATER}
+    \subitem {GlobalEnumerate}, \hyperpage{52}
+  \item {welcomeText}
+    \subitem {GlobaleStaticValue}, \hyperpage{54}
+
+\end{theindex}

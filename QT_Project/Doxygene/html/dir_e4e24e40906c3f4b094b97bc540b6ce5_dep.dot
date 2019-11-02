@@ -1,0 +1,14 @@
+digraph "SmartHomeDomotic" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e4e24e40906c3f4b094b97bc540b6ce5 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_e4e24e40906c3f4b094b97bc540b6ce5.html"];
+    dir_e4e24e40906c3f4b094b97bc540b6ce5 [shape=plaintext label="SmartHomeDomotic"];
+    dir_75a63784bf033a05d16a69af68abcfae [shape=box label="ADS1115" color="black" fillcolor="white" style="filled" URL="dir_75a63784bf033a05d16a69af68abcfae.html"];
+    dir_206a804ea317367acc58cae035d1924a [shape=box label="BME280" color="black" fillcolor="white" style="filled" URL="dir_206a804ea317367acc58cae035d1924a.html"];
+    dir_ca2e47619ba1223c25fbd371124c3290 [shape=box label="DataManager" color="black" fillcolor="white" style="filled" URL="dir_ca2e47619ba1223c25fbd371124c3290.html"];
+  }
+  dir_206a804ea317367acc58cae035d1924a->dir_ca2e47619ba1223c25fbd371124c3290 [headlabel="1", labeldistance=1.5 headhref="dir_000002_000003.html"];
+  dir_75a63784bf033a05d16a69af68abcfae->dir_ca2e47619ba1223c25fbd371124c3290 [headlabel="1", labeldistance=1.5 headhref="dir_000001_000003.html"];
+}

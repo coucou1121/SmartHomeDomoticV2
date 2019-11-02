@@ -1,0 +1,157 @@
+\hypertarget{class_b_m_e280_item}{}\doxysection{B\+M\+E280\+Item Class Reference}
+\label{class_b_m_e280_item}\index{BME280Item@{BME280Item}}
+
+
+Inheritance diagram for B\+M\+E280\+Item\+:
+% FIG 0
+
+
+Collaboration diagram for B\+M\+E280\+Item\+:
+% FIG 1
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a917b18c290818e4ead52c5fa5877986c}\label{class_b_m_e280_item_a917b18c290818e4ead52c5fa5877986c}} 
+void {\bfseries jump\+To\+Next\+State} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a89cc451e3715bd7cdf60191df59821ac}\label{class_b_m_e280_item_a89cc451e3715bd7cdf60191df59821ac}} 
+{\bfseries B\+M\+E280\+Item} (quint8 device\+I2\+C\+Adress, Q\+Object $\ast$bme280\+Display=nullptr, Q\+Object $\ast$room\+Data\+Plot=nullptr, Q\+Object $\ast$home\+Viewer=nullptr)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a694ec0e34deedbf44c87c9c7b2394682}\label{class_b_m_e280_item_a694ec0e34deedbf44c87c9c7b2394682}} 
+void {\bfseries read\+Saved\+Data} ()
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a91a22abb7518696f1b8327442b46de85}\label{class_b_m_e280_item_a91a22abb7518696f1b8327442b46de85}} 
+bool {\bfseries on\+Reading\+Data} () const
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a727cae22d3609caabec0a5169c9daffc}\label{class_b_m_e280_item_a727cae22d3609caabec0a5169c9daffc}} 
+bool {\bfseries device\+Is\+Ready} () const
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a727c324c667a075be2e78eef98664be6}\label{class_b_m_e280_item_a727c324c667a075be2e78eef98664be6}} 
+void {\bfseries set\+Read\+Data} (bool read\+Data)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_aeb31c42e138e1fcdcfe14934737e90dc}\label{class_b_m_e280_item_aeb31c42e138e1fcdcfe14934737e90dc}} 
+\mbox{\hyperlink{class_data_frame}{Data\+Frame}} $\ast$ {\bfseries data\+Frame} () const
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_ac543147d75818635811954dcf5cacd55}\label{class_b_m_e280_item_ac543147d75818635811954dcf5cacd55}} 
+void {\bfseries set\+On\+Reading\+Data} (bool on\+Reading\+Data)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a039e0e9997c2403a5ae9b6731389b01a}\label{class_b_m_e280_item_a039e0e9997c2403a5ae9b6731389b01a}} 
+void {\bfseries set\+Start\+To\+Read\+On\+Data} (bool start\+To\+Read\+On\+Data)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a41b869bc15dd1a04ccc8b129288f885f}\label{class_b_m_e280_item_a41b869bc15dd1a04ccc8b129288f885f}} 
+bool {\bfseries start\+To\+Read\+On\+Data} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_b_m_e280_item_a4706607b745f6de371b04be372b9ddd7}{run}} ()
+\begin{DoxyCompactList}\small\item\em called function when the thread start \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_aa7ea7a0f4ae60ba50d7fc32478ac171a}\label{class_b_m_e280_item_aa7ea7a0f4ae60ba50d7fc32478ac171a}} 
+void {\bfseries \+\_\+init\+Device} ()
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a1097e89fe939fa4cf6361e4d484cbabc}\label{class_b_m_e280_item_a1097e89fe939fa4cf6361e4d484cbabc}} 
+void {\bfseries \+\_\+insert\+Text\+At\+Home\+Page} (Q\+String text\+To\+Insert)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_aede24ddccf30462711201b8c1f93bedc}\label{class_b_m_e280_item_aede24ddccf30462711201b8c1f93bedc}} 
+void {\bfseries \+\_\+check\+State\+Of\+Device} ()
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a156f8fca882debfe418ff1814403ae5c}\label{class_b_m_e280_item_a156f8fca882debfe418ff1814403ae5c}} 
+void {\bfseries \+\_\+init\+Register\+Device} ()
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a85fe907fb537a7f4dceb3a99ec2fe7af}\label{class_b_m_e280_item_a85fe907fb537a7f4dceb3a99ec2fe7af}} 
+bool {\bfseries \+\_\+check\+Register\+Configuration} ()
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_af6fb4462198761c51b2b5293d3ed90a9}\label{class_b_m_e280_item_af6fb4462198761c51b2b5293d3ed90a9}} 
+void {\bfseries \+\_\+read\+Data\+I2C} ()
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_ab0984aab759f5d7c308b30dcea966164}\label{class_b_m_e280_item_ab0984aab759f5d7c308b30dcea966164}} 
+void {\bfseries \+\_\+wait\+Delay} (quint64 delay\+In\+Seconde)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a9a32a8689507c3b75820f785a9ca070b}\label{class_b_m_e280_item_a9a32a8689507c3b75820f785a9ca070b}} 
+void {\bfseries \+\_\+wait\+Delay\+Mili} (quint64 delay\+In\+Mili\+Seconde)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a75d3d68375705dbd36187118bda45554}\label{class_b_m_e280_item_a75d3d68375705dbd36187118bda45554}} 
+void {\bfseries \+\_\+wait\+Delay\+Micro} (quint64 delay\+In\+Micro\+Seconde)
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a414414034e4d43d0b6f4162216eaec54}\label{class_b_m_e280_item_a414414034e4d43d0b6f4162216eaec54}} 
+void {\bfseries \+\_\+go\+To\+Next\+State} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a0ece6e6186e3847f556d7cb9ea2495a7}\label{class_b_m_e280_item_a0ece6e6186e3847f556d7cb9ea2495a7}} 
+quint8 {\bfseries \+\_\+device\+I2\+C\+Adress}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_ad7658e824924227da01867ca61e4ab2f}\label{class_b_m_e280_item_ad7658e824924227da01867ca61e4ab2f}} 
+quint8 {\bfseries \+\_\+fd}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a9f85470c58393afff692e5dfe5a0aebe}\label{class_b_m_e280_item_a9f85470c58393afff692e5dfe5a0aebe}} 
+\mbox{\hyperlink{class_b_m_e280}{B\+M\+E280}} $\ast$ {\bfseries \+\_\+bme280}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a9c571f7ba6ff3bf4eb03e76bad5629c7}\label{class_b_m_e280_item_a9c571f7ba6ff3bf4eb03e76bad5629c7}} 
+\mbox{\hyperlink{structsbme280__dev}{sbme280\+\_\+dev}} {\bfseries \+\_\+bme280\+Device}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a41f74c77eabe8899d50fb50bca8bf49c}\label{class_b_m_e280_item_a41f74c77eabe8899d50fb50bca8bf49c}} 
+\mbox{\hyperlink{structsbme280__dev}{psbme280\+\_\+dev}} {\bfseries \+\_\+pbme280\+Device}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a7feecc62c05c8e343a1915f5fdf45028}\label{class_b_m_e280_item_a7feecc62c05c8e343a1915f5fdf45028}} 
+bool {\bfseries \+\_\+device\+Is\+Ready}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a4dbf2f7f83172a7973e774ae4e8f9933}\label{class_b_m_e280_item_a4dbf2f7f83172a7973e774ae4e8f9933}} 
+bool {\bfseries \+\_\+on\+Reading\+Data}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_aef49836e59ccf0a810771f696cf8eaf7}\label{class_b_m_e280_item_aef49836e59ccf0a810771f696cf8eaf7}} 
+bool {\bfseries \+\_\+start\+To\+Read\+On\+Data}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a6444fe594dbff5b7e999468c1bcb150e}\label{class_b_m_e280_item_a6444fe594dbff5b7e999468c1bcb150e}} 
+Q\+Object $\ast$ {\bfseries \+\_\+bme280\+Display}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_aeb31ab4fecc0eee1f66bc61fccdc91bf}\label{class_b_m_e280_item_aeb31ab4fecc0eee1f66bc61fccdc91bf}} 
+Q\+Object $\ast$ {\bfseries \+\_\+room\+Data\+Plot}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_ad29bfce80b80f54e7e6433fd8490b117}\label{class_b_m_e280_item_ad29bfce80b80f54e7e6433fd8490b117}} 
+Q\+Object $\ast$ {\bfseries \+\_\+home\+Viewer}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_acd295f8c199a019c9cc96bc647f1e941}\label{class_b_m_e280_item_acd295f8c199a019c9cc96bc647f1e941}} 
+\mbox{\hyperlink{class_data_frame}{Data\+Frame}} $\ast$ {\bfseries \+\_\+data\+Frame}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_a8620de0eed058c20eb057491dc40ae93}\label{class_b_m_e280_item_a8620de0eed058c20eb057491dc40ae93}} 
+double {\bfseries \+\_\+temperature}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_adda4cfc146ed260e86770ad32381900b}\label{class_b_m_e280_item_adda4cfc146ed260e86770ad32381900b}} 
+double {\bfseries \+\_\+humidity}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_ae1db4d389bdd3aeb330dc62787cca93b}\label{class_b_m_e280_item_ae1db4d389bdd3aeb330dc62787cca93b}} 
+double {\bfseries \+\_\+pressure}
+\item 
+\mbox{\Hypertarget{class_b_m_e280_item_af8c353ad646eca82ff27a7cdaa23afc2}\label{class_b_m_e280_item_af8c353ad646eca82ff27a7cdaa23afc2}} 
+\mbox{\hyperlink{class_global_enumerate_a4258d211973c735c37c4ae3d1f9460b6}{Global\+Enumerate\+::\+E\+\_\+\+State\+Machine}} {\bfseries \+\_\+state\+Machine}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_m_e280_item_a4706607b745f6de371b04be372b9ddd7}\label{class_b_m_e280_item_a4706607b745f6de371b04be372b9ddd7}} 
+\index{BME280Item@{BME280Item}!run@{run}}
+\index{run@{run}!BME280Item@{BME280Item}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void B\+M\+E280\+Item\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+called function when the thread start 
+
+\begin{DoxyReturn}{Returns}
+void \+: nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Smart\+Home\+Domotic/\+B\+M\+E280/bme280item.\+h\item 
+Smart\+Home\+Domotic/\+B\+M\+E280/bme280item.\+cpp\end{DoxyCompactItemize}

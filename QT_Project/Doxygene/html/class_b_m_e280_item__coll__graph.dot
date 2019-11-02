@@ -1,0 +1,23 @@
+digraph "BME280Item"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="BME280Item",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="QThread",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _bme280" ,fontname="Helvetica"];
+  Node3 [label="BME280",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_b_m_e280.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _bme280Device\n_pbme280Device" ,fontname="Helvetica"];
+  Node4 [label="sbme280_dev",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsbme280__dev.html",tooltip="bme280 device ure"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" comp_data" ,fontname="Helvetica"];
+  Node5 [label="sbme280_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsbme280__data.html",tooltip="bme280 sensor which comprises of temperature, pressure and humidity data"];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" uncomp_data" ,fontname="Helvetica"];
+  Node6 [label="sbme280_uncomp_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsbme280__uncomp__data.html",tooltip=" "];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" settings" ,fontname="Helvetica"];
+  Node7 [label="sbme280_setting",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsbme280__setting.html",tooltip="bme280 sensor settings ure which comprises of mode, oversampling and filter settings."];
+  Node8 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" calib_data" ,fontname="Helvetica"];
+  Node8 [label="sbme280_calib_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsbme280__calib__data.html",tooltip=" "];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _dataFrame" ,fontname="Helvetica"];
+  Node9 [label="DataFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_data_frame.html",tooltip=" "];
+}
