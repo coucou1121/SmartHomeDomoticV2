@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>PageBackground.qml</file>
+        <file>SideBar.qml</file>
+        <file>SideBarForm.ui.qml</file>
+        <file>TankViewer.qml</file>
+        <file>TankViewerForm.ui.qml</file>
+        <file>Tank.qml</file>
+        <file>LabelDevice.qml</file>
+        <file>WarningDisplay.qml</file>
+        <file>WarningDisplayForm.ui.qml</file>
+        <file>Setting.qml</file>
+        <file>SettingForm.ui.qml</file>
+        <file>LabelSetting.qml</file>
+        <file>LabelNumberSetting.qml</file>
+        <file>RadioButton3times.qml</file>
+        <file>Circle.qml</file>
+        <file>CircleForm.ui.qml</file>
+        <file>Clock.qml</file>
+        <file>HomeViewer.qml</file>
+        <file>HomeViewerForm.ui.qml</file>
+        <file>BME280.qml</file>
+        <file>PlotView.qml</file>
+        <file>ControlPanel.qml</file>
+        <file>MultiButton.qml</file>
+        <file>CustomPlot.qml</file>
+        <file>StatisticView.qml</file>
+        <file>StatisticViewForm.ui.qml</file>
+        <file>SliderWithDisplayValue.qml</file>
+        <file>LabelNumber.qml</file>
+        <file>StastisticValuesView.qml</file>
+        <file>StastisticSelector.qml</file>
+        <file>LightAndFanView.qml</file>
+        <file>LightAndFanViewForm.ui.qml</file>
+        <file>PushButtonFan.qml</file>
+        <file>PushButtonLight.qml</file>
+        <file>MCP23017.qml</file>
+    </qresource>
+</RCC>

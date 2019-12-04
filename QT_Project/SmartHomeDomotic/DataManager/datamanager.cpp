@@ -1,33 +1,35 @@
 #include "datamanager.h"
 
-DataManager::DataManager(QObject *stastisticViewer,
+DataManager::DataManager(QString name,
+                         //                         quint32 nbFrameReadForEverySavedFile,
+                         QObject *stastisticViewer,
                          QObject *bme280Display,
-                         QString name,
-                         quint32 nbFrameReadForEverySavedFile,
-                         quint16 delayInMili,
-                         QObject *statisticValueViewer,
+                         //                         QObject *statisticValueViewer,
                          DataAnalyser *dataAnalyserObject):
     _stastisticViewer(stastisticViewer),
     _bme280Display(bme280Display),
-    _delay(GlobaleStaticValue::delaiToReadValue),
+    //    _delay(GlobaleStaticValue::delaiToReadValue),
+    _sleepingDelay(500),
+    _timeInMilisecond(0),
+    _memotimeInMilisecond(0),
     _askForStartReading(false),
     _askForStopReading(false),
     _ADS1115_1(nullptr),
     _ADS1115_2(nullptr),
     _BME280(nullptr),
-    _buffer1(nbFrameReadForEverySavedFile),
-    _buffer2(nbFrameReadForEverySavedFile),
-    _nbFrameReadForEverySavedFile(nbFrameReadForEverySavedFile),
+    _buffer1(86400),
+    //    _buffer2(1000),
+    //    _nbFrameReadForEverySavedFile(nbFrameReadForEverySavedFile),
     _dateTime(QDateTime::currentDateTime()),
     _dataAnalyerObject(dataAnalyserObject),
     _time_format(GlobaleStaticValue::saveTimeFormatMinuteTXT),
     _directoryDatafileName(GlobaleStaticValue::saveDataMain)
 {
 
-    //    this->_itdataFrameBuffer1 = GlobaleStaticValue::buffer1.begin();
+    //    this->_itdataFrameToWrite = GlobaleStaticValue::buffer1.begin();
     //    this->_itdataFrameBuffer2 = GlobaleStaticValue::buffer2.begin();
     this->_dataAnalyerObject->setBuffer(&this->_buffer1);
-    this->_itdataFrameBuffer1 = this->_buffer1.begin();
+    this->_itdataFrameToWrite = this->_buffer1.begin();
     //    this->_itdataFrameBuffer2 = this->_buffer2.begin();
     this->setObjectName(name);
 
@@ -38,7 +40,7 @@ DataManager::DataManager(QObject *stastisticViewer,
 
 }
 
-void DataManager::msleep(unsigned long msecs)
+void DataManager::msleep(qint64 msecs)
 {
     QThread::msleep(msecs);
 }
@@ -85,34 +87,37 @@ void DataManager::setBME280(BME280Item *BME280)
 
 void DataManager::run()
 {
-    static quint64 cpt = 0;
+//    static quint64 cpt = 0;
     static bool inReadingProcess = false;
     static bool firstTimeStart = true;
     bool ADS1115_1isReady = false;
     bool ADS1115_2isReady = false;
     bool BME280isReady = false;
-    bool readingFinished = false;
-    bool ADS1115_2isOnReading = false;
-    bool BME280isOnReading = false;
-    static bool useTheBuffer2 = false;
-    static quint8 memoHour = this->_dateTime.time().hour();
-    qint8 memoMinute = this->_dateTime.time().minute() + 1;
-    QTime memoTime;
-    quint8 bufferCnt = 1;
-    qint64 timeInMilisecond = 0;
-    qint64 memotimeInMilisecond = 0;
-    qDebug() << this->objectName() << "started";
+    quint16 dataFrameState = 0;
+    //    static bool useTheBuffer2 = false;
+    qint8 nextMinuteToSave = this->_dateTime.time().minute() + 1;
+    static qint8 memoSecond = 0;
+    qint64 sleepingDelay = 61;
+
+    qDebug() << Q_FUNC_INFO << this->objectName() << "started";
 
 
 
+    this->_dataAnalyerObject->setItdataFrameToRead(this->_itdataFrameToWrite);
+    this->_dataAnalyerObject->setItdataFrameOnWriting(this->_itdataFrameToWrite);
     this->_dataAnalyerObject->start();
 
     while(true)
     {
+        this->_memotimeInMilisecond = QDateTime::currentMSecsSinceEpoch();
 
+//        sleepingDelay = this->_sleepingDelay;
+
+        dataFrameState = 0;
+        //Check all hardware are ready
         if(_askForStartReading && !inReadingProcess)
         {
-            qDebug() << this->objectName() << "ask thread to start reading";
+            qDebug() << Q_FUNC_INFO << this->objectName() << "ask thread to start reading";
 
             //check the BME280, ADS1115_1 and ADS1115_2 are ready
             do
@@ -141,142 +146,193 @@ void DataManager::run()
         if(inReadingProcess)
         {
             this->_dateTime = QDateTime::currentDateTime();
-            this->_dataAnalyerObject->setDateTime(this->_dateTime);
 
+            //wait minits change to start reccording
             if(firstTimeStart)
             {
-                do
-                {
-                    this->_dateTime = QDateTime::currentDateTime();
-                    this->msleep(10);
-                }
-                while(this->_dateTime.time().minute() != memoMinute);
+                //                while(this->_dateTime.time().minute() != nextMinuteToSave)
+                //                {
+                //                    this->msleep(10);
+                //                    this->_dateTime = QDateTime::currentDateTime();
+                //                }
 
-                this->_dateTime = QDateTime::currentDateTime();
-                this->_dataAnalyerObject->setDateTime(this->_dateTime);
+                //                //set date and time to the dataframe
+                //                this->_dateTime = QDateTime::currentDateTime();
 
-                timeInMilisecond = QDateTime::currentMSecsSinceEpoch();//- QDateTime(QDate::currentDate()).toMSecsSinceEpoch();
-                memoMinute = this->_dateTime.time().minute();
+//                timeInMilisecond = QDateTime::currentMSecsSinceEpoch();//- QDateTime(QDate::currentDate()).toMSecsSinceEpoch();
+                //                nextMinuteToSave = this->_dateTime.time().minute();
                 firstTimeStart = false;
             }
-            memotimeInMilisecond = timeInMilisecond;
 
-            //get current date and time
-            //            this->_dateTime = QDateTime::currentDateTime();
+//            qDebug() << Q_FUNC_INFO << this->objectName() << "live reading start ";
 
-            //ask to read one data
-            this->_BME280->setStartToReadOnData(true);
-            this->_ADS1115_1->setStartToReadOnData(true);
 
-            //wait they finished
-            while(this->_BME280->onReadingData() ||
-                  this->_BME280->startToReadOnData() ||
-                  this->_ADS1115_1->onReadingData() ||
-                  this->_ADS1115_1->startToReadOnData())
+            //reccord date and time when the data is reading
+            this->_itdataFrameToWrite->setDateTime(this->_dateTime);
+
+            //wait until BME280 sensor ready to read value
+            while(this->_BME280->dataFrame()->dataFrameState() != 7)
             {
-                this->msleep(10);
+                this->msleep(1);
             }
 
-            //copy the data from BME280 and ADS1115 object
-            this->_itdataFrameBuffer1->setBME280_temperature(this->_BME280->dataFrame()->BME280_temperature());
-            this->_itdataFrameBuffer1->setBME280_humidity(this->_BME280->dataFrame()->BME280_humidity());
-            this->_itdataFrameBuffer1->setBME280_pressure(this->_BME280->dataFrame()->BME280_pressure());
-            this->_itdataFrameBuffer1->setADS115_1_chan0(this->_ADS1115_1->dataFrame()->ADS115_1_chan0());
-            this->_itdataFrameBuffer1->setADS115_1_chan1(this->_ADS1115_1->dataFrame()->ADS115_1_chan1());
-            this->_itdataFrameBuffer1->setADS115_1_chan2(this->_ADS1115_1->dataFrame()->ADS115_1_chan2());
-            this->_itdataFrameBuffer1->setADS115_1_chan3(this->_ADS1115_1->dataFrame()->ADS115_1_chan3());
+            //Copy the data from BME280 object
+            this->_itdataFrameToWrite->setBME280_temperature(this->_BME280->dataFrame()->BME280_temperature());
+            this->_itdataFrameToWrite->setBME280_humidity(this->_BME280->dataFrame()->BME280_humidity());
+            this->_itdataFrameToWrite->setBME280_pressure(this->_BME280->dataFrame()->BME280_pressure());
+            this->_itdataFrameToWrite->setDataFrameState(this->_BME280->dataFrame()->dataFrameState());
+
+            dataFrameState += this->_itdataFrameToWrite->dataFrameState();
+            //            qDebug() << Q_FUNC_INFO << "BME280 state: " << this->_itdataFrameToWrite->dataFrameState()
+            //                                    << "Pressure : " << this->_itdataFrameToWrite->BME280_pressure();
+
+            //wait until ADS1115_1 sensor ready to read value
+            while(this->_ADS1115_1->dataFrame()->dataFrameState() != 24)
+            {
+                this->msleep(1);
+            }
+
+
+            //Copy the data from ADS1115_1 object
+            this->_itdataFrameToWrite->setADS115_1_chan0(this->_ADS1115_1->dataFrame()->ADS115_1_chan0());
+            this->_itdataFrameToWrite->setADS115_1_chan1(this->_ADS1115_1->dataFrame()->ADS115_1_chan1());
+            this->_itdataFrameToWrite->setADS115_1_chan2(this->_ADS1115_1->dataFrame()->ADS115_1_chan2());
+            this->_itdataFrameToWrite->setADS115_1_chan3(this->_ADS1115_1->dataFrame()->ADS115_1_chan3());
+            this->_itdataFrameToWrite->setDataFrameState(this->_ADS1115_1->dataFrame()->dataFrameState());
+
+            dataFrameState += this->_itdataFrameToWrite->dataFrameState();
 
             //display value of BME280 on the sidebar
-            QMetaObject::invokeMethod(this->_bme280Display, "updateValue",
-                                      Q_ARG(QVariant, QString::number(this->_itdataFrameBuffer1->BME280_temperature(),'f', 2)),
-                                      Q_ARG(QVariant, QString::number(this->_itdataFrameBuffer1->BME280_humidity(),'f', 2)),
-                                      Q_ARG(QVariant, QString::number(this->_itdataFrameBuffer1->BME280_pressure(),'f', 1))
-                                      );
+            //            QMetaObject::invokeMethod(this->_bme280Display, "updateValue",
+            //                                      Q_ARG(QVariant, QString::number(this->_itdataFrameToWrite->BME280_temperature(),'f', 2)),
+            //                                      Q_ARG(QVariant, QString::number(this->_itdataFrameToWrite->BME280_humidity(),'f', 2)),
+            //                                      Q_ARG(QVariant, QString::number(this->_itdataFrameToWrite->BME280_pressure(),'f', 1))
+            //                                      );
 
             //do the same if _ads1115_2 existe
             if(this->_ADS1115_2 != nullptr)
             {
                 //                this->_ADS1115_2->setOnReadingSavedData(true);
-                //this->_ADS1115_2->setDataFrame(this->_itdataFrameBuffer1);
+                //this->_ADS1115_2->setDataFrame(this->_itdataFrameToWrite);
             }
 
-//            qDebug() << Q_FUNC_INFO << QDateTime::currentDateTime().toString("yyyy-MM-dd_HH-mm-ss");
+            //            qDebug() << Q_FUNC_INFO << QDateTime::currentDateTime().toString("yyyy-MM-dd_HH-mm-ss");
 
             //            qDebug() << Q_FUNC_INFO <<
-            //                        "DataTemp temp: " << this->_itdataFrameBuffer1->BME280_temperature() <<
-            //                        ", hum " << this->_itdataFrameBuffer1->BME280_humidity() <<
-            //                        ", press : " << this->_itdataFrameBuffer1->BME280_pressure() <<
-            //                        ", chan 0: " << this->_itdataFrameBuffer1->ADS115_1_chan0() <<
-            //                        ", chan 1: " << this->_itdataFrameBuffer1->ADS115_1_chan1() <<
-            //                        ", chan 2: " << this->_itdataFrameBuffer1->ADS115_1_chan2() <<
-            //                        ", chan 3: " << this->_itdataFrameBuffer1->ADS115_1_chan3() ;
+            //                        "DataTemp temp 2: " << this->_itdataFrameToWrite->BME280_temperature() <<
+            //                        ", hum " << this->_itdataFrameToWrite->BME280_humidity() <<
+            //                        ", press : " << this->_itdataFrameToWrite->BME280_pressure() <<
+            //                        ", chan 0: " << this->_itdataFrameToWrite->ADS115_1_chan0() <<
+            //                        ", chan 1: " << this->_itdataFrameToWrite->ADS115_1_chan1() <<
+            //                        ", chan 2: " << this->_itdataFrameToWrite->ADS115_1_chan2() <<
+            //                        ", chan 3: " << this->_itdataFrameToWrite->ADS115_1_chan3() <<
+            //                        ", state : " << this->_itdataFrameToWrite->dataFrameState();
 
-            if(this->_dateTime.time().minute() == memoMinute)
+            this->_itdataFrameToWrite->setDataFrameState(dataFrameState);
+
+//            //saveplot data in file, to recal in case of app restarted every second
+//            if (memoSecond != this->_dateTime.time().second())
+//            {
+//              this->_dataAnalyerObject->savePlotData(this->_itdataFrameToWrite);
+//              memoSecond = this->_dateTime.time().second();
+//            }
+
+
+            //add in temp file if it's the same minute
+            if(this->_dateTime.time().minute() == nextMinuteToSave - 1)
             {
-                this->_dataAnalyerObject->setDataFrame(this->_itdataFrameBuffer1);
-                this->_dataAnalyerObject->setSaveTempFile(true);
-                do
+                while(!this->_dataAnalyerObject->saveTempFileFinished())
                 {
-                    //                readingFinished = this->_dataAnalyerObject->saveFinished();
                     this->msleep(1);
                 }
-                while(!this->_dataAnalyerObject->saveTempFileFinished());
-                //                this->_itdataFrameBuffer1++;
-                cpt++;
+                this->_dataAnalyerObject->setUpdateDataFrameForDataManager(true);
+                this->_dataAnalyerObject->setDataFrame(this->_itdataFrameToWrite);
+                this->_dataAnalyerObject->setSaveTempDataFrame(true);
+                this->_dataAnalyerObject->setUpdateDataFrameForDataManager(false);
             }
             else
             {
-                if(!useTheBuffer2)
-                {
-                    this->_itdataFrameBuffer1 = _buffer2.begin();
-                    useTheBuffer2 = true;
-                    this->_dataAnalyerObject->setBuffer(&this->_buffer1);
-                }
-                else
-                {
-                    this->_itdataFrameBuffer1 = _buffer1.begin();
-                    useTheBuffer2 = false;
-                    this->_dataAnalyerObject->setBuffer(&this->_buffer2);
-                }
-                //                this->_dataAnalyerObject->setItdataFrameEnd(this->_itdataFrameBuffer1);
-                //                this->_dataAnalyerObject->setNbOfSavedDataInBuffer(cpt);
+                nextMinuteToSave = this->_dateTime.time().minute() + 1;
 
-                //                this->_dataAnalyerObject->setDateTime(this->_dateTime);
-                //               this->_dataAnalyerObject->setDateTime(memoDateTime);
-                memoMinute = this->_dateTime.time().minute();
-                //                memoTime = this->_dateTime.time();
-                //                memoTime.setHMS(memoTime.hour(),memoMinute-1,memoTime.second());
-                //                this->_dateTime.setTime(memoTime);
-                this->_dataAnalyerObject->setDateTime(this->_dateTime.addSecs(-60));
+                //this->_dataAnalyerObject->setDateTime(this->_dateTime.addSecs(-60));
 
                 this->_dataAnalyerObject->setSaveFile(true);
 
-                do
-                {
-                    this->msleep(10);
-                }
-                while(!this->_dataAnalyerObject->saveFileFinished());
-                //          this->_dataAnalyerObject->saveFile(_dateTime.toString(this->_time_format), cpt);
+                this->_dataAnalyerObject->setItdataFrameToRead(this->_itdataFrameToWrite);
 
-                this->_dataAnalyerObject->setSaveTempFile(true);
-                cpt = 0;
+                this->_itdataFrameToWrite = this->_itdataFrameToWrite ==
+                        this->_buffer1.end() ? this->_buffer1.begin() : this->_itdataFrameToWrite + 1;
+
+                this->_dataAnalyerObject->setItdataFrameOnWriting(this->_itdataFrameToWrite);
+
+                while(this->_dataAnalyerObject->saveFile() &&
+                      !this->_dataAnalyerObject->saveFileFinished())
+                {
+                    this->msleep(1);
+                }
+
+                //                this->_dataAnalyerObject->setSaveTempFile(true);
+//                cpt = 0;
             }
         }
 
-        timeInMilisecond = QDateTime::currentMSecsSinceEpoch();// - QDateTime(QDate::currentDate()).toMSecsSinceEpoch();
 
-        while((memotimeInMilisecond+this->_delay) > timeInMilisecond)
-        {
-            this->msleep(10);
-            timeInMilisecond = QDateTime::currentMSecsSinceEpoch();// - QDateTime(QDate::currentDate()).toMSecsSinceEpoch();
-        }
-        //        this->msleep(_delay-100);
+        //live data saving in temp file
+        //        while((memotimeInMilisecond+this->_delay) > timeInMilisecond)
+        //            //        while((memotimeInMilisecond+1000) > timeInMilisecond)
+        //        {
+        //            //            qDebug() << Q_FUNC_INFO <<
+        //            //                        "DataTemp temp 3: " << this->_itdataFrameToWrite->BME280_temperature() <<
+        //            //                        ", hum " << this->_itdataFrameToWrite->BME280_humidity() <<
+        //            //                        ", press : " << this->_itdataFrameToWrite->BME280_pressure() <<
+        //            //                        ", chan 0: " << this->_itdataFrameToWrite->ADS115_1_chan0() <<
+        //            //                        ", chan 1: " << this->_itdataFrameToWrite->ADS115_1_chan1() <<
+        //            //                        ", chan 2: " << this->_itdataFrameToWrite->ADS115_1_chan2() <<
+        //            //                        ", chan 3: " << this->_itdataFrameToWrite->ADS115_1_chan3() <<
+        //            //                        ", state : " << this->_itdataFrameToWrite->dataFrameState();
+
+        //            if(this->_dateTime.time().minute() == nextMinuteToSave)
+        //            {
+        //                this->_dateTime = QDateTime::currentDateTime();
+        //                this->_dataAnalyerObject->setDateTime(this->_dateTime);
+
+        //                this->_dataAnalyerObject->setDataFrame(this->_itdataFrameToWrite);
+        //                this->_dataAnalyerObject->setSaveTempFile(true);
+        //                do
+        //                {
+        //                    //                readingFinished = this->_dataAnalyerObject->saveFinished();
+        //                    this->msleep(1);
+        //                }
+        //                while(!this->_dataAnalyerObject->saveTempFileFinished());
+        //                //                this->_itdataFrameToWrite++;
+        //                cpt++;
+        //            }
+
+
+        //            this->msleep(5000);
+        //            timeInMilisecond = QDateTime::currentMSecsSinceEpoch();// - QDateTime(QDate::currentDate()).toMSecsSinceEpoch();
+        //        }
+
+
+//        this->msleep(this->_waitingDelay-(timeInMilisecond - memotimeInMilisecond));
+
+        this->_timeInMilisecond = QDateTime::currentMSecsSinceEpoch();// - QDateTime(QDate::currentDate()).toMSecsSinceEpoch();
+        sleepingDelay = (this->_timeInMilisecond - this->_memotimeInMilisecond) > this->_sleepingDelay ?
+                    0 : this->_sleepingDelay - (this->_timeInMilisecond - this->_memotimeInMilisecond);
+
+//        qDebug() << Q_FUNC_INFO << this->objectName() << "Time to read data : "
+//                 << timeInMilisecond - memotimeInMilisecond << "[ms]";
+
+        this->_waitDelayMili(sleepingDelay);
+
+
+
     }
 }
 
-void DataManager::setDelay(const quint16 &delay)
+void DataManager::setSleepingDelay(const qint64 &sleepingDelay)
 {
-    _delay = delay;
+    _sleepingDelay = sleepingDelay;
 }
 
 void DataManager::_waitDelayMili(quint64 delayInMiliSeconde)
@@ -302,7 +358,7 @@ void DataManager::ReceivedreplotWithSavedData(int year, int month, int day)
     dateToAnalyse.setDate(year,month,day);
     dateTimeToAnalyse.setDate(dateToAnalyse);
 
-//    QString directoryfileName = this->_saveDataFileMainName;
+    //    QString directoryfileName = this->_saveDataFileMainName;
     QString fileName = "";
 
     if(month != 0)
@@ -323,7 +379,7 @@ void DataManager::ReceivedreplotWithSavedData(int year, int month, int day)
 
     QStringList listeOfData;
 
-    qint8 lineNumber = 0;
+//    qint8 lineNumber = 0;
     double tempMin = 200;
     double tempMax = 0;
     double humMin = 200;
@@ -343,7 +399,7 @@ void DataManager::ReceivedreplotWithSavedData(int year, int month, int day)
     double memoPressMin = 2000;
     double memoPressMax = 0;
     qint16 memoConsoTotal = 0;
-    qint16 memoConsoTotalDayBefore = 0;
+//    qint16 memoConsoTotalDayBefore = 0;
 
     if (fileToAnalyse.open(QFile::ReadOnly))
     {
@@ -354,7 +410,7 @@ void DataManager::ReceivedreplotWithSavedData(int year, int month, int day)
             //            qDebug() << "_updateDataForTheDay" << listeOfData.count() << listeOfData[1];
 
             //Analyse the data
-            lineNumber = listeOfData[0].toInt();
+//            lineNumber = listeOfData[0].toInt();
 
             tempMin = listeOfData[1].toDouble() < tempMin ? listeOfData[1].toDouble() :  tempMin;
             tempMax = listeOfData[2].toDouble() > tempMax ? listeOfData[2].toDouble() :  tempMax;

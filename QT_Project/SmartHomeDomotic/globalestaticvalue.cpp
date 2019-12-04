@@ -17,7 +17,12 @@ quint16 GlobaleStaticValue::delaiToReadValue = 10000;    // on graph are 8640 po
 
 //text value for the saved file
 QString GlobaleStaticValue::saveGroupeNameApplicationSettingTxt = "APP_SETTING";
-QString GlobaleStaticValue::ADS115_5V_ValueInPlus = "ADS115_5V_InPlus";
+QString GlobaleStaticValue::GraphicReccordTime = "Graphic_reccord_time";
+QString GlobaleStaticValue::ADS115_0V_Chan0_ValueInPlus = "ADS115_0V_Chan0_ValueInPlus";
+QString GlobaleStaticValue::ADS115_0V_Chan1_ValueInPlus = "ADS115_0V_Chan1_ValueInPlus";
+QString GlobaleStaticValue::ADS115_5V_Chan0_ValueInPlus = "ADS115_5V_Chan0_ValueInPlus";
+QString GlobaleStaticValue::ADS115_5V_Chan1_ValueInPlus = "ADS115_5V_Chan1_ValueInPlus";
+QString GlobaleStaticValue::Volume_PID_coef = "Volume_PID_coef";
 QString GlobaleStaticValue::saveIDTxt = "ID";
 QString GlobaleStaticValue::saveObjectNameTxt = "ObjectName";
 QString GlobaleStaticValue::saveTitleTxt = "Title";
@@ -26,6 +31,11 @@ QString GlobaleStaticValue::saveLiquideInsideTxt = "LiquideInside";
 QString GlobaleStaticValue::saveVolumeMaxTxt = "VolumeMax";
 QString GlobaleStaticValue::saveLowLevelWarningTxt = "LowLevelWarning";
 QString GlobaleStaticValue::saveHeightVMaxValueTxt = "HeightVMax";
+QString GlobaleStaticValue::saveOffsetPressureTxt = "OffsetPressure";
+QString GlobaleStaticValue::saveATMMinTxt = "saveATMMin";
+QString GlobaleStaticValue::saveATMAvgTxt = "saveATMAvg";
+QString GlobaleStaticValue::saveATMMaxTxt = "saveATMMax";
+QString GlobaleStaticValue::smoothPlotTxt = "smoothTankPlot";
 
 //saved static date-time format
 QString GlobaleStaticValue::saveTimeFormatMinuteTXT = "yyyy-MM-dd_HH-mm-00";
@@ -43,10 +53,31 @@ QString GlobaleStaticValue::saveTempFileTxt = "Save_Temp_File_Name_and_Path";
 QString GlobaleStaticValue::saveTempFile = "./Data/tempData.csv";
 //QString GlobaleStaticValue::saveTempFile = "/home/smarthomedomotic/Data/tempData.csv";
 
+//saved static plot data file
+QString GlobaleStaticValue::savePlotDataFileReadOnly = "./Data/PlotDataReadOnly.csv";
+QString GlobaleStaticValue::savePlotDataFileWriteOnly = "./Data/PlotDataWriteOnly.csv";
+
 //setting file
 QString GlobaleStaticValue::settingFileTxt= "Setting_File_Name_and_Path";
 QString GlobaleStaticValue::settingFile = "./Setting/settings.ini";
 //QString GlobaleStaticValue::settingFile = "/home/smarthomedomotic/Setting/settings.ini";
+
+//log file
+QString GlobaleStaticValue::logFileTxt= "Log_File_Name_and_Path";
+QString GlobaleStaticValue::logFile = "/home/smarthomedomotic/Logs/LogFile.log";
+//QString GlobaleStaticValue::logFile = "./Logs/LogFile.log";
+
+//permission file
+QFileDevice::Permissions GlobaleStaticValue::filePermissions =
+        QFileDevice::ExeUser |
+        QFileDevice::WriteUser |
+        QFileDevice::ReadUser |
+        QFileDevice::ReadOwner |
+        // QFileDevice::ReadGroup |
+        QFileDevice::WriteOwner |
+        // QFileDevice::WriteGroup |
+        QFileDevice::ExeOwner;
+
 
 //Machine States static text
 QString GlobaleStaticValue::stateNotFounded = "NOT FOUNDED";
@@ -78,7 +109,7 @@ QString GlobaleStaticValue::bme280PerCent = "%";
 QString GlobaleStaticValue::bme280Milibar = "mb";
 
 //pressure capteur values
-quint16 GlobaleStaticValue::pressureCapteurRangeMaxInPlus = 26500;
+quint16 GlobaleStaticValue::pressureCapteurCoef = 22700;
 quint16 GlobaleStaticValue::pressureCapteurHeightMaxWater = 5000;
 
 //density T/m^3
@@ -86,12 +117,17 @@ double GlobaleStaticValue::densityWater = 1;
 double GlobaleStaticValue::densityOil = 0.84;
 double GlobaleStaticValue::densityOilECO = 0.84;
 
-static QString titleTank1 = "Tank_1";
-static QString titleTank2 = "Tank_2";
-static QString titleTank3 = "Tank_3";
-static QString titleTank4 = "Tank_4";
-static QString titleTank5 = "Tank_5";
-static QString titleTank6 = "Tank_6";
+//pressure coeficient ADS1115
+double GlobaleStaticValue::pressureCoefWater = (double)pressureCapteurHeightMaxWater/(double)pressureCapteurCoef; // = 0.22;
+double GlobaleStaticValue::pressureCoefOil = pressureCoefWater*densityOil; //  0.18;
+
+//tanks TXT object name
+QString GlobaleStaticValue::ObjectNameTank1 = "Tank_1";
+QString GlobaleStaticValue::ObjectNameTank2 = "Tank_2";
+QString GlobaleStaticValue::ObjectNameTank3 = "Tank_3";
+QString GlobaleStaticValue::ObjectNameTank4 = "Tank_4";
+QString GlobaleStaticValue::ObjectNameTank5 = "Tank_5";
+QString GlobaleStaticValue::ObjectNameTank6 = "Tank_6";
 
 //home view object name
 static QString BME280Name = "BME 280";
@@ -110,12 +146,12 @@ static QString errLowLevelReached = "low level reached";
 QMap<int, QString> GlobaleStaticValue::initTankObjectName()
 {
     QMap<int, QString> ret;
-    ret.insert(GlobalEnumerate::TANK1, titleTank1);
-    ret.insert(GlobalEnumerate::TANK2, titleTank2);
-    ret.insert(GlobalEnumerate::TANK3, titleTank3);
-    ret.insert(GlobalEnumerate::TANK4, titleTank4);
-    ret.insert(GlobalEnumerate::TANK5, titleTank5);
-    ret.insert(GlobalEnumerate::TANK6, titleTank6);
+    ret.insert(GlobalEnumerate::TANK1, ObjectNameTank1);
+    ret.insert(GlobalEnumerate::TANK2, ObjectNameTank2);
+    ret.insert(GlobalEnumerate::TANK3, ObjectNameTank3);
+    ret.insert(GlobalEnumerate::TANK4, ObjectNameTank4);
+    ret.insert(GlobalEnumerate::TANK5, ObjectNameTank5);
+    ret.insert(GlobalEnumerate::TANK6, ObjectNameTank6);
     return ret;
 }
 
@@ -123,12 +159,12 @@ QMap<int, QString> GlobaleStaticValue::initHomeViewObject()
 {
     QMap<int, QString> ret;
     ret.insert(GlobalEnumerate::HOMEBME280, BME280Name);
-    ret.insert(GlobalEnumerate::HOMETANK1, titleTank1);
-    ret.insert(GlobalEnumerate::HOMETANK2, titleTank2);
-    ret.insert(GlobalEnumerate::HOMETANK3, titleTank3);
-    ret.insert(GlobalEnumerate::HOMETANK4, titleTank4);
-    ret.insert(GlobalEnumerate::HOMETANK5, titleTank5);
-    ret.insert(GlobalEnumerate::HOMETANK6, titleTank6);
+    ret.insert(GlobalEnumerate::HOMETANK1, ObjectNameTank1);
+    ret.insert(GlobalEnumerate::HOMETANK2, ObjectNameTank2);
+    ret.insert(GlobalEnumerate::HOMETANK3, ObjectNameTank3);
+    ret.insert(GlobalEnumerate::HOMETANK4, ObjectNameTank4);
+    ret.insert(GlobalEnumerate::HOMETANK5, ObjectNameTank5);
+    ret.insert(GlobalEnumerate::HOMETANK6, ObjectNameTank6);
     ret.insert(GlobalEnumerate::HOMESENSOR1, sensor1Name);
     ret.insert(GlobalEnumerate::HOMESENSOR2, sensor2Name);
     ret.insert(GlobalEnumerate::HOMESENSOR3, sensor3Name);

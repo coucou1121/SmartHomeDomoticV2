@@ -61,6 +61,11 @@ private:
     bool _onReadingData;
     bool _startToReadOnData;
 
+    quint16 _sleepingDelay;
+    qint64 _timeInMilisecond;
+    qint64 _memotimeInMilisecond;
+
+
     QObject *_bme280Display;
     QObject *_roomDataPlot;
     QObject *_homeViewer;

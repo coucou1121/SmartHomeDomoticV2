@@ -2,6 +2,7 @@
 #define GLOBALESTATICVALUE_H
 
 #include <QMap>
+#include <QFileDevice>
 
 #include <globalenumerate.h>
 #include <DataManager/dataFrame.h>
@@ -27,7 +28,12 @@ public:
 
     //Saved static String
     static QString saveGroupeNameApplicationSettingTxt;
-    static QString ADS115_5V_ValueInPlus;
+    static QString GraphicReccordTime;
+    static QString ADS115_0V_Chan0_ValueInPlus;
+    static QString ADS115_0V_Chan1_ValueInPlus;
+    static QString ADS115_5V_Chan0_ValueInPlus;
+    static QString ADS115_5V_Chan1_ValueInPlus;
+    static QString Volume_PID_coef;
     static QString saveIDTxt;
     static QString saveObjectNameTxt;
     static QString saveTitleTxt;
@@ -36,6 +42,11 @@ public:
     static QString saveVolumeMaxTxt;
     static QString saveLowLevelWarningTxt;
     static QString saveHeightVMaxValueTxt;
+    static QString saveOffsetPressureTxt;
+    static QString saveATMMinTxt;
+    static QString saveATMAvgTxt;
+    static QString saveATMMaxTxt;
+    static QString smoothPlotTxt;
 
     //saved static date-time format
     static QString saveTimeFormatMinuteTXT;
@@ -54,6 +65,17 @@ public:
     //setting file
     static QString settingFileTxt;
     static QString settingFile;
+
+    //log file
+    static QString logFileTxt;
+    static QString logFile;
+
+    //Permission of all files
+    static QFileDevice::Permissions filePermissions;
+
+    //saved static plot data file
+    static QString savePlotDataFileReadOnly;
+    static QString savePlotDataFileWriteOnly;
 
     //Machine States static text
     static QString stateNotFounded;
@@ -85,7 +107,7 @@ public:
     static QString bme280Milibar;
 
     //pressure capteur values
-    static quint16 pressureCapteurRangeMaxInPlus;
+    static quint16 pressureCapteurCoef;
     static quint16 pressureCapteurHeightMaxWater;
 
     //density kg/m^3
@@ -93,8 +115,19 @@ public:
     static double densityOil;
     static double densityOilECO;
 
+    //pressure coeficient ADS1115
+    static double pressureCoefWater;
+    static double pressureCoefOil;
+
     //static array
 
+    //tanks TXT object name
+    static QString ObjectNameTank1;
+    static QString ObjectNameTank2;
+    static QString ObjectNameTank3;
+    static QString ObjectNameTank4;
+    static QString ObjectNameTank5;
+    static QString ObjectNameTank6;
 
     //TankObjectName
     /**

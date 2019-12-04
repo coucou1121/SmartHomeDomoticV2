@@ -11,6 +11,9 @@ BME280Item::BME280Item(quint8 deviceI2CAdresse,
     _deviceIsReady(false),
     _onReadingData(true),
     _startToReadOnData(false),
+    _sleepingDelay(500),
+    _timeInMilisecond(0),
+    _memotimeInMilisecond(0),
     _bme280Display(bme280Display),
     _roomDataPlot(roomDataPlot),
     _homeViewer(homeViewer),
@@ -24,7 +27,6 @@ BME280Item::BME280Item(quint8 deviceI2CAdresse,
 
     //reset the device structure
     this->_bme280->init_sbme280_device(this->_pbme280Device);
-
 }
 
 void BME280Item::readSavedData()
@@ -62,23 +64,52 @@ bool BME280Item::deviceIsReady() const
 
 void BME280Item::run()
 {
+
+    qint64 sleepingDelay = 0;
+
     while(true)
     {
-        //    qDebug() << Q_FUNC_INFO << this->_stateMachineBME280->property("state");
-        while(!this->_deviceIsReady)
-        {
-            this->_initDevice();
-            this->_waitDelayMili(1000);
-        }
+        this->_memotimeInMilisecond = QDateTime::currentMSecsSinceEpoch();
 
-        if(this->_startToReadOnData && this->_deviceIsReady)
-        {
-            this->_startToReadOnData = false;
-            _goToNextState();
-            this->_checkStateOfDevice();
-        }
+//            qDebug() << Q_FUNC_INFO;
+//        while(!this->_deviceIsReady)
+//        {
+//            this->_initDevice();
+//            this->_waitDelayMili(1000);
+//        }
 
-        this->_waitDelayMili(10);
+//        if(this->_deviceIsReady)
+//        {
+//        _goToNextState();
+//        }
+        this->_checkStateOfDevice();
+
+//        if(this->_startToReadOnData && this->_deviceIsReady)
+//        {
+//            this->_startToReadOnData = false;
+//            _goToNextState();
+//            this->_checkStateOfDevice();
+//            QMetaObject::invokeMethod(this->_roomDataPlot, "addYValue",
+//                                      Q_ARG(QVariant, QString::number(this->_temperature,'f', 2)),
+//                                      Q_ARG(QVariant, QString::number(this->_humidity,'f', 2)),
+//                                      Q_ARG(QVariant, QString::number(this->_pressure,'f', 2)),
+//                                      Q_ARG(QVariant, 6)
+//                                      );
+//            QMetaObject::invokeMethod(this->_roomDataPlot, "addYValue",
+//                                      Q_ARG(QVariant, QString::number(this->_pressure,'f', 2)),
+//                                      Q_ARG(QVariant, QString::number(this->_pressure,'f', 2)),
+//                                      Q_ARG(QVariant, QString::number(this->_pressure,'f', 2)),
+//                                      Q_ARG(QVariant, 6)
+//                                      );
+//        }
+        this->_timeInMilisecond = QDateTime::currentMSecsSinceEpoch();// - QDateTime(QDate::currentDate()).toMSecsSinceEpoch();
+        sleepingDelay = (this->_timeInMilisecond - this->_memotimeInMilisecond) > this->_sleepingDelay ?
+                    0 : this->_sleepingDelay - (this->_timeInMilisecond - this->_memotimeInMilisecond);
+
+//        qDebug() << Q_FUNC_INFO << this->objectName() << "Time to read data : "
+//                 << this->_timeInMilisecond - this->_memotimeInMilisecond << "[ms]";
+
+        this->_waitDelayMili(sleepingDelay);
     }
 }
 
@@ -184,12 +215,13 @@ void BME280Item::_checkStateOfDevice()
         if(!this->_checkRegisterConfiguration())
         {
             this->_stateMachine = GlobalEnumerate::STATE_INIT;
-            this->_checkStateOfDevice();
+//            this->_checkStateOfDevice();
         }
         else
         {
             this->_onReadingData = true;
             this->_readDataI2C();
+            _goToNextState();
         }
         break;
     }
@@ -205,6 +237,7 @@ void BME280Item::_checkStateOfDevice()
         QMetaObject::invokeMethod(this->_homeViewer, "changeColorBME280",
                                   Q_ARG(QVariant, DEVICE_COLOR_READY_HEX));
         this->_onReadingData = false;
+        _goToNextState();
 
         break;
     }
@@ -231,6 +264,7 @@ void BME280Item::_initRegisterDevice()
     //set temperature, humidity and pressure oversampling x16
     this->_bme280Device.settings.osr_t = BME280_OVERSAMPLING_16X;
     this->_bme280Device.settings.osr_h = BME280_OVERSAMPLING_16X;
+//    this->_bme280Device.settings.osr_h = BME280_OVERSAMPLING_1X;
     this->_bme280Device.settings.osr_p = BME280_OVERSAMPLING_16X;
 
     //set filter x16
@@ -274,8 +308,10 @@ bool BME280Item::_checkRegisterConfiguration()
 
 void BME280Item::_readDataI2C()
 {
-    static int cpt = 0;
+//    static int cpt = 0;
     //    qDebug() << Q_FUNC_INFO << "CPT : " << cpt;
+
+    this->_dataFrame->setDataFrameState(0);
 
     quint8 registerValue = 1;
 
@@ -300,6 +336,7 @@ void BME280Item::_readDataI2C()
                                                         &this->_pbme280Device->calib_data);
     //    qDebug() << "temperature : " << this->_temperature;
 
+
     //read compensate pressure
     this->_pressure = BME280::compensate_pressure(&this->_pbme280Device->uncomp_data,
                                                   &this->_pbme280Device->calib_data);
@@ -308,12 +345,16 @@ void BME280Item::_readDataI2C()
     //change pascal to millibar
     this->_pressure = this->_pressure/100;
 
+
     //read compensate humidity
     this->_humidity = BME280::compensate_humidity(&this->_pbme280Device->uncomp_data,
                                                   &this->_pbme280Device->calib_data);
     //    qDebug() << "humidity : " << this->_humidity;
 
     //    qDebug() << "altitude : " << this->_bme280->getAltitude(this->_pressure);
+
+//    qDebug() << Q_FUNC_INFO << "BME280 state: " << this->_dataFrame->dataFrameState();
+
     if(this->_deviceIsReady)
     {
         if(this->_dataFrame!=nullptr)
@@ -321,25 +362,38 @@ void BME280Item::_readDataI2C()
             this->_dataFrame->setBME280_temperature(this->_temperature);
             this->_dataFrame->setBME280_humidity(this->_humidity);
             this->_dataFrame->setBME280_pressure(this->_pressure);
+
+            this->_temperature != 0 ? this->_dataFrame->setDataFrameState(this->_dataFrame->dataFrameState() | (1 << 0)) :
+                                      this->_dataFrame->setDataFrameState(this->_dataFrame->dataFrameState() & (0 << 0));
+            this->_humidity != 0 ? this->_dataFrame->setDataFrameState(this->_dataFrame->dataFrameState() | (1 << 1)) :
+                                   this->_dataFrame->setDataFrameState(this->_dataFrame->dataFrameState() & (0 << 1));
+            this->_pressure != 0 ? this->_dataFrame->setDataFrameState(this->_dataFrame->dataFrameState() | (1 << 2)) :
+                                   this->_dataFrame->setDataFrameState(this->_dataFrame->dataFrameState() & (0 << 2));
         }
 
-
-        //        if(cpt%60 == 0)
+         //        if(cpt%60 == 0)
         //        {
-        QMetaObject::invokeMethod(this->_roomDataPlot, "addYValue",
-                                  Q_ARG(QVariant, QString::number(this->_humidity,'f', 2)),
-                                  Q_ARG(QVariant, QString::number(this->_temperature,'f', 2)),
-                                  Q_ARG(QVariant, QString::number(this->_pressure/10,'f', 1)),
-                                  Q_ARG(QVariant, 6)
-                                  );
+//        QMetaObject::invokeMethod(this->_roomDataPlot, "addYValue",
+//                                  Q_ARG(QVariant, QString::number(this->_humidity,'f', 2)),
+//                                  Q_ARG(QVariant, QString::number(this->_temperature,'f', 2)),
+//                                  Q_ARG(QVariant, QString::number(this->_pressure/10,'f', 2)),
+//                                  Q_ARG(QVariant, 6)
+//                                  );
+//        QMetaObject::invokeMethod(this->_bme280Display, "updateValue",
+//                                  Q_ARG(QVariant, QString::number(this->_temperature,'f', 2)),
+//                                  Q_ARG(QVariant, QString::number(this->_humidity,'f', 2)),
+//                                  Q_ARG(QVariant, QString::number(this->_pressure,'f', 2))
+//                                  );
+
+//        QMetaObject::invokeMethod(this->_roomDataPlot, "addYValue",
+//                                  Q_ARG(QVariant, QString::number(this->_pressure,'f', 2)),
+//                                  Q_ARG(QVariant, QString::number(this->_pressure,'f', 2)),
+//                                  Q_ARG(QVariant, QString::number(this->_pressure,'f', 2)),
+//                                  Q_ARG(QVariant, 6)
+//                                  );
         //            cpt = 0;
         //        }
     }
-    //    QMetaObject::invokeMethod(this->_bme280Display, "updateValue",
-    //                              Q_ARG(QVariant, QString::number(this->_temperature,'f', 2)),
-    //                              Q_ARG(QVariant, QString::number(this->_humidity,'f', 2)),
-    //                              Q_ARG(QVariant, QString::number(this->_pressure,'f', 1))
-    //                              );
 
     else
     {
@@ -349,11 +403,13 @@ void BME280Item::_readDataI2C()
                                     GlobaleStaticValue::bme280Pressure + " " + QString::number(this->_pressure,'f',1) + " " + GlobaleStaticValue::bme280Milibar
                                     );
     }
-    _goToNextState();
+//    _goToNextState();
 
     //    jumpToNextState();
-    this->_checkStateOfDevice();
-    cpt++;
+//    this->_checkStateOfDevice();
+//    cpt++;
+
+//    qDebug() << Q_FUNC_INFO << "BME280 state: " << this->_dataFrame->dataFrameState();
 }
 
 void BME280Item::_waitDelay(quint64 delayInSeconde)

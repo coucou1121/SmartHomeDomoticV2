@@ -30,7 +30,7 @@
 /**************************************************************************
     CONVERSION DELAY (in mS)
 **************************************************************************/
-#define ADS1115_CONVERSIONDELAY         (200000)
+#define ADS1115_CONVERSIONDELAY         (10)
 
 /**************************************************************************
     POINTER REGISTER
@@ -99,6 +99,20 @@
 #define ADS1115_REG_CONFIG_COMP_QUE_2CONV   (0x0001)    // Assert ALERT/RDY after two conversions
 #define ADS1115_REG_CONFIG_COMP_QUE_4CONV   (0x0002)    // Assert ALERT/RDY after four conversions
 #define ADS1115_REG_CONFIG_COMP_QUE_NONE    (0x0003)    // Disable the comparator and put ALERT/RDY in high state (default)
+
+typedef enum
+{
+    MUX_MASK   = ADS1115_REG_CONFIG_MUX_MASK,
+    MUX_DIFF_0_1     = ADS1115_REG_CONFIG_MUX_DIFF_0_1,
+    MUX_DIFF_0_3     = ADS1115_REG_CONFIG_MUX_DIFF_0_3,
+    MUX_DIFF_1_3     = ADS1115_REG_CONFIG_MUX_DIFF_1_3,
+    MUX_DIFF_2_3     = ADS1115_REG_CONFIG_MUX_DIFF_2_3,
+    MUX_SINGLE_0     = ADS1115_REG_CONFIG_MUX_SINGLE_0,
+    MUX_SINGLE_1     = ADS1115_REG_CONFIG_MUX_SINGLE_1,
+    MUX_SINGLE_2     = ADS1115_REG_CONFIG_MUX_SINGLE_2,
+    MUX_SINGLE_3     = ADS1115_REG_CONFIG_MUX_SINGLE_3,
+
+} adsMUX_t;
 
 typedef enum
 {
@@ -215,14 +229,38 @@ public:
             ADS1115 can only accept positive voltages
     */
     /**************************************************************************/
-    quint16  Measure_SingleEnded_OnlyPositiveValue(quint8 channel);
+    quint16 Measure_SingleEnded_OnlyPositiveValue(quint8 channel);
+
+    /**************************************************************************/
+    /*!
+        Reads the conversion results, measuring the voltage
+        difference between the P (AIN0) and N (AIN1) input.  Generates
+        a signed value since the difference can be either
+        positive or negative.
+    */
+    /**************************************************************************/
+    quint16 Mesure_Differential_0_1();
+
+
+    /**************************************************************************/
+    /*!
+        Reads the conversion results, measuring the voltage
+        difference between the P (AIN2) and N (AIN3) input.  Generates
+        a signed value since the difference can be either
+        positive or negative.
+    */
+    /**************************************************************************/
+    quint16 Mesure_Differential_2_3();
 
     float convertValueToVolt(quint16 regValue);
 
     quint16 ads_config_register() const;
 
     void setRegister(bool forFirstInit);
-    qint16 readConfigRegister();
+    quint16 readConfigRegister();
+
+    adsMUX_t ads_MUX() const;
+    void setAds_MUX(const adsMUX_t &ads_MUX);
 
 private:
 
@@ -234,6 +272,7 @@ private:
     qint16 _ads_lowthreshold;
     qint16 _ads_highthreshold;
 
+    adsMUX_t _ads_MUX;
     adsOSMode_t _ads_osmode;
     adsGain_t _ads_gain;
     adsMode_t _ads_mode;
@@ -260,6 +299,9 @@ private:
     */
     /**************************************************************************/
     qint16 _readRegisterOnlyPositiveValue();
+
+
+    qint16 _readRegisterValue();
 
     void _waitDelay(quint64 delayInMiliSeconde);
 

@@ -13,10 +13,12 @@ ADS1115::ADS1115(quint8 device_I2C_Adress):
     _ads_reading_value(0),
     _ads_lowthreshold(0),
     _ads_highthreshold(0),
+    _ads_MUX(MUX_SINGLE_0),
     _ads_osmode(OSMODE_SINGLE),
-    _ads_gain(GAIN_TWOTHIRDS),
+//    _ads_gain(GAIN_TWOTHIRDS),
+    _ads_gain(GAIN_SIXTEEN),
     _ads_mode(MODE_SINGLE),
-    _ads_rate(RATE_128),
+    _ads_rate(RATE_16),
     _ads_compmode(COMPMODE_TRAD),
     _ads_comppol(COMPPOL_LOW),
     _ads_complat(COMPLAT_NONLAT),
@@ -142,6 +144,9 @@ void ADS1115::setRegister(bool forFirstInit)
     // Latching comparator
     this->_ads_config_register |= this->_ads_complat;
 
+    // Set MUX
+    this->_ads_config_register |= this->_ads_MUX;
+
     //  Comparator queue, Disble comparator mode.
     this->_ads_config_register |= this->_ads_compque;
 
@@ -152,9 +157,9 @@ void ADS1115::setRegister(bool forFirstInit)
 
 }
 
-qint16 ADS1115::readConfigRegister()
+quint16 ADS1115::readConfigRegister()
 {
-    qint16 val = 0;
+    quint16 val = 0;
 
     val = wiringPiI2CReadReg16(this->_ads_fd,
                                ADS1115_REG_POINTER_CONFIG);
@@ -164,6 +169,16 @@ qint16 ADS1115::readConfigRegister()
     //        qDebug() << "register value swap: " << QString::number(val,2);
 
     return val;
+}
+
+adsMUX_t ADS1115::ads_MUX() const
+{
+    return _ads_MUX;
+}
+
+void ADS1115::setAds_MUX(const adsMUX_t &ads_MUX)
+{
+    _ads_MUX = ads_MUX;
 }
 
 void ADS1115::_writeRegister(quint16 regValue)
@@ -207,6 +222,27 @@ qint16 ADS1115::_readRegisterOnlyPositiveValue()
     return val;
 }
 
+qint16 ADS1115::_readRegisterValue()
+{
+    qint16 val = 0;
+
+    val = wiringPiI2CReadReg16(this->_ads_fd,
+                               ADS1115_REG_POINTER_CONVERT);
+
+    //swap the register
+    val = this->_swapRegister(val);
+
+    //Check for sign bit and turn into a negative value if set.
+    if((val & 0x8000) != 0)
+    {
+        val -= 1 << 16;
+    }
+
+    //set negative value to zero
+    //val = val < 0 ? 0: val;
+    return val;
+}
+
 quint16 ADS1115::Measure_SingleEnded_OnlyPositiveValue(quint8 channel)
 {
     if (channel > 3)
@@ -229,13 +265,64 @@ quint16 ADS1115::Measure_SingleEnded_OnlyPositiveValue(quint8 channel)
         // Wait for the conversion to complete
         this->_waitConvertionFinished();
 
-        //      this->_waitDelay(this->_ads_conversionDelay);
-
+        this->_waitDelay(this->_ads_conversionDelay);
 
         // Read the conversion results
         // 16-bit unsigned results for the ADS1115
         return this->_readRegisterOnlyPositiveValue();
     }
+}
+
+quint16 ADS1115::Mesure_Differential_0_1()
+{
+    //this->_waitConvertionFinished();
+
+    // Specify mux value.
+    this->_ads_MUX = MUX_DIFF_0_1;
+
+    //set the register for reading
+    this->setRegister(false);
+
+    // Write config register to the ADC
+    this->_writeRegister(this->_ads_config_register);
+
+//    qDebug() << Q_FUNC_INFO << QString::number(this->readConfigRegister(),2);
+
+    // Wait for the conversion to complete
+    this->_waitConvertionFinished();
+
+    //this->_waitDelay(this->_ads_conversionDelay);
+
+    // Read the conversion results
+    // 16-bit unsigned results for the ADS1115
+    return this->_readRegisterValue();
+
+}
+
+quint16 ADS1115::Mesure_Differential_2_3()
+{
+    //this->_waitConvertionFinished();
+
+    // Specify mux value.
+    this->_ads_MUX = MUX_DIFF_2_3;
+
+    //set the register for reading
+    this->setRegister(false);
+
+    // Write config register to the ADC
+    this->_writeRegister(this->_ads_config_register);
+
+//    qDebug() << Q_FUNC_INFO << QString::number(this->readConfigRegister(),2);
+
+    // Wait for the conversion to complete
+    this->_waitConvertionFinished();
+
+    //this->_waitDelay(this->_ads_conversionDelay);
+
+    // Read the conversion results
+    // 16-bit unsigned results for the ADS1115
+    return this->_readRegisterValue();
+
 }
 
 float ADS1115::convertValueToVolt(quint16 regValue)
@@ -294,7 +381,7 @@ void ADS1115::_waitConvertionFinished()
         conversionIsFinished = val == 0x8000 ? true : false;
 //        qDebug() << "wait conversion: " << QString::number(val,2);
         // wait a miliseconde
-        this->_waitDelay(10);
+        this->_waitDelay(5);
     }
     while(!conversionIsFinished);
 }

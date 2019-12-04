@@ -164,6 +164,7 @@ public:
 
     //humidity trace
     static QColor _traceColorHumidityPlot;
+    static QColor _traceColorHumidityMinPlot;
 
     //pressure trace
     static QColor _traceColorPressurePlot;

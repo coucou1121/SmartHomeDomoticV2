@@ -5,7 +5,7 @@ GlobalEnumerate::GlobalEnumerate()
 
 }
 
-void GlobalEnumerate::initClass()
+void GlobalEnumerate::initCppToQmlClass()
 {
 
     //Style of the plot

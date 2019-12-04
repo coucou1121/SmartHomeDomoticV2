@@ -8,19 +8,34 @@ import QtQuick.Controls.Material 2.0
 
 Window
 {
-    id: window
 
+    property bool isCompletRunning: false
+
+    id: mainWindow
+    objectName: "mainWindow"
     //visibility: "FullScreen"
 
-    width: 1200
+    width: 1600
     height: 800
-    minimumWidth: 1200
+    minimumWidth: 1600
     minimumHeight: 800
     visible: true
     title: "Samrt Home Domotic"
 
     Material.theme: Material.Dark
     Material.accent: Material.DeepPurple
+
+    Component.onCompleted:
+    {
+//        customPlotRoomData.setupStyleWeatherStation()
+//        qcustomPlotStatisticsTemperature.setupStyleTemperatureTrace(2)
+//        customPlotStatisticHumidity.setupStyleHumidityTrace(2)
+//        customPlotStatisticsPressure.setupStylePressureTrace(2)
+//        customPlotStatisticsConso.setupStyleConsoTrace(2)
+//        isReadyToBeInitialise = true
+        mainWindow.isCompletRunning = true;
+        console.log("QML Completed Running!!!")
+    }
 
     StackLayout
     {
@@ -42,12 +57,20 @@ Window
             //            Layout.fillHeight: true
         }
 
+        LightAndFanViewer
+        {
+            id: lightAndFanViewer
+            objectName: "lightAndFanViewer"
+            anchors.fill: parent
+
+        }
+
         TankViewer
         {
             id: tankViewer
             objectName: "tankViewer"
             //            tank1TankObjectName: "tank_1"
-            anchors.fill: parent
+//            anchors.fill: parent
             Layout.fillHeight: true
             Layout.fillWidth: true
         }
@@ -56,7 +79,7 @@ Window
         {
             id: statisticViewer
             objectName: "statisticViewer"
-            anchors.fill: parent
+//            anchors.fill: parent
             Layout.fillWidth: true
             Layout.fillHeight: true
         }
@@ -66,7 +89,7 @@ Window
         {
             id: settingViewer
             objectName: "settingViewer"
-            anchors.fill: parent
+//            anchors.fill: parent
             Layout.fillWidth: true
             Layout.fillHeight: true
         }
@@ -85,9 +108,22 @@ Window
 
         TabButton
         {
-            id: tabButtonLight
+            id: tabButtonHome
             x: 0
             text: qsTr("Home")
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 0
+            anchors.top: parent.top
+            anchors.topMargin: 0
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+        }
+
+        TabButton
+        {
+            id: tabButtonLightAndFan
+            x: 0
+            text: qsTr("Light / Fan")
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 0
             anchors.top: parent.top

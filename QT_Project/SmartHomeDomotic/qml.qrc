@@ -4,7 +4,6 @@
         <file>PageBackground.qml</file>
         <file>SideBar.qml</file>
         <file>SideBarForm.ui.qml</file>
-        <file>Light.qml</file>
         <file>LightForm.ui.qml</file>
         <file>TankViewer.qml</file>
         <file>TankViewerForm.ui.qml</file>
@@ -33,5 +32,8 @@
         <file>LabelNumber.qml</file>
         <file>StastisticValuesView.qml</file>
         <file>StastisticSelector.qml</file>
+        <file>LightAndFanViewer.qml</file>
+        <file>LightAndFanViewerForm.ui.qml</file>
+        <file>LightAndFan.qml</file>
     </qresource>
 </RCC>

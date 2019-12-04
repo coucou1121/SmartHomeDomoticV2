@@ -31,8 +31,12 @@ Set PW : 12345678
 ****************** wifi configuration ************************************
 get the wifi MAC adress : ifconfig wlan0
 ***************************************************************************
-Wired IP address : 10.0.0.21/24
-Wifi IP address : 10.0.0.31/24
+Chaufferie Wired IP address : 10.0.0.30/24
+Chuafferie Wifi  IP address : 10.0.0.31/24
+
+SmartHome Wired IP address : 10.0.0.40/24
+SmartHome Wifi  IP address : 10.0.0.41/24
+
 
 remove unused software 
 sudo apt-get remove --purge wolfram-engine	// not install on 2018-11-13-raspbian-stretch

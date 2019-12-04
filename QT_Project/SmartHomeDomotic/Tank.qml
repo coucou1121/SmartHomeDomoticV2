@@ -119,7 +119,7 @@ Item
            // {
            //     memoWarningActive = !warningActive
                 rectangleUnderTitleWarningVisible = warningActive
-                console.log("tankCheckLowlevel : " + tank.objectName + " " + warningActive)
+//                console.log("tankCheckLowlevel : " + tank.objectName + " " + warningActive)
                 tank.sendWarningLowLevel(tank.objectName, tankTitleText, E_ErrorMessage.ERR_LOW_LEVEL_REACHED, warningActive)
                 tank.sendWarningLowLevelToSetting(tank.objectName, warningActive)
           //  }

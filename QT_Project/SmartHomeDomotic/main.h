@@ -18,9 +18,9 @@
 
 
 
-
 #include <QDebug>
 #include <globalenumerate.h>
+#include <globalestaticvalue.h>
 #include <globalstyle.h>
 #include <setting.h>
 #include <errormanager.h>
@@ -38,6 +38,8 @@
 
 class Main
 {
+
+    static QObject *qobjectHomeViewer;
 
 };
 

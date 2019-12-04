@@ -24,9 +24,9 @@ public:
 
     typedef enum
     {
-        PLOT_STYLE_WEATHER_STATION = 0,    /*!< weather station style, 1x temp, 1x humidity, 1x pressur and 1x horizontal limite line*/
-        PLOT_STYLE_ANANLOG_TRACE,          /*!< line traces, 6x traces and 1x horizontal limite line */
-        PLOT_STYLE_STATISTIC_TRACE,        /*!< line traces, 6x traces and 1x horizontal limite line */
+        NONE = 0,
+        PLOT_STYLE_LIVE_WEATHER_STATION,    /*!< weather station style, 1x temp, 1x humidity, 1x pressur and 1x horizontal limite line*/
+        PLOT_STYLE_LIVE_TANKS_TRACE,          /*!< line traces, 6x traces and 1x horizontal limite line */
         PLOT_STYLE_TEMPERATURE_TRACE,        /*!< line traces, 2x traces and 1x horizontal limite line */
         PLOT_STYLE_HUMIDITY_TRACE,        /*!< line traces, 2x traces and 1x horizontal limite line */
         PLOT_STYLE_PRESSURE_TRACE,        /*!< line traces, 2x traces and 1x horizontal limite line */
@@ -135,10 +135,11 @@ public:
     Q_ENUM(E_StateMachine)
 
     /**
-      * \fn init();
+      * \fn initClass();
       * \brief create link bettween C++ and QML
+      * initialise the global qRegisterMetaType and qmlRegisterType
       */
-    static void initClass();
+    static void initCppToQmlClass();
 };
 
 #endif // GLOBALENUMERATE_H
