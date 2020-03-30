@@ -1,0 +1,5 @@
+to read the configuration use this command
+
+pinout
+
+gpio readall

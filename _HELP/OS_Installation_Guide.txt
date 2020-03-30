@@ -16,7 +16,7 @@ Enable Remote GPIO
 Change boot option in boot Otpion -> B1 Desktop / CLI -> B4 Desktop Autologin
 
 In advanced options :
-Set resolution to the maximum (DMT mode 82)
+Set resolution to the maximum (DMT mode 82, 1920 x 1080i)
 Set GPU memory to 256 in memory split
 Set fake (KMS) in GL Driver
 

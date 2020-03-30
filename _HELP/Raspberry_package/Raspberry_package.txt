@@ -1,0 +1,7 @@
+search a package
+
+apt-cache search xxx*
+
+read information abaout a package
+
+apt-cache show xxx*
